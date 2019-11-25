@@ -13,6 +13,8 @@ pool:
 variables:
   dotnetSdkVersion: '2.2.108'
   nugetToolVersion: '5.x'
+  includeWindowsRuntimeComponent: false
+  buildConfiguration: 'Release'
 
 steps:
   - task: UseDotNet@2
@@ -31,3 +33,50 @@ steps:
     inputs:
       command: 'run'
       projects: 'CodeGen/CodeGen.csproj'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build UnitsNet solution'
+    inputs:
+      command: 'build'
+      projects: 'UnitsNet.sln'
+      arguments: '--configuration $(buildConfiguration)'
+
+  - task: MSBuild@1
+    displayName: 'Restore WindowsRuntimeComponent dependencies'
+    inputs:
+      solution: 'UnitsNet.WindowsRuntimeComponent.sln'
+      configuration: '$(buildConfiguration)'
+      msbuildArguments: '-t:restore'
+    condition: and(succeeded(), eq(variables['includeWindowsRuntimeComponent'], 'true'))
+
+  - task: MSBuild@1
+    displayName: 'Build WindowsRuntimeComponent solution'
+    inputs:
+      solution: 'UnitsNet.WindowsRuntimeComponent.sln'
+      configuration: '$(buildConfiguration)'
+    condition: and(succeeded(), eq(variables['includeWindowsRuntimeComponent'], 'true'))
+
+  - script: |
+      dotnet dotcover test --no-build --dotCoverFilters="+:module=UnitsNet*;-:module=*Tests" --dotCoverOutput="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Tests.coverage.xml" --dcReportType=DetailedXML
+    displayName: 'UnitsNet.Tests code coverage'
+    workingDirectory: 'UnitsNet.Tests'
+
+  - script: |
+      dotnet dotcover test --no-build --dotCoverFilters="+:module=UnitsNet*;-:module=*Tests" --dotCoverOutput="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --dcReportType=DetailedXML
+    displayName: 'UnitsNet.Serialization.JsonNet.Tests code coverage'
+    workingDirectory: 'UnitsNet.Serialization.JsonNet.Tests'
+
+  - script: |
+      dotnet dotcover test --no-build --dotCoverFilters="+:module=UnitsNet*;-:module=*Tests" --dotCoverOutput="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.CompatibilityTests.coverage.xml" --dcReportType=DetailedXML
+    displayName: 'UnitsNet.Serialization.JsonNet.CompatibilityTests code coverage'
+    workingDirectory: 'UnitsNet.Serialization.JsonNet.CompatibilityTests'
+
+  - script: |
+      dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools
+      tools/reportgenerator.exe -reports:"$(Build.SourcesDirectory)/Artifacts/Coverage/*.coverage.xml" -targetdir:"$(Build.SourcesDirectory)/Artifacts/Coverage/Report" -reporttypes:"HtmlInline_AzurePipelines;Cobertura" -sourcedirs:"$(Build.SourcesDirectory)"
+    displayName: 'Generate code coverage report'
+
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report/Cobertura.xml'
