@@ -1,0 +1,32 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:  
+  name: 'Agileo'
+  
+variables:
+  dotnetSdkVersion: '2.2.108'
+  nugetToolVersion: '5.x'
+
+steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
+    inputs:
+      packageType: 'sdk'
+      version: '$(dotnetSdkVersion)'
+
+  - task: NuGetToolInstaller@1
+    displayName: 'Use NuGet tool $(nugetToolVersion)'
+    inputs:
+      versionSpec: '$(nugetToolVersion)'
+      
+  - task: DotNetCoreCLI@2
+    displayName: 'Generate code'
+    inputs:
+      command: 'run'
+      projects: 'CodeGen/CodeGen.csproj'
