@@ -88,6 +88,23 @@ steps:
       summaryFileLocation: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report/Cobertura.xml'
       reportDirectory: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report'
 
+  - script: |
+      dotnet pack --configuration $(buildConfiguration) --no-build -o "$(Build.SourcesDirectory)/Artifacts/NuGet" "$(Build.SourcesDirectory)/UnitsNet/UnitsNet.csproj"
+      dotnet pack --configuration $(buildConfiguration) --no-build -o "$(Build.SourcesDirectory)/Artifacts/NuGet" "$(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet/UnitsNet.Serialization.JsonNet.csproj"
+    displayName: 'Generate packages'
+
+  - task: NuGetAuthenticate@0
+    displayName: 'NuGet Authenticate'
+
+  - task: NuGetCommand@2
+    displayName: 'NuGet push'
+    inputs:
+      command: 'push'
+      packagesToPush: '$(Build.SourcesDirectory)/Artifacts/NuGet/*.nupkg;!$(Build.SourcesDirectory)/Artifacts/NuGet/*.symbols.nupkg'
+      nuGetFeedType: 'internal'
+      publishVstsFeed: '7d4d6dca-b70a-4118-977c-8e3a5910b0ad/05eb264a-a7ce-48ff-b0ce-bb179d345dfc'
+      allowPackageConflicts: true
+
   - task: WhiteSource Bolt@19
     displayName: 'Run WhiteSource Bolt'
 
