@@ -9,6 +9,7 @@
     <Copyright>Copyright 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com).</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RepositoryUrl>https://github.com/angularsen/UnitsNet</RepositoryUrl>
+    <PackageIcon>logo-128.png</PackageIcon>
     <PackageIconUrl>https://raw.githubusercontent.com/angularsen/UnitsNet/ce85185429be345d77eb2ce09c99d59cc9ab8aed/Docs/Images/logo-32.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/angularsen/UnitsNet</PackageProjectUrl>
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
@@ -49,6 +50,10 @@
   <!-- Project references, will also generate the corresponding nuget dependencies -->
   <ItemGroup>
     <ProjectReference Include="..\UnitsNet\UnitsNet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Docs\Images\logo-128.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
