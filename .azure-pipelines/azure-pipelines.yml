@@ -4,8 +4,20 @@
 # https://aka.ms/yaml
 
 trigger:
-  - master
-  - feature/*
+  branches:
+    include:
+      - master
+      - feature/*
+      - release/*
+  paths:
+    exclude:
+      - 'docs/*'
+      - 'README.md'
+
+pr:
+  branches:
+    include:
+      - master
 
 pool:
   name: 'Agileo'
@@ -97,6 +109,26 @@ steps:
       packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
       nobuild: true
       versioningScheme: 'off'
+      verbosityPack: 'normal'
+    # Previous steps success and CI build due to a tag or Pull Request to master
+    condition: |
+      and
+      (
+        succeeded(),
+        or
+        (
+          and
+          (
+            in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+            startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          ),
+          and
+          (
+            eq(variables['Build.Reason'], 'PullRequest'),
+            eq(variables['System.PullRequest.TargetBranch'], 'master')
+          )
+        )
+      )
 
   - task: DotNetCoreCLI@2
     displayName: 'Generate UnitsNet.Serialization.JsonNet package'
@@ -107,9 +139,37 @@ steps:
       packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
       nobuild: true
       versioningScheme: 'off'
+      verbosityPack: 'normal'
+    # Previous steps success and CI build due to a tag or Pull Request to master
+    condition: |
+      and
+      (
+        succeeded(),
+        or
+        (
+          and
+          (
+            in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+            startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          ),
+          and
+          (
+            eq(variables['Build.Reason'], 'PullRequest'),
+            eq(variables['System.PullRequest.TargetBranch'], 'master')
+          )
+        )
+      )
 
   - task: NuGetAuthenticate@0
     displayName: 'NuGet Authenticate'
+    condition: |
+      and
+      (
+        succeeded(),
+        in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+        startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+      )
+
 
   - task: NuGetCommand@2
     displayName: 'NuGet push'
@@ -119,6 +179,13 @@ steps:
       nuGetFeedType: 'internal'
       publishVstsFeed: '7d4d6dca-b70a-4118-977c-8e3a5910b0ad/05eb264a-a7ce-48ff-b0ce-bb179d345dfc'
       allowPackageConflicts: true
+    condition: |
+      and
+      (
+        succeeded(),
+        in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+        startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+      )
 
   - task: WhiteSource Bolt@19
     displayName: 'Run WhiteSource Bolt'
