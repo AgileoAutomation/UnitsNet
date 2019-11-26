@@ -63,28 +63,3 @@ steps:
       projects: '**/*Tests/*.csproj'
       arguments: '--configuration $(buildConfiguration) --collect "Code coverage" --settings $(System.DefaultWorkingDirectory)/CodeCoverage.runsettings'
       nobuild: true
-
-  # - script: |
-  #     dotnet dotcover test --no-build --dotCoverFilters="+:module=UnitsNet*;-:module=*Tests" --dotCoverOutput="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Tests.coverage.xml" --dcReportType=DetailedXML
-  #   displayName: 'UnitsNet.Tests code coverage'
-  #   workingDirectory: 'UnitsNet.Tests'
-
-  # - script: |
-  #     dotnet dotcover test --no-build --dotCoverFilters="+:module=UnitsNet*;-:module=*Tests" --dotCoverOutput="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --dcReportType=DetailedXML
-  #   displayName: 'UnitsNet.Serialization.JsonNet.Tests code coverage'
-  #   workingDirectory: 'UnitsNet.Serialization.JsonNet.Tests'
-
-  # - script: |
-  #     dotnet dotcover test --no-build --dotCoverFilters="+:module=UnitsNet*;-:module=*Tests" --dotCoverOutput="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.CompatibilityTests.coverage.xml" --dcReportType=DetailedXML
-  #   displayName: 'UnitsNet.Serialization.JsonNet.CompatibilityTests code coverage'
-  #   workingDirectory: 'UnitsNet.Serialization.JsonNet.CompatibilityTests'
-
-  # - script: |
-  #     dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools
-  #     tools/reportgenerator.exe -reports:"$(Build.SourcesDirectory)/Artifacts/Coverage/*.coverage.xml" -targetdir:"$(Build.SourcesDirectory)/Artifacts/Coverage/Report" -reporttypes:"HtmlInline_AzurePipelines;Cobertura" -sourcedirs:"$(Build.SourcesDirectory)"
-  #   displayName: 'Generate code coverage report'
-
-  - task: PublishCodeCoverageResults@1
-    inputs:
-      codeCoverageTool: 'Cobertura'
-      summaryFileLocation: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report/Cobertura.xml'
