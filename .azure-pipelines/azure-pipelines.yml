@@ -88,10 +88,25 @@ steps:
       summaryFileLocation: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report/Cobertura.xml'
       reportDirectory: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report'
 
-  - script: |
-      dotnet pack --configuration $(buildConfiguration) --no-build -o "$(Build.SourcesDirectory)/Artifacts/NuGet" "$(Build.SourcesDirectory)/UnitsNet/UnitsNet.csproj"
-      dotnet pack --configuration $(buildConfiguration) --no-build -o "$(Build.SourcesDirectory)/Artifacts/NuGet" "$(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet/UnitsNet.Serialization.JsonNet.csproj"
-    displayName: 'Generate packages'
+  - task: DotNetCoreCLI@2
+    displayName: 'Generate UnitsNet package'
+    inputs:
+      command: 'pack'
+      packagesToPack: '$(Build.SourcesDirectory)/UnitsNet/UnitsNet.csproj'
+      configuration: '$(buildConfiguration)'
+      packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
+      nobuild: true
+      versioningScheme: 'off'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Generate UnitsNet.Serialization.JsonNet package'
+    inputs:
+      command: 'pack'
+      packagesToPack: '$(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet/UnitsNet.Serialization.JsonNet.csproj'
+      configuration: '$(buildConfiguration)'
+      packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
+      nobuild: true
+      versioningScheme: 'off'
 
   - task: NuGetAuthenticate@0
     displayName: 'NuGet Authenticate'
