@@ -11,7 +11,7 @@ pool:
   name: 'Agileo'
 
 variables:
-  dotnetSdkVersion: '2.2.108'
+  dotnetSdkVersion: '2.2.x'
   nugetToolVersion: '5.x'
   includeWindowsRuntimeComponent: false
   buildConfiguration: 'Release'
@@ -65,8 +65,8 @@ steps:
       nobuild: true
 
   - script: |
-      dotnet tool install --tool-path tools dotnet-reportgenerator-globaltool
-      tools/reportgenerator.exe -reports:"$(Agent.TempDirectory)/**/*.coverage" -targetdir:"$(Build.SourcesDirectory)/Artifacts/Coverage/Report" -reporttypes:"Cobertura" -sourcedirs:"$(Build.SourcesDirectory)"
+      dotnet tool install --tool-path . dotnet-reportgenerator-globaltool
+      reportgenerator -reports:"$(Agent.TempDirectory)/**/*.coverage" -targetdir:"$(Build.SourcesDirectory)/Artifacts/Coverage/Report" -reporttypes:"Cobertura" -sourcedirs:"$(Build.SourcesDirectory)"
     displayName: 'Generate code coverage report'
 
   - task: PublishCodeCoverageResults@1
