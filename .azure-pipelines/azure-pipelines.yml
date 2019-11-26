@@ -57,17 +57,17 @@ steps:
     condition: and(succeeded(), eq(variables['includeWindowsRuntimeComponent'], 'true'))
 
   - script: |
-      dotcover dotnet --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
     displayName: 'UnitsNet.Tests code coverage'
     workingDirectory: 'UnitsNet.Tests'
 
   - script: |
-      dotcover dotnet --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
     displayName: 'UnitsNet.Serialization.JsonNet.Tests code coverage'
     workingDirectory: 'UnitsNet.Serialization.JsonNet.Tests'
 
   - script: |
-      dotcover dotnet --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.CompatibilityTests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.CompatibilityTests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
     displayName: 'UnitsNet.Serialization.JsonNet.CompatibilityTests code coverage'
     workingDirectory: 'UnitsNet.Serialization.JsonNet.CompatibilityTests'
 
