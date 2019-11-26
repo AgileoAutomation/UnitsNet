@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File name extension must be .runsettings -->
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+       <DataCollector friendlyName="Code coverage">
+        <Configuration>
+          <CodeCoverage>
+            <ModulePaths>
+                <Include>
+                  <ModulePath>UnitsNet*</ModulePath>
+                </Include>
+              <Exclude>
+                <ModulePath>xunit.*</ModulePath>
+                <ModulePath>.*Tests</ModulePath>
+              </Exclude>
+            </ModulePaths>
+          </CodeCoverage>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>
