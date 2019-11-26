@@ -57,19 +57,16 @@ steps:
     condition: and(succeeded(), eq(variables['includeWindowsRuntimeComponent'], 'true'))
 
   - script: |
-      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build $(Build.SourcesDirectory)/UnitsNet.Tests/UnitsNet.Tests.csproj"
     displayName: 'UnitsNet.Tests code coverage'
-    workingDirectory: 'UnitsNet.Tests'
 
   - script: |
-      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build $(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet.Tests/UnitsNet.Serialization.JsonNet.Tests.csproj"
     displayName: 'UnitsNet.Serialization.JsonNet.Tests code coverage'
-    workingDirectory: 'UnitsNet.Serialization.JsonNet.Tests'
 
   - script: |
-      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.CompatibilityTests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build"
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.CompatibilityTests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build $(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet.CompatibilityTests/UnitsNet.Serialization.JsonNet.CompatibilityTests.csproj"
     displayName: 'UnitsNet.Serialization.JsonNet.CompatibilityTests code coverage'
-    workingDirectory: 'UnitsNet.Serialization.JsonNet.CompatibilityTests'
 
   - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
     displayName: 'Generate code coverage report'
