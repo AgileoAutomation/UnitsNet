@@ -11,7 +11,7 @@ pool:
   name: 'Agileo'
 
 variables:
-  dotnetSdkVersion: '2.2.x'
+  dotnetSdkVersion: '3.x'
   nugetToolVersion: '5.x'
   includeWindowsRuntimeComponent: false
   buildConfiguration: 'Release'
