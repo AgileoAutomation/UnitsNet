@@ -53,16 +53,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricAdmittance(double.PositiveInfinity, ElectricAdmittanceUnit.Siemens));
-            Assert.Throws<ArgumentException>(() => new ElectricAdmittance(double.NegativeInfinity, ElectricAdmittanceUnit.Siemens));
+            var positiveInfinityQuantity = new ElectricAdmittance(double.PositiveInfinity, ElectricAdmittanceUnit.Siemens);
+            var negativeInfinityQuantity = new ElectricAdmittance(double.NegativeInfinity, ElectricAdmittanceUnit.Siemens);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricAdmittance(double.NaN, ElectricAdmittanceUnit.Siemens));
+            var nanQuantity = new ElectricAdmittance(double.NaN, ElectricAdmittanceUnit.Siemens);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -85,16 +89,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromSiemens_WithInfinityValue_ThrowsArgumentException()
+        public void FromSiemens_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricAdmittance.FromSiemens(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ElectricAdmittance.FromSiemens(double.NegativeInfinity));
+            var positiveInfinityQuantity = ElectricAdmittance.FromSiemens(double.PositiveInfinity);
+            var negativeInfinityQuantity = ElectricAdmittance.FromSiemens(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromSiemens_WithNanValue_ThrowsArgumentException()
+        public void FromSiemens_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricAdmittance.FromSiemens(double.NaN));
+            var nanQuantity = ElectricAdmittance.FromSiemens(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

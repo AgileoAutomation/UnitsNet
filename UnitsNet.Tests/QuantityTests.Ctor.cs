@@ -74,9 +74,9 @@ namespace UnitsNet.Tests
 
                 // decimal types
                 Assert.Equal(5, new Information(5L, InformationUnit.Bit).Value);
-                Assert.Equal(5, new Information(5m, InformationUnit.Bit).Value);
+                Assert.Equal(5, new Information(5d, InformationUnit.Bit).Value);
                 Assert.Equal(InformationUnit.Bit, new Information(5L, InformationUnit.Bit).Unit);
-                Assert.Equal(InformationUnit.Bit, new Information(5m, InformationUnit.Bit).Unit);
+                Assert.Equal(InformationUnit.Bit, new Information(5d, InformationUnit.Bit).Unit);
 
                 // logarithmic types
                 Assert.Equal(5, new Level(5L, LevelUnit.Decibel).Value);

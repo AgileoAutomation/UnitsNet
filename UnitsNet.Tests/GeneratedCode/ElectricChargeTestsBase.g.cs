@@ -55,16 +55,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricCharge(double.PositiveInfinity, ElectricChargeUnit.Coulomb));
-            Assert.Throws<ArgumentException>(() => new ElectricCharge(double.NegativeInfinity, ElectricChargeUnit.Coulomb));
+            var positiveInfinityQuantity = new ElectricCharge(double.PositiveInfinity, ElectricChargeUnit.Coulomb);
+            var negativeInfinityQuantity = new ElectricCharge(double.NegativeInfinity, ElectricChargeUnit.Coulomb);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricCharge(double.NaN, ElectricChargeUnit.Coulomb));
+            var nanQuantity = new ElectricCharge(double.NaN, ElectricChargeUnit.Coulomb);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -89,16 +93,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromCoulombs_WithInfinityValue_ThrowsArgumentException()
+        public void FromCoulombs_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricCharge.FromCoulombs(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ElectricCharge.FromCoulombs(double.NegativeInfinity));
+            var positiveInfinityQuantity = ElectricCharge.FromCoulombs(double.PositiveInfinity);
+            var negativeInfinityQuantity = ElectricCharge.FromCoulombs(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromCoulombs_WithNanValue_ThrowsArgumentException()
+        public void FromCoulombs_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricCharge.FromCoulombs(double.NaN));
+            var nanQuantity = ElectricCharge.FromCoulombs(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

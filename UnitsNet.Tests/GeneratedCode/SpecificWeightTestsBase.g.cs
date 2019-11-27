@@ -79,16 +79,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new SpecificWeight(double.PositiveInfinity, SpecificWeightUnit.NewtonPerCubicMeter));
-            Assert.Throws<ArgumentException>(() => new SpecificWeight(double.NegativeInfinity, SpecificWeightUnit.NewtonPerCubicMeter));
+            var positiveInfinityQuantity = new SpecificWeight(double.PositiveInfinity, SpecificWeightUnit.NewtonPerCubicMeter);
+            var negativeInfinityQuantity = new SpecificWeight(double.NegativeInfinity, SpecificWeightUnit.NewtonPerCubicMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new SpecificWeight(double.NaN, SpecificWeightUnit.NewtonPerCubicMeter));
+            var nanQuantity = new SpecificWeight(double.NaN, SpecificWeightUnit.NewtonPerCubicMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -137,16 +141,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromNewtonsPerCubicMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromNewtonsPerCubicMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => SpecificWeight.FromNewtonsPerCubicMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => SpecificWeight.FromNewtonsPerCubicMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = SpecificWeight.FromNewtonsPerCubicMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = SpecificWeight.FromNewtonsPerCubicMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromNewtonsPerCubicMeter_WithNanValue_ThrowsArgumentException()
+        public void FromNewtonsPerCubicMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => SpecificWeight.FromNewtonsPerCubicMeter(double.NaN));
+            var nanQuantity = SpecificWeight.FromNewtonsPerCubicMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

@@ -63,16 +63,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Frequency(double.PositiveInfinity, FrequencyUnit.Hertz));
-            Assert.Throws<ArgumentException>(() => new Frequency(double.NegativeInfinity, FrequencyUnit.Hertz));
+            var positiveInfinityQuantity = new Frequency(double.PositiveInfinity, FrequencyUnit.Hertz);
+            var negativeInfinityQuantity = new Frequency(double.NegativeInfinity, FrequencyUnit.Hertz);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Frequency(double.NaN, FrequencyUnit.Hertz));
+            var nanQuantity = new Frequency(double.NaN, FrequencyUnit.Hertz);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -105,16 +109,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromHertz_WithInfinityValue_ThrowsArgumentException()
+        public void FromHertz_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Frequency.FromHertz(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Frequency.FromHertz(double.NegativeInfinity));
+            var positiveInfinityQuantity = Frequency.FromHertz(double.PositiveInfinity);
+            var negativeInfinityQuantity = Frequency.FromHertz(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromHertz_WithNanValue_ThrowsArgumentException()
+        public void FromHertz_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Frequency.FromHertz(double.NaN));
+            var nanQuantity = Frequency.FromHertz(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

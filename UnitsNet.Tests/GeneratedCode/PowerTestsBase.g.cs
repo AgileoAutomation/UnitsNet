@@ -81,7 +81,24 @@ namespace UnitsNet.Tests
         [Fact]
         public void Ctor_WithUndefinedUnit_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => new Power((decimal)0.0, PowerUnit.Undefined));
+            Assert.Throws<ArgumentException>(() => new Power((double)0.0, PowerUnit.Undefined));
+        }
+
+        [Fact]
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
+        {
+            var positiveInfinityQuantity = new Power(double.PositiveInfinity, PowerUnit.Watt);
+            var negativeInfinityQuantity = new Power(double.NegativeInfinity, PowerUnit.Watt);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
+        }
+
+        [Fact]
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
+        {
+            var nanQuantity = new Power(double.NaN, PowerUnit.Watt);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -133,6 +150,23 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(1, Power.From(1, PowerUnit.Picowatt).Picowatts, PicowattsTolerance);
             AssertEx.EqualTolerance(1, Power.From(1, PowerUnit.Terawatt).Terawatts, TerawattsTolerance);
             AssertEx.EqualTolerance(1, Power.From(1, PowerUnit.Watt).Watts, WattsTolerance);
+        }
+
+        [Fact]
+        public void FromWatts_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
+        {
+            var positiveInfinityQuantity = Power.FromWatts(double.PositiveInfinity);
+            var negativeInfinityQuantity = Power.FromWatts(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
+        }
+
+        [Fact]
+        public void FromWatts_WithNanValue_CreateQuantityAndAffectNaNValue()
+        {
+            var nanQuantity = Power.FromWatts(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

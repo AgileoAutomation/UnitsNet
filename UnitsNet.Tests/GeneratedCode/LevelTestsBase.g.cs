@@ -49,16 +49,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Level(double.PositiveInfinity, LevelUnit.Decibel));
-            Assert.Throws<ArgumentException>(() => new Level(double.NegativeInfinity, LevelUnit.Decibel));
+            var positiveInfinityQuantity = new Level(double.PositiveInfinity, LevelUnit.Decibel);
+            var negativeInfinityQuantity = new Level(double.NegativeInfinity, LevelUnit.Decibel);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Level(double.NaN, LevelUnit.Decibel));
+            var nanQuantity = new Level(double.NaN, LevelUnit.Decibel);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -77,16 +81,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromDecibels_WithInfinityValue_ThrowsArgumentException()
+        public void FromDecibels_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Level.FromDecibels(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Level.FromDecibels(double.NegativeInfinity));
+            var positiveInfinityQuantity = Level.FromDecibels(double.PositiveInfinity);
+            var negativeInfinityQuantity = Level.FromDecibels(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromDecibels_WithNanValue_ThrowsArgumentException()
+        public void FromDecibels_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Level.FromDecibels(double.NaN));
+            var nanQuantity = Level.FromDecibels(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

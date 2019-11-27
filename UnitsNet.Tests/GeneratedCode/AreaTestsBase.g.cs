@@ -73,16 +73,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Area(double.PositiveInfinity, AreaUnit.SquareMeter));
-            Assert.Throws<ArgumentException>(() => new Area(double.NegativeInfinity, AreaUnit.SquareMeter));
+            var positiveInfinityQuantity = new Area(double.PositiveInfinity, AreaUnit.SquareMeter);
+            var negativeInfinityQuantity = new Area(double.NegativeInfinity, AreaUnit.SquareMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Area(double.NaN, AreaUnit.SquareMeter));
+            var nanQuantity = new Area(double.NaN, AreaUnit.SquareMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -125,16 +129,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromSquareMeters_WithInfinityValue_ThrowsArgumentException()
+        public void FromSquareMeters_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Area.FromSquareMeters(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Area.FromSquareMeters(double.NegativeInfinity));
+            var positiveInfinityQuantity = Area.FromSquareMeters(double.PositiveInfinity);
+            var negativeInfinityQuantity = Area.FromSquareMeters(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromSquareMeters_WithNanValue_ThrowsArgumentException()
+        public void FromSquareMeters_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Area.FromSquareMeters(double.NaN));
+            var nanQuantity = Area.FromSquareMeters(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

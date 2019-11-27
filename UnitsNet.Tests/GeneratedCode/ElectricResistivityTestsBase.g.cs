@@ -73,16 +73,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricResistivity(double.PositiveInfinity, ElectricResistivityUnit.OhmMeter));
-            Assert.Throws<ArgumentException>(() => new ElectricResistivity(double.NegativeInfinity, ElectricResistivityUnit.OhmMeter));
+            var positiveInfinityQuantity = new ElectricResistivity(double.PositiveInfinity, ElectricResistivityUnit.OhmMeter);
+            var negativeInfinityQuantity = new ElectricResistivity(double.NegativeInfinity, ElectricResistivityUnit.OhmMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricResistivity(double.NaN, ElectricResistivityUnit.OhmMeter));
+            var nanQuantity = new ElectricResistivity(double.NaN, ElectricResistivityUnit.OhmMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -125,16 +129,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromOhmMeters_WithInfinityValue_ThrowsArgumentException()
+        public void FromOhmMeters_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricResistivity.FromOhmMeters(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ElectricResistivity.FromOhmMeters(double.NegativeInfinity));
+            var positiveInfinityQuantity = ElectricResistivity.FromOhmMeters(double.PositiveInfinity);
+            var negativeInfinityQuantity = ElectricResistivity.FromOhmMeters(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromOhmMeters_WithNanValue_ThrowsArgumentException()
+        public void FromOhmMeters_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricResistivity.FromOhmMeters(double.NaN));
+            var nanQuantity = ElectricResistivity.FromOhmMeters(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

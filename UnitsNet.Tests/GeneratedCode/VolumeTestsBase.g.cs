@@ -139,16 +139,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Volume(double.PositiveInfinity, VolumeUnit.CubicMeter));
-            Assert.Throws<ArgumentException>(() => new Volume(double.NegativeInfinity, VolumeUnit.CubicMeter));
+            var positiveInfinityQuantity = new Volume(double.PositiveInfinity, VolumeUnit.CubicMeter);
+            var negativeInfinityQuantity = new Volume(double.NegativeInfinity, VolumeUnit.CubicMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Volume(double.NaN, VolumeUnit.CubicMeter));
+            var nanQuantity = new Volume(double.NaN, VolumeUnit.CubicMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -257,16 +261,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromCubicMeters_WithInfinityValue_ThrowsArgumentException()
+        public void FromCubicMeters_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Volume.FromCubicMeters(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Volume.FromCubicMeters(double.NegativeInfinity));
+            var positiveInfinityQuantity = Volume.FromCubicMeters(double.PositiveInfinity);
+            var negativeInfinityQuantity = Volume.FromCubicMeters(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromCubicMeters_WithNanValue_ThrowsArgumentException()
+        public void FromCubicMeters_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Volume.FromCubicMeters(double.NaN));
+            var nanQuantity = Volume.FromCubicMeters(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

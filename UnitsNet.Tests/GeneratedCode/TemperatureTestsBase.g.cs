@@ -63,16 +63,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Temperature(double.PositiveInfinity, TemperatureUnit.Kelvin));
-            Assert.Throws<ArgumentException>(() => new Temperature(double.NegativeInfinity, TemperatureUnit.Kelvin));
+            var positiveInfinityQuantity = new Temperature(double.PositiveInfinity, TemperatureUnit.Kelvin);
+            var negativeInfinityQuantity = new Temperature(double.NegativeInfinity, TemperatureUnit.Kelvin);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Temperature(double.NaN, TemperatureUnit.Kelvin));
+            var nanQuantity = new Temperature(double.NaN, TemperatureUnit.Kelvin);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -105,16 +109,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromKelvins_WithInfinityValue_ThrowsArgumentException()
+        public void FromKelvins_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Temperature.FromKelvins(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Temperature.FromKelvins(double.NegativeInfinity));
+            var positiveInfinityQuantity = Temperature.FromKelvins(double.PositiveInfinity);
+            var negativeInfinityQuantity = Temperature.FromKelvins(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromKelvins_WithNanValue_ThrowsArgumentException()
+        public void FromKelvins_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Temperature.FromKelvins(double.NaN));
+            var nanQuantity = Temperature.FromKelvins(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

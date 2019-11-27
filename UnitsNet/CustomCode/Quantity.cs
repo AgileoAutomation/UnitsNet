@@ -57,13 +57,13 @@ namespace UnitsNet
         /// <inheritdoc cref="TryFrom(QuantityValue,System.Enum,out UnitsNet.IQuantity)"/>
         public static bool TryFrom(double value, Enum unit, out IQuantity quantity)
         {
-            // Implicit cast to QuantityValue would prevent TryFrom from being called,
-            // so we need to explicitly check this here for double arguments.
-            if (double.IsNaN(value) || double.IsInfinity(value))
-            {
-                quantity = default(IQuantity);
-                return false;
-            }
+            // // Implicit cast to QuantityValue would prevent TryFrom from being called,
+            // // so we need to explicitly check this here for double arguments.
+            // if (double.IsNaN(value) || double.IsInfinity(value))
+            // {
+            //     quantity = default(IQuantity);
+            //     return false;
+            // }
 
             return TryFrom((QuantityValue)value, unit, out quantity);
         }

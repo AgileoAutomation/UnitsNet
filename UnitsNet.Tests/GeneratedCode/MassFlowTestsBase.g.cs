@@ -111,16 +111,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new MassFlow(double.PositiveInfinity, MassFlowUnit.GramPerSecond));
-            Assert.Throws<ArgumentException>(() => new MassFlow(double.NegativeInfinity, MassFlowUnit.GramPerSecond));
+            var positiveInfinityQuantity = new MassFlow(double.PositiveInfinity, MassFlowUnit.GramPerSecond);
+            var negativeInfinityQuantity = new MassFlow(double.NegativeInfinity, MassFlowUnit.GramPerSecond);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new MassFlow(double.NaN, MassFlowUnit.GramPerSecond));
+            var nanQuantity = new MassFlow(double.NaN, MassFlowUnit.GramPerSecond);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -201,16 +205,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromGramsPerSecond_WithInfinityValue_ThrowsArgumentException()
+        public void FromGramsPerSecond_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => MassFlow.FromGramsPerSecond(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => MassFlow.FromGramsPerSecond(double.NegativeInfinity));
+            var positiveInfinityQuantity = MassFlow.FromGramsPerSecond(double.PositiveInfinity);
+            var negativeInfinityQuantity = MassFlow.FromGramsPerSecond(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromGramsPerSecond_WithNanValue_ThrowsArgumentException()
+        public void FromGramsPerSecond_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => MassFlow.FromGramsPerSecond(double.NaN));
+            var nanQuantity = MassFlow.FromGramsPerSecond(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

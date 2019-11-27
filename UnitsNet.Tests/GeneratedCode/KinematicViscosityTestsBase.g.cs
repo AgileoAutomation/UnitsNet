@@ -61,16 +61,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new KinematicViscosity(double.PositiveInfinity, KinematicViscosityUnit.SquareMeterPerSecond));
-            Assert.Throws<ArgumentException>(() => new KinematicViscosity(double.NegativeInfinity, KinematicViscosityUnit.SquareMeterPerSecond));
+            var positiveInfinityQuantity = new KinematicViscosity(double.PositiveInfinity, KinematicViscosityUnit.SquareMeterPerSecond);
+            var negativeInfinityQuantity = new KinematicViscosity(double.NegativeInfinity, KinematicViscosityUnit.SquareMeterPerSecond);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new KinematicViscosity(double.NaN, KinematicViscosityUnit.SquareMeterPerSecond));
+            var nanQuantity = new KinematicViscosity(double.NaN, KinematicViscosityUnit.SquareMeterPerSecond);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -101,16 +105,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromSquareMetersPerSecond_WithInfinityValue_ThrowsArgumentException()
+        public void FromSquareMetersPerSecond_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => KinematicViscosity.FromSquareMetersPerSecond(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => KinematicViscosity.FromSquareMetersPerSecond(double.NegativeInfinity));
+            var positiveInfinityQuantity = KinematicViscosity.FromSquareMetersPerSecond(double.PositiveInfinity);
+            var negativeInfinityQuantity = KinematicViscosity.FromSquareMetersPerSecond(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromSquareMetersPerSecond_WithNanValue_ThrowsArgumentException()
+        public void FromSquareMetersPerSecond_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => KinematicViscosity.FromSquareMetersPerSecond(double.NaN));
+            var nanQuantity = KinematicViscosity.FromSquareMetersPerSecond(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

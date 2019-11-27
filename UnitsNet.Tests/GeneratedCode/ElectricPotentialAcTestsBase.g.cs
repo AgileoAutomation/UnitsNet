@@ -55,16 +55,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricPotentialAc(double.PositiveInfinity, ElectricPotentialAcUnit.VoltAc));
-            Assert.Throws<ArgumentException>(() => new ElectricPotentialAc(double.NegativeInfinity, ElectricPotentialAcUnit.VoltAc));
+            var positiveInfinityQuantity = new ElectricPotentialAc(double.PositiveInfinity, ElectricPotentialAcUnit.VoltAc);
+            var negativeInfinityQuantity = new ElectricPotentialAc(double.NegativeInfinity, ElectricPotentialAcUnit.VoltAc);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricPotentialAc(double.NaN, ElectricPotentialAcUnit.VoltAc));
+            var nanQuantity = new ElectricPotentialAc(double.NaN, ElectricPotentialAcUnit.VoltAc);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -89,16 +93,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromVoltsAc_WithInfinityValue_ThrowsArgumentException()
+        public void FromVoltsAc_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricPotentialAc.FromVoltsAc(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ElectricPotentialAc.FromVoltsAc(double.NegativeInfinity));
+            var positiveInfinityQuantity = ElectricPotentialAc.FromVoltsAc(double.PositiveInfinity);
+            var negativeInfinityQuantity = ElectricPotentialAc.FromVoltsAc(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromVoltsAc_WithNanValue_ThrowsArgumentException()
+        public void FromVoltsAc_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricPotentialAc.FromVoltsAc(double.NaN));
+            var nanQuantity = ElectricPotentialAc.FromVoltsAc(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

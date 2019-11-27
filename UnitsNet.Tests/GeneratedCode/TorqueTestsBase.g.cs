@@ -87,16 +87,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Torque(double.PositiveInfinity, TorqueUnit.NewtonMeter));
-            Assert.Throws<ArgumentException>(() => new Torque(double.NegativeInfinity, TorqueUnit.NewtonMeter));
+            var positiveInfinityQuantity = new Torque(double.PositiveInfinity, TorqueUnit.NewtonMeter);
+            var negativeInfinityQuantity = new Torque(double.NegativeInfinity, TorqueUnit.NewtonMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Torque(double.NaN, TorqueUnit.NewtonMeter));
+            var nanQuantity = new Torque(double.NaN, TorqueUnit.NewtonMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -153,16 +157,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromNewtonMeters_WithInfinityValue_ThrowsArgumentException()
+        public void FromNewtonMeters_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Torque.FromNewtonMeters(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Torque.FromNewtonMeters(double.NegativeInfinity));
+            var positiveInfinityQuantity = Torque.FromNewtonMeters(double.PositiveInfinity);
+            var negativeInfinityQuantity = Torque.FromNewtonMeters(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromNewtonMeters_WithNanValue_ThrowsArgumentException()
+        public void FromNewtonMeters_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Torque.FromNewtonMeters(double.NaN));
+            var nanQuantity = Torque.FromNewtonMeters(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

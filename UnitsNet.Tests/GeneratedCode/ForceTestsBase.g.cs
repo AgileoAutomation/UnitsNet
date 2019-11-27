@@ -71,16 +71,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Force(double.PositiveInfinity, ForceUnit.Newton));
-            Assert.Throws<ArgumentException>(() => new Force(double.NegativeInfinity, ForceUnit.Newton));
+            var positiveInfinityQuantity = new Force(double.PositiveInfinity, ForceUnit.Newton);
+            var negativeInfinityQuantity = new Force(double.NegativeInfinity, ForceUnit.Newton);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Force(double.NaN, ForceUnit.Newton));
+            var nanQuantity = new Force(double.NaN, ForceUnit.Newton);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -121,16 +125,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromNewtons_WithInfinityValue_ThrowsArgumentException()
+        public void FromNewtons_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Force.FromNewtons(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Force.FromNewtons(double.NegativeInfinity));
+            var positiveInfinityQuantity = Force.FromNewtons(double.PositiveInfinity);
+            var negativeInfinityQuantity = Force.FromNewtons(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromNewtons_WithNanValue_ThrowsArgumentException()
+        public void FromNewtons_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Force.FromNewtons(double.NaN));
+            var nanQuantity = Force.FromNewtons(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

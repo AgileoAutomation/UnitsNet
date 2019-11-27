@@ -143,16 +143,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new VolumeFlow(double.PositiveInfinity, VolumeFlowUnit.CubicMeterPerSecond));
-            Assert.Throws<ArgumentException>(() => new VolumeFlow(double.NegativeInfinity, VolumeFlowUnit.CubicMeterPerSecond));
+            var positiveInfinityQuantity = new VolumeFlow(double.PositiveInfinity, VolumeFlowUnit.CubicMeterPerSecond);
+            var negativeInfinityQuantity = new VolumeFlow(double.NegativeInfinity, VolumeFlowUnit.CubicMeterPerSecond);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new VolumeFlow(double.NaN, VolumeFlowUnit.CubicMeterPerSecond));
+            var nanQuantity = new VolumeFlow(double.NaN, VolumeFlowUnit.CubicMeterPerSecond);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -265,16 +269,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromCubicMetersPerSecond_WithInfinityValue_ThrowsArgumentException()
+        public void FromCubicMetersPerSecond_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => VolumeFlow.FromCubicMetersPerSecond(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => VolumeFlow.FromCubicMetersPerSecond(double.NegativeInfinity));
+            var positiveInfinityQuantity = VolumeFlow.FromCubicMetersPerSecond(double.PositiveInfinity);
+            var negativeInfinityQuantity = VolumeFlow.FromCubicMetersPerSecond(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromCubicMetersPerSecond_WithNanValue_ThrowsArgumentException()
+        public void FromCubicMetersPerSecond_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => VolumeFlow.FromCubicMetersPerSecond(double.NaN));
+            var nanQuantity = VolumeFlow.FromCubicMetersPerSecond(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

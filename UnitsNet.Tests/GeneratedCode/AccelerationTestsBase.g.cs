@@ -71,16 +71,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Acceleration(double.PositiveInfinity, AccelerationUnit.MeterPerSecondSquared));
-            Assert.Throws<ArgumentException>(() => new Acceleration(double.NegativeInfinity, AccelerationUnit.MeterPerSecondSquared));
+            var positiveInfinityQuantity = new Acceleration(double.PositiveInfinity, AccelerationUnit.MeterPerSecondSquared);
+            var negativeInfinityQuantity = new Acceleration(double.NegativeInfinity, AccelerationUnit.MeterPerSecondSquared);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Acceleration(double.NaN, AccelerationUnit.MeterPerSecondSquared));
+            var nanQuantity = new Acceleration(double.NaN, AccelerationUnit.MeterPerSecondSquared);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -121,16 +125,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromMetersPerSecondSquared_WithInfinityValue_ThrowsArgumentException()
+        public void FromMetersPerSecondSquared_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Acceleration.FromMetersPerSecondSquared(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Acceleration.FromMetersPerSecondSquared(double.NegativeInfinity));
+            var positiveInfinityQuantity = Acceleration.FromMetersPerSecondSquared(double.PositiveInfinity);
+            var negativeInfinityQuantity = Acceleration.FromMetersPerSecondSquared(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromMetersPerSecondSquared_WithNanValue_ThrowsArgumentException()
+        public void FromMetersPerSecondSquared_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Acceleration.FromMetersPerSecondSquared(double.NaN));
+            var nanQuantity = Acceleration.FromMetersPerSecondSquared(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

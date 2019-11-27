@@ -59,16 +59,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new PressureChangeRate(double.PositiveInfinity, PressureChangeRateUnit.PascalPerSecond));
-            Assert.Throws<ArgumentException>(() => new PressureChangeRate(double.NegativeInfinity, PressureChangeRateUnit.PascalPerSecond));
+            var positiveInfinityQuantity = new PressureChangeRate(double.PositiveInfinity, PressureChangeRateUnit.PascalPerSecond);
+            var negativeInfinityQuantity = new PressureChangeRate(double.NegativeInfinity, PressureChangeRateUnit.PascalPerSecond);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new PressureChangeRate(double.NaN, PressureChangeRateUnit.PascalPerSecond));
+            var nanQuantity = new PressureChangeRate(double.NaN, PressureChangeRateUnit.PascalPerSecond);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -97,16 +101,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromPascalsPerSecond_WithInfinityValue_ThrowsArgumentException()
+        public void FromPascalsPerSecond_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => PressureChangeRate.FromPascalsPerSecond(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => PressureChangeRate.FromPascalsPerSecond(double.NegativeInfinity));
+            var positiveInfinityQuantity = PressureChangeRate.FromPascalsPerSecond(double.PositiveInfinity);
+            var negativeInfinityQuantity = PressureChangeRate.FromPascalsPerSecond(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromPascalsPerSecond_WithNanValue_ThrowsArgumentException()
+        public void FromPascalsPerSecond_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => PressureChangeRate.FromPascalsPerSecond(double.NaN));
+            var nanQuantity = PressureChangeRate.FromPascalsPerSecond(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

@@ -93,16 +93,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Energy(double.PositiveInfinity, EnergyUnit.Joule));
-            Assert.Throws<ArgumentException>(() => new Energy(double.NegativeInfinity, EnergyUnit.Joule));
+            var positiveInfinityQuantity = new Energy(double.PositiveInfinity, EnergyUnit.Joule);
+            var negativeInfinityQuantity = new Energy(double.NegativeInfinity, EnergyUnit.Joule);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Energy(double.NaN, EnergyUnit.Joule));
+            var nanQuantity = new Energy(double.NaN, EnergyUnit.Joule);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -165,16 +169,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromJoules_WithInfinityValue_ThrowsArgumentException()
+        public void FromJoules_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Energy.FromJoules(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Energy.FromJoules(double.NegativeInfinity));
+            var positiveInfinityQuantity = Energy.FromJoules(double.PositiveInfinity);
+            var negativeInfinityQuantity = Energy.FromJoules(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromJoules_WithNanValue_ThrowsArgumentException()
+        public void FromJoules_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Energy.FromJoules(double.NaN));
+            var nanQuantity = Energy.FromJoules(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

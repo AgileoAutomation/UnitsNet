@@ -63,16 +63,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new SpecificEnergy(double.PositiveInfinity, SpecificEnergyUnit.JoulePerKilogram));
-            Assert.Throws<ArgumentException>(() => new SpecificEnergy(double.NegativeInfinity, SpecificEnergyUnit.JoulePerKilogram));
+            var positiveInfinityQuantity = new SpecificEnergy(double.PositiveInfinity, SpecificEnergyUnit.JoulePerKilogram);
+            var negativeInfinityQuantity = new SpecificEnergy(double.NegativeInfinity, SpecificEnergyUnit.JoulePerKilogram);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new SpecificEnergy(double.NaN, SpecificEnergyUnit.JoulePerKilogram));
+            var nanQuantity = new SpecificEnergy(double.NaN, SpecificEnergyUnit.JoulePerKilogram);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -105,16 +109,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromJoulesPerKilogram_WithInfinityValue_ThrowsArgumentException()
+        public void FromJoulesPerKilogram_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => SpecificEnergy.FromJoulesPerKilogram(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => SpecificEnergy.FromJoulesPerKilogram(double.NegativeInfinity));
+            var positiveInfinityQuantity = SpecificEnergy.FromJoulesPerKilogram(double.PositiveInfinity);
+            var negativeInfinityQuantity = SpecificEnergy.FromJoulesPerKilogram(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromJoulesPerKilogram_WithNanValue_ThrowsArgumentException()
+        public void FromJoulesPerKilogram_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => SpecificEnergy.FromJoulesPerKilogram(double.NaN));
+            var nanQuantity = SpecificEnergy.FromJoulesPerKilogram(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

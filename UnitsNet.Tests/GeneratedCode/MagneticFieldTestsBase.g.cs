@@ -53,16 +53,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new MagneticField(double.PositiveInfinity, MagneticFieldUnit.Tesla));
-            Assert.Throws<ArgumentException>(() => new MagneticField(double.NegativeInfinity, MagneticFieldUnit.Tesla));
+            var positiveInfinityQuantity = new MagneticField(double.PositiveInfinity, MagneticFieldUnit.Tesla);
+            var negativeInfinityQuantity = new MagneticField(double.NegativeInfinity, MagneticFieldUnit.Tesla);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new MagneticField(double.NaN, MagneticFieldUnit.Tesla));
+            var nanQuantity = new MagneticField(double.NaN, MagneticFieldUnit.Tesla);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -85,16 +89,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromTeslas_WithInfinityValue_ThrowsArgumentException()
+        public void FromTeslas_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => MagneticField.FromTeslas(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => MagneticField.FromTeslas(double.NegativeInfinity));
+            var positiveInfinityQuantity = MagneticField.FromTeslas(double.PositiveInfinity);
+            var negativeInfinityQuantity = MagneticField.FromTeslas(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromTeslas_WithNanValue_ThrowsArgumentException()
+        public void FromTeslas_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => MagneticField.FromTeslas(double.NaN));
+            var nanQuantity = MagneticField.FromTeslas(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

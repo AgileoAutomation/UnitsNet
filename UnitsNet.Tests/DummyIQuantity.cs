@@ -17,6 +17,8 @@ namespace UnitsNet.Tests
 
         public double Value => throw new NotImplementedException();
 
+        public bool IsValidValue => throw new NotImplementedException();
+
         public double As(Enum unit)
         {
             throw new NotImplementedException();

@@ -47,16 +47,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new VitaminA(double.PositiveInfinity, VitaminAUnit.InternationalUnit));
-            Assert.Throws<ArgumentException>(() => new VitaminA(double.NegativeInfinity, VitaminAUnit.InternationalUnit));
+            var positiveInfinityQuantity = new VitaminA(double.PositiveInfinity, VitaminAUnit.InternationalUnit);
+            var negativeInfinityQuantity = new VitaminA(double.NegativeInfinity, VitaminAUnit.InternationalUnit);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new VitaminA(double.NaN, VitaminAUnit.InternationalUnit));
+            var nanQuantity = new VitaminA(double.NaN, VitaminAUnit.InternationalUnit);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -73,16 +77,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromInternationalUnits_WithInfinityValue_ThrowsArgumentException()
+        public void FromInternationalUnits_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => VitaminA.FromInternationalUnits(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => VitaminA.FromInternationalUnits(double.NegativeInfinity));
+            var positiveInfinityQuantity = VitaminA.FromInternationalUnits(double.PositiveInfinity);
+            var negativeInfinityQuantity = VitaminA.FromInternationalUnits(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromInternationalUnits_WithNanValue_ThrowsArgumentException()
+        public void FromInternationalUnits_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => VitaminA.FromInternationalUnits(double.NaN));
+            var nanQuantity = VitaminA.FromInternationalUnits(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

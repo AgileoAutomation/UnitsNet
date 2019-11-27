@@ -36,7 +36,7 @@ namespace UnitsNet.Tests
 
                 // decimal types
                 Assert.Equal("5 b", new Information(5L, InformationUnit.Bit).ToString());
-                Assert.Equal("5 b", new Information(5m, InformationUnit.Bit).ToString());
+                Assert.Equal("5 b", new Information(5d, InformationUnit.Bit).ToString());
 
                 // logarithmic types
                 Assert.Equal("5 dB", new Level(5L, LevelUnit.Decibel).ToString());

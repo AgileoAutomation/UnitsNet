@@ -167,12 +167,13 @@ namespace UnitsNet
               throw new ArgumentException(""The quantity can not be created with an undefined unit."", nameof(unit));
 ");
 
-            Writer.WL(_quantity.BaseType == "double"
-                ? @"
-            _value = Guard.EnsureValidNumber(value, nameof(value));"
-                : @"
-            _value = value;");
+            // Writer.WL(_quantity.BaseType == "double"
+            //     ? @"
+            // _value = Guard.EnsureValidNumber(value, nameof(value));"
+            //     : @"
+            // _value = value;");
             Writer.WL($@"
+            _value = value;
             _unit = unit;
         }}
 
@@ -192,12 +193,13 @@ namespace UnitsNet
             var firstUnitInfo = unitInfos.FirstOrDefault();
 ");
 
-            Writer.WL(_quantity.BaseType == "double"
-                ? @"
-            _value = Guard.EnsureValidNumber(value, nameof(value));"
-                : @"
-            _value = value;");
+            // Writer.WL(_quantity.BaseType == "double"
+            //     ? @"
+            // _value = Guard.EnsureValidNumber(value, nameof(value));"
+            //     : @"
+            // _value = value;");
             Writer.WL(@"
+            _value = value;
             _unit = firstUnitInfo?.Value ?? throw new ArgumentException(""No units were found for the given UnitSystem."", nameof(unitSystem));
         }
 ");

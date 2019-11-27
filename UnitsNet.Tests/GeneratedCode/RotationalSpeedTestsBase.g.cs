@@ -71,16 +71,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new RotationalSpeed(double.PositiveInfinity, RotationalSpeedUnit.RadianPerSecond));
-            Assert.Throws<ArgumentException>(() => new RotationalSpeed(double.NegativeInfinity, RotationalSpeedUnit.RadianPerSecond));
+            var positiveInfinityQuantity = new RotationalSpeed(double.PositiveInfinity, RotationalSpeedUnit.RadianPerSecond);
+            var negativeInfinityQuantity = new RotationalSpeed(double.NegativeInfinity, RotationalSpeedUnit.RadianPerSecond);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new RotationalSpeed(double.NaN, RotationalSpeedUnit.RadianPerSecond));
+            var nanQuantity = new RotationalSpeed(double.NaN, RotationalSpeedUnit.RadianPerSecond);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -121,16 +125,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromRadiansPerSecond_WithInfinityValue_ThrowsArgumentException()
+        public void FromRadiansPerSecond_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => RotationalSpeed.FromRadiansPerSecond(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => RotationalSpeed.FromRadiansPerSecond(double.NegativeInfinity));
+            var positiveInfinityQuantity = RotationalSpeed.FromRadiansPerSecond(double.PositiveInfinity);
+            var negativeInfinityQuantity = RotationalSpeed.FromRadiansPerSecond(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromRadiansPerSecond_WithNanValue_ThrowsArgumentException()
+        public void FromRadiansPerSecond_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => RotationalSpeed.FromRadiansPerSecond(double.NaN));
+            var nanQuantity = RotationalSpeed.FromRadiansPerSecond(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

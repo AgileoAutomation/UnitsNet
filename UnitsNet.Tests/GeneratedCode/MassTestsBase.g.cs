@@ -95,16 +95,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Mass(double.PositiveInfinity, MassUnit.Kilogram));
-            Assert.Throws<ArgumentException>(() => new Mass(double.NegativeInfinity, MassUnit.Kilogram));
+            var positiveInfinityQuantity = new Mass(double.PositiveInfinity, MassUnit.Kilogram);
+            var negativeInfinityQuantity = new Mass(double.NegativeInfinity, MassUnit.Kilogram);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Mass(double.NaN, MassUnit.Kilogram));
+            var nanQuantity = new Mass(double.NaN, MassUnit.Kilogram);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -169,16 +173,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromKilograms_WithInfinityValue_ThrowsArgumentException()
+        public void FromKilograms_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Mass.FromKilograms(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Mass.FromKilograms(double.NegativeInfinity));
+            var positiveInfinityQuantity = Mass.FromKilograms(double.PositiveInfinity);
+            var negativeInfinityQuantity = Mass.FromKilograms(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromKilograms_WithNanValue_ThrowsArgumentException()
+        public void FromKilograms_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Mass.FromKilograms(double.NaN));
+            var nanQuantity = Mass.FromKilograms(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

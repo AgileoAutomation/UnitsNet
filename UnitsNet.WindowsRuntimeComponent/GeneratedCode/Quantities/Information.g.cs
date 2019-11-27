@@ -39,7 +39,7 @@ namespace UnitsNet
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
-        private readonly decimal _value;
+        private readonly double _value;
 
         /// <summary>
         ///     The unit this quantity was constructed with.
@@ -71,7 +71,7 @@ namespace UnitsNet
         /// <param name="unit">The unit representation to construct this quantity with.</param>
         /// <remarks>Value parameter cannot be named 'value' due to constraint when targeting Windows Runtime Component.</remarks>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        private Information(decimal value, InformationUnit unit)
+        private Information(double value, InformationUnit unit)
         {
             if(unit == InformationUnit.Undefined)
               throw new ArgumentException("The quantity can not be created with an undefined unit.", nameof(unit));
@@ -100,12 +100,12 @@ namespace UnitsNet
         /// <summary>
         /// Represents the largest possible value of Information
         /// </summary>
-        public static Information MaxValue { get; } = new Information(decimal.MaxValue, BaseUnit);
+        public static Information MaxValue { get; } = new Information(double.MaxValue, BaseUnit);
 
         /// <summary>
         /// Represents the smallest possible value of Information
         /// </summary>
-        public static Information MinValue { get; } = new Information(decimal.MinValue, BaseUnit);
+        public static Information MinValue { get; } = new Information(double.MinValue, BaseUnit);
 
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.
@@ -322,7 +322,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromBits(double bits)
         {
-            decimal value = (decimal) bits;
+            double value = (double) bits;
             return new Information(value, InformationUnit.Bit);
         }
         /// <summary>
@@ -332,7 +332,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromBytes(double bytes)
         {
-            decimal value = (decimal) bytes;
+            double value = (double) bytes;
             return new Information(value, InformationUnit.Byte);
         }
         /// <summary>
@@ -342,7 +342,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromExabits(double exabits)
         {
-            decimal value = (decimal) exabits;
+            double value = (double) exabits;
             return new Information(value, InformationUnit.Exabit);
         }
         /// <summary>
@@ -352,7 +352,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromExabytes(double exabytes)
         {
-            decimal value = (decimal) exabytes;
+            double value = (double) exabytes;
             return new Information(value, InformationUnit.Exabyte);
         }
         /// <summary>
@@ -362,7 +362,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromExbibits(double exbibits)
         {
-            decimal value = (decimal) exbibits;
+            double value = (double) exbibits;
             return new Information(value, InformationUnit.Exbibit);
         }
         /// <summary>
@@ -372,7 +372,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromExbibytes(double exbibytes)
         {
-            decimal value = (decimal) exbibytes;
+            double value = (double) exbibytes;
             return new Information(value, InformationUnit.Exbibyte);
         }
         /// <summary>
@@ -382,7 +382,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromGibibits(double gibibits)
         {
-            decimal value = (decimal) gibibits;
+            double value = (double) gibibits;
             return new Information(value, InformationUnit.Gibibit);
         }
         /// <summary>
@@ -392,7 +392,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromGibibytes(double gibibytes)
         {
-            decimal value = (decimal) gibibytes;
+            double value = (double) gibibytes;
             return new Information(value, InformationUnit.Gibibyte);
         }
         /// <summary>
@@ -402,7 +402,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromGigabits(double gigabits)
         {
-            decimal value = (decimal) gigabits;
+            double value = (double) gigabits;
             return new Information(value, InformationUnit.Gigabit);
         }
         /// <summary>
@@ -412,7 +412,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromGigabytes(double gigabytes)
         {
-            decimal value = (decimal) gigabytes;
+            double value = (double) gigabytes;
             return new Information(value, InformationUnit.Gigabyte);
         }
         /// <summary>
@@ -422,7 +422,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromKibibits(double kibibits)
         {
-            decimal value = (decimal) kibibits;
+            double value = (double) kibibits;
             return new Information(value, InformationUnit.Kibibit);
         }
         /// <summary>
@@ -432,7 +432,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromKibibytes(double kibibytes)
         {
-            decimal value = (decimal) kibibytes;
+            double value = (double) kibibytes;
             return new Information(value, InformationUnit.Kibibyte);
         }
         /// <summary>
@@ -442,7 +442,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromKilobits(double kilobits)
         {
-            decimal value = (decimal) kilobits;
+            double value = (double) kilobits;
             return new Information(value, InformationUnit.Kilobit);
         }
         /// <summary>
@@ -452,7 +452,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromKilobytes(double kilobytes)
         {
-            decimal value = (decimal) kilobytes;
+            double value = (double) kilobytes;
             return new Information(value, InformationUnit.Kilobyte);
         }
         /// <summary>
@@ -462,7 +462,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromMebibits(double mebibits)
         {
-            decimal value = (decimal) mebibits;
+            double value = (double) mebibits;
             return new Information(value, InformationUnit.Mebibit);
         }
         /// <summary>
@@ -472,7 +472,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromMebibytes(double mebibytes)
         {
-            decimal value = (decimal) mebibytes;
+            double value = (double) mebibytes;
             return new Information(value, InformationUnit.Mebibyte);
         }
         /// <summary>
@@ -482,7 +482,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromMegabits(double megabits)
         {
-            decimal value = (decimal) megabits;
+            double value = (double) megabits;
             return new Information(value, InformationUnit.Megabit);
         }
         /// <summary>
@@ -492,7 +492,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromMegabytes(double megabytes)
         {
-            decimal value = (decimal) megabytes;
+            double value = (double) megabytes;
             return new Information(value, InformationUnit.Megabyte);
         }
         /// <summary>
@@ -502,7 +502,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromPebibits(double pebibits)
         {
-            decimal value = (decimal) pebibits;
+            double value = (double) pebibits;
             return new Information(value, InformationUnit.Pebibit);
         }
         /// <summary>
@@ -512,7 +512,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromPebibytes(double pebibytes)
         {
-            decimal value = (decimal) pebibytes;
+            double value = (double) pebibytes;
             return new Information(value, InformationUnit.Pebibyte);
         }
         /// <summary>
@@ -522,7 +522,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromPetabits(double petabits)
         {
-            decimal value = (decimal) petabits;
+            double value = (double) petabits;
             return new Information(value, InformationUnit.Petabit);
         }
         /// <summary>
@@ -532,7 +532,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromPetabytes(double petabytes)
         {
-            decimal value = (decimal) petabytes;
+            double value = (double) petabytes;
             return new Information(value, InformationUnit.Petabyte);
         }
         /// <summary>
@@ -542,7 +542,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromTebibits(double tebibits)
         {
-            decimal value = (decimal) tebibits;
+            double value = (double) tebibits;
             return new Information(value, InformationUnit.Tebibit);
         }
         /// <summary>
@@ -552,7 +552,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromTebibytes(double tebibytes)
         {
-            decimal value = (decimal) tebibytes;
+            double value = (double) tebibytes;
             return new Information(value, InformationUnit.Tebibyte);
         }
         /// <summary>
@@ -562,7 +562,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromTerabits(double terabits)
         {
-            decimal value = (decimal) terabits;
+            double value = (double) terabits;
             return new Information(value, InformationUnit.Terabit);
         }
         /// <summary>
@@ -572,7 +572,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static Information FromTerabytes(double terabytes)
         {
-            decimal value = (decimal) terabytes;
+            double value = (double) terabytes;
             return new Information(value, InformationUnit.Terabyte);
         }
 
@@ -586,7 +586,7 @@ namespace UnitsNet
         [return: System.Runtime.InteropServices.WindowsRuntime.ReturnValueName("returnValue")]
         public static Information From(double value, InformationUnit fromUnit)
         {
-            return new Information((decimal)value, fromUnit);
+            return new Information((double)value, fromUnit);
         }
 
         #endregion
@@ -862,42 +862,42 @@ namespace UnitsNet
         ///     This is typically the first step in converting from one unit to another.
         /// </summary>
         /// <returns>The value in the base unit representation.</returns>
-        private decimal AsBaseUnit()
+        private double AsBaseUnit()
         {
             switch(Unit)
             {
                 case InformationUnit.Bit: return _value;
-                case InformationUnit.Byte: return _value*8m;
-                case InformationUnit.Exabit: return (_value) * 1e18m;
-                case InformationUnit.Exabyte: return (_value*8m) * 1e18m;
-                case InformationUnit.Exbibit: return (_value) * (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Exbibyte: return (_value*8m) * (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Gibibit: return (_value) * (1024m * 1024 * 1024);
-                case InformationUnit.Gibibyte: return (_value*8m) * (1024m * 1024 * 1024);
-                case InformationUnit.Gigabit: return (_value) * 1e9m;
-                case InformationUnit.Gigabyte: return (_value*8m) * 1e9m;
-                case InformationUnit.Kibibit: return (_value) * 1024m;
-                case InformationUnit.Kibibyte: return (_value*8m) * 1024m;
-                case InformationUnit.Kilobit: return (_value) * 1e3m;
-                case InformationUnit.Kilobyte: return (_value*8m) * 1e3m;
-                case InformationUnit.Mebibit: return (_value) * (1024m * 1024);
-                case InformationUnit.Mebibyte: return (_value*8m) * (1024m * 1024);
-                case InformationUnit.Megabit: return (_value) * 1e6m;
-                case InformationUnit.Megabyte: return (_value*8m) * 1e6m;
-                case InformationUnit.Pebibit: return (_value) * (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Pebibyte: return (_value*8m) * (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Petabit: return (_value) * 1e15m;
-                case InformationUnit.Petabyte: return (_value*8m) * 1e15m;
-                case InformationUnit.Tebibit: return (_value) * (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Tebibyte: return (_value*8m) * (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Terabit: return (_value) * 1e12m;
-                case InformationUnit.Terabyte: return (_value*8m) * 1e12m;
+                case InformationUnit.Byte: return _value*8;
+                case InformationUnit.Exabit: return (_value) * 1e18d;
+                case InformationUnit.Exabyte: return (_value*8) * 1e18d;
+                case InformationUnit.Exbibit: return (_value) * (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Exbibyte: return (_value*8) * (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Gibibit: return (_value) * (1024d * 1024 * 1024);
+                case InformationUnit.Gibibyte: return (_value*8) * (1024d * 1024 * 1024);
+                case InformationUnit.Gigabit: return (_value) * 1e9d;
+                case InformationUnit.Gigabyte: return (_value*8) * 1e9d;
+                case InformationUnit.Kibibit: return (_value) * 1024d;
+                case InformationUnit.Kibibyte: return (_value*8) * 1024d;
+                case InformationUnit.Kilobit: return (_value) * 1e3d;
+                case InformationUnit.Kilobyte: return (_value*8) * 1e3d;
+                case InformationUnit.Mebibit: return (_value) * (1024d * 1024);
+                case InformationUnit.Mebibyte: return (_value*8) * (1024d * 1024);
+                case InformationUnit.Megabit: return (_value) * 1e6d;
+                case InformationUnit.Megabyte: return (_value*8) * 1e6d;
+                case InformationUnit.Pebibit: return (_value) * (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Pebibyte: return (_value*8) * (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Petabit: return (_value) * 1e15d;
+                case InformationUnit.Petabyte: return (_value*8) * 1e15d;
+                case InformationUnit.Tebibit: return (_value) * (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Tebibyte: return (_value*8) * (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Terabit: return (_value) * 1e12d;
+                case InformationUnit.Terabyte: return (_value*8) * 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
         }
 
-        private decimal AsBaseNumericType(InformationUnit unit)
+        private double AsBaseNumericType(InformationUnit unit)
         {
             if(Unit == unit)
                 return _value;
@@ -907,31 +907,31 @@ namespace UnitsNet
             switch(unit)
             {
                 case InformationUnit.Bit: return baseUnitValue;
-                case InformationUnit.Byte: return baseUnitValue/8m;
-                case InformationUnit.Exabit: return (baseUnitValue) / 1e18m;
-                case InformationUnit.Exabyte: return (baseUnitValue/8m) / 1e18m;
-                case InformationUnit.Exbibit: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Exbibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Gibibit: return (baseUnitValue) / (1024m * 1024 * 1024);
-                case InformationUnit.Gibibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024);
-                case InformationUnit.Gigabit: return (baseUnitValue) / 1e9m;
-                case InformationUnit.Gigabyte: return (baseUnitValue/8m) / 1e9m;
-                case InformationUnit.Kibibit: return (baseUnitValue) / 1024m;
-                case InformationUnit.Kibibyte: return (baseUnitValue/8m) / 1024m;
-                case InformationUnit.Kilobit: return (baseUnitValue) / 1e3m;
-                case InformationUnit.Kilobyte: return (baseUnitValue/8m) / 1e3m;
-                case InformationUnit.Mebibit: return (baseUnitValue) / (1024m * 1024);
-                case InformationUnit.Mebibyte: return (baseUnitValue/8m) / (1024m * 1024);
-                case InformationUnit.Megabit: return (baseUnitValue) / 1e6m;
-                case InformationUnit.Megabyte: return (baseUnitValue/8m) / 1e6m;
-                case InformationUnit.Pebibit: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Pebibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Petabit: return (baseUnitValue) / 1e15m;
-                case InformationUnit.Petabyte: return (baseUnitValue/8m) / 1e15m;
-                case InformationUnit.Tebibit: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Tebibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Terabit: return (baseUnitValue) / 1e12m;
-                case InformationUnit.Terabyte: return (baseUnitValue/8m) / 1e12m;
+                case InformationUnit.Byte: return baseUnitValue/8;
+                case InformationUnit.Exabit: return (baseUnitValue) / 1e18d;
+                case InformationUnit.Exabyte: return (baseUnitValue/8) / 1e18d;
+                case InformationUnit.Exbibit: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Exbibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Gibibit: return (baseUnitValue) / (1024d * 1024 * 1024);
+                case InformationUnit.Gibibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024);
+                case InformationUnit.Gigabit: return (baseUnitValue) / 1e9d;
+                case InformationUnit.Gigabyte: return (baseUnitValue/8) / 1e9d;
+                case InformationUnit.Kibibit: return (baseUnitValue) / 1024d;
+                case InformationUnit.Kibibyte: return (baseUnitValue/8) / 1024d;
+                case InformationUnit.Kilobit: return (baseUnitValue) / 1e3d;
+                case InformationUnit.Kilobyte: return (baseUnitValue/8) / 1e3d;
+                case InformationUnit.Mebibit: return (baseUnitValue) / (1024d * 1024);
+                case InformationUnit.Mebibyte: return (baseUnitValue/8) / (1024d * 1024);
+                case InformationUnit.Megabit: return (baseUnitValue) / 1e6d;
+                case InformationUnit.Megabyte: return (baseUnitValue/8) / 1e6d;
+                case InformationUnit.Pebibit: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Pebibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Petabit: return (baseUnitValue) / 1e15d;
+                case InformationUnit.Petabyte: return (baseUnitValue/8) / 1e15d;
+                case InformationUnit.Tebibit: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Tebibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Terabit: return (baseUnitValue) / 1e12d;
+                case InformationUnit.Terabyte: return (baseUnitValue/8) / 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

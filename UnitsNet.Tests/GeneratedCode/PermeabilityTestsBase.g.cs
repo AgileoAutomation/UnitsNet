@@ -47,16 +47,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Permeability(double.PositiveInfinity, PermeabilityUnit.HenryPerMeter));
-            Assert.Throws<ArgumentException>(() => new Permeability(double.NegativeInfinity, PermeabilityUnit.HenryPerMeter));
+            var positiveInfinityQuantity = new Permeability(double.PositiveInfinity, PermeabilityUnit.HenryPerMeter);
+            var negativeInfinityQuantity = new Permeability(double.NegativeInfinity, PermeabilityUnit.HenryPerMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Permeability(double.NaN, PermeabilityUnit.HenryPerMeter));
+            var nanQuantity = new Permeability(double.NaN, PermeabilityUnit.HenryPerMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -73,16 +77,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromHenriesPerMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromHenriesPerMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Permeability.FromHenriesPerMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Permeability.FromHenriesPerMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = Permeability.FromHenriesPerMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = Permeability.FromHenriesPerMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromHenriesPerMeter_WithNanValue_ThrowsArgumentException()
+        public void FromHenriesPerMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Permeability.FromHenriesPerMeter(double.NaN));
+            var nanQuantity = Permeability.FromHenriesPerMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

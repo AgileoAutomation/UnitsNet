@@ -129,16 +129,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Pressure(double.PositiveInfinity, PressureUnit.Pascal));
-            Assert.Throws<ArgumentException>(() => new Pressure(double.NegativeInfinity, PressureUnit.Pascal));
+            var positiveInfinityQuantity = new Pressure(double.PositiveInfinity, PressureUnit.Pascal);
+            var negativeInfinityQuantity = new Pressure(double.NegativeInfinity, PressureUnit.Pascal);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Pressure(double.NaN, PressureUnit.Pascal));
+            var nanQuantity = new Pressure(double.NaN, PressureUnit.Pascal);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -237,16 +241,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromPascals_WithInfinityValue_ThrowsArgumentException()
+        public void FromPascals_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Pressure.FromPascals(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Pressure.FromPascals(double.NegativeInfinity));
+            var positiveInfinityQuantity = Pressure.FromPascals(double.PositiveInfinity);
+            var negativeInfinityQuantity = Pressure.FromPascals(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromPascals_WithNanValue_ThrowsArgumentException()
+        public void FromPascals_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Pressure.FromPascals(double.NaN));
+            var nanQuantity = Pressure.FromPascals(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
