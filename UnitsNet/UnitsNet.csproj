@@ -1,20 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <!-- NuGet properties -->
   <PropertyGroup>
-    <PackageId>UnitsNet</PackageId>
+    <PackageId>UnitsNet.Agileo</PackageId>
     <Version>4.40.0</Version>
     <Authors>Andreas Gullberg Larsen</Authors>
     <Title>Units.NET</Title>
     <Description>Get all the common units of measurement and the conversions between them. It is light-weight and thoroughly tested.</Description>
     <Copyright>Copyright 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com).</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <RepositoryUrl>https://github.com/angularsen/UnitsNet</RepositoryUrl>
+    <RepositoryUrl>https://github.com/GuillaumeLebeau/UnitsNet</RepositoryUrl>
     <PackageIcon>logo-128.png</PackageIcon>
-    <PackageIconUrl>https://raw.githubusercontent.com/angularsen/UnitsNet/ce85185429be345d77eb2ce09c99d59cc9ab8aed/Docs/Images/logo-32.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/angularsen/UnitsNet</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/GuillaumeLebeau/UnitsNet/master/Docs/Images/logo-128.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/GuillaumeLebeau/UnitsNet</PackageProjectUrl>
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>unit units quantity quantities measurement si metric imperial abbreviation abbreviations convert conversion parse immutable</PackageTags>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <!-- Assembly and msbuild properties -->
