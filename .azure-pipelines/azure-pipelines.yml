@@ -1,0 +1,196 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+      - master
+      - feature/*
+      - release/*
+  paths:
+    exclude:
+      - 'docs/*'
+      - 'README.md'
+
+pr:
+  branches:
+    include:
+      - master
+
+pool:
+  name: 'Agileo'
+
+variables:
+  dotnetSdkVersion: '2.2.x'
+  nugetToolVersion: '5.x'
+  includeWindowsRuntimeComponent: false
+  buildConfiguration: 'Release'
+
+steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
+    inputs:
+      packageType: 'sdk'
+      version: '$(dotnetSdkVersion)'
+
+  - task: NuGetToolInstaller@1
+    displayName: 'Use NuGet tool $(nugetToolVersion)'
+    inputs:
+      versionSpec: '$(nugetToolVersion)'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Generate code'
+    inputs:
+      command: 'run'
+      projects: 'CodeGen/CodeGen.csproj'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build UnitsNet solution'
+    inputs:
+      command: 'build'
+      projects: 'UnitsNet.sln'
+      arguments: '--configuration $(buildConfiguration)'
+
+  - task: MSBuild@1
+    displayName: 'Restore WindowsRuntimeComponent dependencies'
+    inputs:
+      solution: 'UnitsNet.WindowsRuntimeComponent.sln'
+      configuration: '$(buildConfiguration)'
+      msbuildArguments: '-t:restore'
+    condition: and(succeeded(), eq(variables['includeWindowsRuntimeComponent'], 'true'))
+
+  - task: MSBuild@1
+    displayName: 'Build WindowsRuntimeComponent solution'
+    inputs:
+      solution: 'UnitsNet.WindowsRuntimeComponent.sln'
+      configuration: '$(buildConfiguration)'
+    condition: and(succeeded(), eq(variables['includeWindowsRuntimeComponent'], 'true'))
+
+  - script: |
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build --logger trx $(Build.SourcesDirectory)/UnitsNet.Tests/UnitsNet.Tests.csproj"
+    displayName: 'UnitsNet.Tests code coverage'
+
+  - script: |
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build --logger trx $(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet.Tests/UnitsNet.Serialization.JsonNet.Tests.csproj"
+    displayName: 'UnitsNet.Serialization.JsonNet.Tests code coverage'
+
+  - script: |
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.CompatibilityTests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build --logger trx $(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet.CompatibilityTests/UnitsNet.Serialization.JsonNet.CompatibilityTests.csproj"
+    displayName: 'UnitsNet.Serialization.JsonNet.CompatibilityTests code coverage'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish test results'
+    inputs:
+      testRunner: VSTest
+      testResultsFiles: '**/*.trx'
+
+  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+    displayName: 'Generate code coverage report'
+    inputs:
+      reports: '$(Build.SourcesDirectory)/Artifacts/Coverage/*.coverage.xml'
+      targetdir: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report'
+      reporttypes: 'HtmlInline_AzurePipelines;Cobertura;Badges'
+
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Publish code coverage'
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report/Cobertura.xml'
+      reportDirectory: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Generate UnitsNet package'
+    inputs:
+      command: 'pack'
+      packagesToPack: '$(Build.SourcesDirectory)/UnitsNet/UnitsNet.csproj'
+      configuration: '$(buildConfiguration)'
+      packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
+      nobuild: true
+      versioningScheme: 'off'
+      verbosityPack: 'normal'
+    # Previous steps success and CI build due to a tag or Pull Request to master
+    condition: |
+      and
+      (
+        succeeded(),
+        or
+        (
+          and
+          (
+            in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+            startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          ),
+          and
+          (
+            eq(variables['Build.Reason'], 'PullRequest'),
+            eq(variables['System.PullRequest.TargetBranch'], 'master')
+          )
+        )
+      )
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Generate UnitsNet.Serialization.JsonNet package'
+    inputs:
+      command: 'pack'
+      packagesToPack: '$(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet/UnitsNet.Serialization.JsonNet.csproj'
+      configuration: '$(buildConfiguration)'
+      packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
+      nobuild: true
+      versioningScheme: 'off'
+      verbosityPack: 'normal'
+    # Previous steps success and CI build due to a tag or Pull Request to master
+    condition: |
+      and
+      (
+        succeeded(),
+        or
+        (
+          and
+          (
+            in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+            startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          ),
+          and
+          (
+            eq(variables['Build.Reason'], 'PullRequest'),
+            eq(variables['System.PullRequest.TargetBranch'], 'master')
+          )
+        )
+      )
+
+  - task: NuGetAuthenticate@0
+    displayName: 'NuGet Authenticate'
+    condition: |
+      and
+      (
+        succeeded(),
+        in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+        startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+      )
+
+
+  - task: NuGetCommand@2
+    displayName: 'NuGet push'
+    inputs:
+      command: 'push'
+      packagesToPush: '$(Build.SourcesDirectory)/Artifacts/NuGet/*.nupkg;!$(Build.SourcesDirectory)/Artifacts/NuGet/*.symbols.nupkg'
+      nuGetFeedType: 'internal'
+      publishVstsFeed: '7d4d6dca-b70a-4118-977c-8e3a5910b0ad/05eb264a-a7ce-48ff-b0ce-bb179d345dfc'
+      allowPackageConflicts: true
+    condition: |
+      and
+      (
+        succeeded(),
+        in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+        startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+      )
+
+  - task: WhiteSource Bolt@19
+    displayName: 'Run WhiteSource Bolt'
+
+  - publish: $(Build.SourcesDirectory)/Artifacts
+    displayName: 'Publish Artifacts'
+    artifact: 'drop'
+    condition: succeeded()
