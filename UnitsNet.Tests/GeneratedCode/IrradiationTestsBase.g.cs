@@ -59,16 +59,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Irradiation(double.PositiveInfinity, IrradiationUnit.JoulePerSquareMeter));
-            Assert.Throws<ArgumentException>(() => new Irradiation(double.NegativeInfinity, IrradiationUnit.JoulePerSquareMeter));
+            var positiveInfinityQuantity = new Irradiation(double.PositiveInfinity, IrradiationUnit.JoulePerSquareMeter);
+            var negativeInfinityQuantity = new Irradiation(double.NegativeInfinity, IrradiationUnit.JoulePerSquareMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Irradiation(double.NaN, IrradiationUnit.JoulePerSquareMeter));
+            var nanQuantity = new Irradiation(double.NaN, IrradiationUnit.JoulePerSquareMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -97,16 +101,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromJoulesPerSquareMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromJoulesPerSquareMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Irradiation.FromJoulesPerSquareMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Irradiation.FromJoulesPerSquareMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = Irradiation.FromJoulesPerSquareMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = Irradiation.FromJoulesPerSquareMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromJoulesPerSquareMeter_WithNanValue_ThrowsArgumentException()
+        public void FromJoulesPerSquareMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Irradiation.FromJoulesPerSquareMeter(double.NaN));
+            var nanQuantity = Irradiation.FromJoulesPerSquareMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

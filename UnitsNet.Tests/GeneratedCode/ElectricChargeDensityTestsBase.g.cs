@@ -47,16 +47,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricChargeDensity(double.PositiveInfinity, ElectricChargeDensityUnit.CoulombPerCubicMeter));
-            Assert.Throws<ArgumentException>(() => new ElectricChargeDensity(double.NegativeInfinity, ElectricChargeDensityUnit.CoulombPerCubicMeter));
+            var positiveInfinityQuantity = new ElectricChargeDensity(double.PositiveInfinity, ElectricChargeDensityUnit.CoulombPerCubicMeter);
+            var negativeInfinityQuantity = new ElectricChargeDensity(double.NegativeInfinity, ElectricChargeDensityUnit.CoulombPerCubicMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricChargeDensity(double.NaN, ElectricChargeDensityUnit.CoulombPerCubicMeter));
+            var nanQuantity = new ElectricChargeDensity(double.NaN, ElectricChargeDensityUnit.CoulombPerCubicMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -73,16 +77,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromCoulombsPerCubicMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromCoulombsPerCubicMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricChargeDensity.FromCoulombsPerCubicMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ElectricChargeDensity.FromCoulombsPerCubicMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = ElectricChargeDensity.FromCoulombsPerCubicMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = ElectricChargeDensity.FromCoulombsPerCubicMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromCoulombsPerCubicMeter_WithNanValue_ThrowsArgumentException()
+        public void FromCoulombsPerCubicMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricChargeDensity.FromCoulombsPerCubicMeter(double.NaN));
+            var nanQuantity = ElectricChargeDensity.FromCoulombsPerCubicMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

@@ -65,16 +65,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Duration(double.PositiveInfinity, DurationUnit.Second));
-            Assert.Throws<ArgumentException>(() => new Duration(double.NegativeInfinity, DurationUnit.Second));
+            var positiveInfinityQuantity = new Duration(double.PositiveInfinity, DurationUnit.Second);
+            var negativeInfinityQuantity = new Duration(double.NegativeInfinity, DurationUnit.Second);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Duration(double.NaN, DurationUnit.Second));
+            var nanQuantity = new Duration(double.NaN, DurationUnit.Second);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -109,16 +113,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromSeconds_WithInfinityValue_ThrowsArgumentException()
+        public void FromSeconds_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Duration.FromSeconds(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Duration.FromSeconds(double.NegativeInfinity));
+            var positiveInfinityQuantity = Duration.FromSeconds(double.PositiveInfinity);
+            var negativeInfinityQuantity = Duration.FromSeconds(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromSeconds_WithNanValue_ThrowsArgumentException()
+        public void FromSeconds_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Duration.FromSeconds(double.NaN));
+            var nanQuantity = Duration.FromSeconds(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

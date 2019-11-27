@@ -109,16 +109,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Length(double.PositiveInfinity, LengthUnit.Meter));
-            Assert.Throws<ArgumentException>(() => new Length(double.NegativeInfinity, LengthUnit.Meter));
+            var positiveInfinityQuantity = new Length(double.PositiveInfinity, LengthUnit.Meter);
+            var negativeInfinityQuantity = new Length(double.NegativeInfinity, LengthUnit.Meter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Length(double.NaN, LengthUnit.Meter));
+            var nanQuantity = new Length(double.NaN, LengthUnit.Meter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -197,16 +201,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromMeters_WithInfinityValue_ThrowsArgumentException()
+        public void FromMeters_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Length.FromMeters(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Length.FromMeters(double.NegativeInfinity));
+            var positiveInfinityQuantity = Length.FromMeters(double.PositiveInfinity);
+            var negativeInfinityQuantity = Length.FromMeters(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromMeters_WithNanValue_ThrowsArgumentException()
+        public void FromMeters_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Length.FromMeters(double.NaN));
+            var nanQuantity = Length.FromMeters(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

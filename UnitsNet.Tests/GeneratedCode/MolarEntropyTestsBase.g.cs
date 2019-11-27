@@ -51,16 +51,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new MolarEntropy(double.PositiveInfinity, MolarEntropyUnit.JoulePerMoleKelvin));
-            Assert.Throws<ArgumentException>(() => new MolarEntropy(double.NegativeInfinity, MolarEntropyUnit.JoulePerMoleKelvin));
+            var positiveInfinityQuantity = new MolarEntropy(double.PositiveInfinity, MolarEntropyUnit.JoulePerMoleKelvin);
+            var negativeInfinityQuantity = new MolarEntropy(double.NegativeInfinity, MolarEntropyUnit.JoulePerMoleKelvin);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new MolarEntropy(double.NaN, MolarEntropyUnit.JoulePerMoleKelvin));
+            var nanQuantity = new MolarEntropy(double.NaN, MolarEntropyUnit.JoulePerMoleKelvin);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -81,16 +85,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromJoulesPerMoleKelvin_WithInfinityValue_ThrowsArgumentException()
+        public void FromJoulesPerMoleKelvin_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => MolarEntropy.FromJoulesPerMoleKelvin(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => MolarEntropy.FromJoulesPerMoleKelvin(double.NegativeInfinity));
+            var positiveInfinityQuantity = MolarEntropy.FromJoulesPerMoleKelvin(double.PositiveInfinity);
+            var negativeInfinityQuantity = MolarEntropy.FromJoulesPerMoleKelvin(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromJoulesPerMoleKelvin_WithNanValue_ThrowsArgumentException()
+        public void FromJoulesPerMoleKelvin_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => MolarEntropy.FromJoulesPerMoleKelvin(double.NaN));
+            var nanQuantity = MolarEntropy.FromJoulesPerMoleKelvin(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

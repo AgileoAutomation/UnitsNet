@@ -49,16 +49,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new PowerRatio(double.PositiveInfinity, PowerRatioUnit.DecibelWatt));
-            Assert.Throws<ArgumentException>(() => new PowerRatio(double.NegativeInfinity, PowerRatioUnit.DecibelWatt));
+            var positiveInfinityQuantity = new PowerRatio(double.PositiveInfinity, PowerRatioUnit.DecibelWatt);
+            var negativeInfinityQuantity = new PowerRatio(double.NegativeInfinity, PowerRatioUnit.DecibelWatt);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new PowerRatio(double.NaN, PowerRatioUnit.DecibelWatt));
+            var nanQuantity = new PowerRatio(double.NaN, PowerRatioUnit.DecibelWatt);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -77,16 +81,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromDecibelWatts_WithInfinityValue_ThrowsArgumentException()
+        public void FromDecibelWatts_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => PowerRatio.FromDecibelWatts(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => PowerRatio.FromDecibelWatts(double.NegativeInfinity));
+            var positiveInfinityQuantity = PowerRatio.FromDecibelWatts(double.PositiveInfinity);
+            var negativeInfinityQuantity = PowerRatio.FromDecibelWatts(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromDecibelWatts_WithNanValue_ThrowsArgumentException()
+        public void FromDecibelWatts_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => PowerRatio.FromDecibelWatts(double.NaN));
+            var nanQuantity = PowerRatio.FromDecibelWatts(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

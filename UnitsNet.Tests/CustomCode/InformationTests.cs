@@ -70,13 +70,13 @@ namespace UnitsNet.Tests.CustomCode
         [Fact]
         public void MaxValueIsCorrectForUnitWithBaseTypeDecimal()
         {
-            Assert.Equal((double) decimal.MaxValue, Information.MaxValue.Bits);
+            Assert.Equal(double.MaxValue, Information.MaxValue.Bits);
         }
 
         [Fact]
         public void MinValueIsCorrectForUnitWithBaseTypeDecimal()
         {
-            Assert.Equal((double) decimal.MinValue, Information.MinValue.Bits);
+            Assert.Equal(double.MinValue, Information.MinValue.Bits);
         }
     }
 }

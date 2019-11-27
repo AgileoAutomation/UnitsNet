@@ -93,7 +93,24 @@ namespace UnitsNet.Tests
         [Fact]
         public void Ctor_WithUndefinedUnit_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => new BitRate((decimal)0.0, BitRateUnit.Undefined));
+            Assert.Throws<ArgumentException>(() => new BitRate((double)0.0, BitRateUnit.Undefined));
+        }
+
+        [Fact]
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
+        {
+            var positiveInfinityQuantity = new BitRate(double.PositiveInfinity, BitRateUnit.BitPerSecond);
+            var negativeInfinityQuantity = new BitRate(double.NegativeInfinity, BitRateUnit.BitPerSecond);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
+        }
+
+        [Fact]
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
+        {
+            var nanQuantity = new BitRate(double.NaN, BitRateUnit.BitPerSecond);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -157,6 +174,23 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(1, BitRate.From(1, BitRateUnit.TebibytePerSecond).TebibytesPerSecond, TebibytesPerSecondTolerance);
             AssertEx.EqualTolerance(1, BitRate.From(1, BitRateUnit.TerabitPerSecond).TerabitsPerSecond, TerabitsPerSecondTolerance);
             AssertEx.EqualTolerance(1, BitRate.From(1, BitRateUnit.TerabytePerSecond).TerabytesPerSecond, TerabytesPerSecondTolerance);
+        }
+
+        [Fact]
+        public void FromBitsPerSecond_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
+        {
+            var positiveInfinityQuantity = BitRate.FromBitsPerSecond(double.PositiveInfinity);
+            var negativeInfinityQuantity = BitRate.FromBitsPerSecond(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
+        }
+
+        [Fact]
+        public void FromBitsPerSecond_WithNanValue_CreateQuantityAndAffectNaNValue()
+        {
+            var nanQuantity = BitRate.FromBitsPerSecond(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

@@ -51,16 +51,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new LinearDensity(double.PositiveInfinity, LinearDensityUnit.KilogramPerMeter));
-            Assert.Throws<ArgumentException>(() => new LinearDensity(double.NegativeInfinity, LinearDensityUnit.KilogramPerMeter));
+            var positiveInfinityQuantity = new LinearDensity(double.PositiveInfinity, LinearDensityUnit.KilogramPerMeter);
+            var negativeInfinityQuantity = new LinearDensity(double.NegativeInfinity, LinearDensityUnit.KilogramPerMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new LinearDensity(double.NaN, LinearDensityUnit.KilogramPerMeter));
+            var nanQuantity = new LinearDensity(double.NaN, LinearDensityUnit.KilogramPerMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -81,16 +85,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromKilogramsPerMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromKilogramsPerMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => LinearDensity.FromKilogramsPerMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => LinearDensity.FromKilogramsPerMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = LinearDensity.FromKilogramsPerMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = LinearDensity.FromKilogramsPerMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromKilogramsPerMeter_WithNanValue_ThrowsArgumentException()
+        public void FromKilogramsPerMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => LinearDensity.FromKilogramsPerMeter(double.NaN));
+            var nanQuantity = LinearDensity.FromKilogramsPerMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

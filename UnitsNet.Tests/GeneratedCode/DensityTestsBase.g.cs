@@ -125,16 +125,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Density(double.PositiveInfinity, DensityUnit.KilogramPerCubicMeter));
-            Assert.Throws<ArgumentException>(() => new Density(double.NegativeInfinity, DensityUnit.KilogramPerCubicMeter));
+            var positiveInfinityQuantity = new Density(double.PositiveInfinity, DensityUnit.KilogramPerCubicMeter);
+            var negativeInfinityQuantity = new Density(double.NegativeInfinity, DensityUnit.KilogramPerCubicMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Density(double.NaN, DensityUnit.KilogramPerCubicMeter));
+            var nanQuantity = new Density(double.NaN, DensityUnit.KilogramPerCubicMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -229,16 +233,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromKilogramsPerCubicMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromKilogramsPerCubicMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Density.FromKilogramsPerCubicMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Density.FromKilogramsPerCubicMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = Density.FromKilogramsPerCubicMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = Density.FromKilogramsPerCubicMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromKilogramsPerCubicMeter_WithNanValue_ThrowsArgumentException()
+        public void FromKilogramsPerCubicMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Density.FromKilogramsPerCubicMeter(double.NaN));
+            var nanQuantity = Density.FromKilogramsPerCubicMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

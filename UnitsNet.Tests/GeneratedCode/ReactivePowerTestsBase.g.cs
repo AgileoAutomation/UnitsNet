@@ -53,16 +53,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ReactivePower(double.PositiveInfinity, ReactivePowerUnit.VoltampereReactive));
-            Assert.Throws<ArgumentException>(() => new ReactivePower(double.NegativeInfinity, ReactivePowerUnit.VoltampereReactive));
+            var positiveInfinityQuantity = new ReactivePower(double.PositiveInfinity, ReactivePowerUnit.VoltampereReactive);
+            var negativeInfinityQuantity = new ReactivePower(double.NegativeInfinity, ReactivePowerUnit.VoltampereReactive);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ReactivePower(double.NaN, ReactivePowerUnit.VoltampereReactive));
+            var nanQuantity = new ReactivePower(double.NaN, ReactivePowerUnit.VoltampereReactive);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -85,16 +89,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromVoltamperesReactive_WithInfinityValue_ThrowsArgumentException()
+        public void FromVoltamperesReactive_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ReactivePower.FromVoltamperesReactive(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ReactivePower.FromVoltamperesReactive(double.NegativeInfinity));
+            var positiveInfinityQuantity = ReactivePower.FromVoltamperesReactive(double.PositiveInfinity);
+            var negativeInfinityQuantity = ReactivePower.FromVoltamperesReactive(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromVoltamperesReactive_WithNanValue_ThrowsArgumentException()
+        public void FromVoltamperesReactive_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ReactivePower.FromVoltamperesReactive(double.NaN));
+            var nanQuantity = ReactivePower.FromVoltamperesReactive(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

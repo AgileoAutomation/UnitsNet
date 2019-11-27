@@ -47,16 +47,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new SolidAngle(double.PositiveInfinity, SolidAngleUnit.Steradian));
-            Assert.Throws<ArgumentException>(() => new SolidAngle(double.NegativeInfinity, SolidAngleUnit.Steradian));
+            var positiveInfinityQuantity = new SolidAngle(double.PositiveInfinity, SolidAngleUnit.Steradian);
+            var negativeInfinityQuantity = new SolidAngle(double.NegativeInfinity, SolidAngleUnit.Steradian);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new SolidAngle(double.NaN, SolidAngleUnit.Steradian));
+            var nanQuantity = new SolidAngle(double.NaN, SolidAngleUnit.Steradian);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -73,16 +77,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromSteradians_WithInfinityValue_ThrowsArgumentException()
+        public void FromSteradians_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => SolidAngle.FromSteradians(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => SolidAngle.FromSteradians(double.NegativeInfinity));
+            var positiveInfinityQuantity = SolidAngle.FromSteradians(double.PositiveInfinity);
+            var negativeInfinityQuantity = SolidAngle.FromSteradians(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromSteradians_WithNanValue_ThrowsArgumentException()
+        public void FromSteradians_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => SolidAngle.FromSteradians(double.NaN));
+            var nanQuantity = SolidAngle.FromSteradians(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

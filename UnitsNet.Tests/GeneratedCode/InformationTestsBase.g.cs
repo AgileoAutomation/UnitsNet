@@ -93,7 +93,24 @@ namespace UnitsNet.Tests
         [Fact]
         public void Ctor_WithUndefinedUnit_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => new Information((decimal)0.0, InformationUnit.Undefined));
+            Assert.Throws<ArgumentException>(() => new Information((double)0.0, InformationUnit.Undefined));
+        }
+
+        [Fact]
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
+        {
+            var positiveInfinityQuantity = new Information(double.PositiveInfinity, InformationUnit.Bit);
+            var negativeInfinityQuantity = new Information(double.NegativeInfinity, InformationUnit.Bit);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
+        }
+
+        [Fact]
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
+        {
+            var nanQuantity = new Information(double.NaN, InformationUnit.Bit);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -157,6 +174,23 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(1, Information.From(1, InformationUnit.Tebibyte).Tebibytes, TebibytesTolerance);
             AssertEx.EqualTolerance(1, Information.From(1, InformationUnit.Terabit).Terabits, TerabitsTolerance);
             AssertEx.EqualTolerance(1, Information.From(1, InformationUnit.Terabyte).Terabytes, TerabytesTolerance);
+        }
+
+        [Fact]
+        public void FromBits_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
+        {
+            var positiveInfinityQuantity = Information.FromBits(double.PositiveInfinity);
+            var negativeInfinityQuantity = Information.FromBits(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
+        }
+
+        [Fact]
+        public void FromBits_WithNanValue_CreateQuantityAndAffectNaNValue()
+        {
+            var nanQuantity = Information.FromBits(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

@@ -73,16 +73,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Angle(double.PositiveInfinity, AngleUnit.Degree));
-            Assert.Throws<ArgumentException>(() => new Angle(double.NegativeInfinity, AngleUnit.Degree));
+            var positiveInfinityQuantity = new Angle(double.PositiveInfinity, AngleUnit.Degree);
+            var negativeInfinityQuantity = new Angle(double.NegativeInfinity, AngleUnit.Degree);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Angle(double.NaN, AngleUnit.Degree));
+            var nanQuantity = new Angle(double.NaN, AngleUnit.Degree);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -125,16 +129,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromDegrees_WithInfinityValue_ThrowsArgumentException()
+        public void FromDegrees_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Angle.FromDegrees(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Angle.FromDegrees(double.NegativeInfinity));
+            var positiveInfinityQuantity = Angle.FromDegrees(double.PositiveInfinity);
+            var negativeInfinityQuantity = Angle.FromDegrees(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromDegrees_WithNanValue_ThrowsArgumentException()
+        public void FromDegrees_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Angle.FromDegrees(double.NaN));
+            var nanQuantity = Angle.FromDegrees(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

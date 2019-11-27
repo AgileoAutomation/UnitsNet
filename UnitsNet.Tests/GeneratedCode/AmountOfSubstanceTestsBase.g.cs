@@ -75,16 +75,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new AmountOfSubstance(double.PositiveInfinity, AmountOfSubstanceUnit.Mole));
-            Assert.Throws<ArgumentException>(() => new AmountOfSubstance(double.NegativeInfinity, AmountOfSubstanceUnit.Mole));
+            var positiveInfinityQuantity = new AmountOfSubstance(double.PositiveInfinity, AmountOfSubstanceUnit.Mole);
+            var negativeInfinityQuantity = new AmountOfSubstance(double.NegativeInfinity, AmountOfSubstanceUnit.Mole);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new AmountOfSubstance(double.NaN, AmountOfSubstanceUnit.Mole));
+            var nanQuantity = new AmountOfSubstance(double.NaN, AmountOfSubstanceUnit.Mole);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -129,16 +133,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromMoles_WithInfinityValue_ThrowsArgumentException()
+        public void FromMoles_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => AmountOfSubstance.FromMoles(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => AmountOfSubstance.FromMoles(double.NegativeInfinity));
+            var positiveInfinityQuantity = AmountOfSubstance.FromMoles(double.PositiveInfinity);
+            var negativeInfinityQuantity = AmountOfSubstance.FromMoles(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromMoles_WithNanValue_ThrowsArgumentException()
+        public void FromMoles_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => AmountOfSubstance.FromMoles(double.NaN));
+            var nanQuantity = AmountOfSubstance.FromMoles(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

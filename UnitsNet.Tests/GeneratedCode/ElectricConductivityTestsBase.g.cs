@@ -51,16 +51,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricConductivity(double.PositiveInfinity, ElectricConductivityUnit.SiemensPerMeter));
-            Assert.Throws<ArgumentException>(() => new ElectricConductivity(double.NegativeInfinity, ElectricConductivityUnit.SiemensPerMeter));
+            var positiveInfinityQuantity = new ElectricConductivity(double.PositiveInfinity, ElectricConductivityUnit.SiemensPerMeter);
+            var negativeInfinityQuantity = new ElectricConductivity(double.NegativeInfinity, ElectricConductivityUnit.SiemensPerMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ElectricConductivity(double.NaN, ElectricConductivityUnit.SiemensPerMeter));
+            var nanQuantity = new ElectricConductivity(double.NaN, ElectricConductivityUnit.SiemensPerMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -81,16 +85,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromSiemensPerMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromSiemensPerMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricConductivity.FromSiemensPerMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ElectricConductivity.FromSiemensPerMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = ElectricConductivity.FromSiemensPerMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = ElectricConductivity.FromSiemensPerMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromSiemensPerMeter_WithNanValue_ThrowsArgumentException()
+        public void FromSiemensPerMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ElectricConductivity.FromSiemensPerMeter(double.NaN));
+            var nanQuantity = ElectricConductivity.FromSiemensPerMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

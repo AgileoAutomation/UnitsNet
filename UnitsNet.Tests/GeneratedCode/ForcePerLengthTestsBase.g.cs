@@ -69,16 +69,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ForcePerLength(double.PositiveInfinity, ForcePerLengthUnit.NewtonPerMeter));
-            Assert.Throws<ArgumentException>(() => new ForcePerLength(double.NegativeInfinity, ForcePerLengthUnit.NewtonPerMeter));
+            var positiveInfinityQuantity = new ForcePerLength(double.PositiveInfinity, ForcePerLengthUnit.NewtonPerMeter);
+            var negativeInfinityQuantity = new ForcePerLength(double.NegativeInfinity, ForcePerLengthUnit.NewtonPerMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ForcePerLength(double.NaN, ForcePerLengthUnit.NewtonPerMeter));
+            var nanQuantity = new ForcePerLength(double.NaN, ForcePerLengthUnit.NewtonPerMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -117,16 +121,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromNewtonsPerMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromNewtonsPerMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ForcePerLength.FromNewtonsPerMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ForcePerLength.FromNewtonsPerMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = ForcePerLength.FromNewtonsPerMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = ForcePerLength.FromNewtonsPerMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromNewtonsPerMeter_WithNanValue_ThrowsArgumentException()
+        public void FromNewtonsPerMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ForcePerLength.FromNewtonsPerMeter(double.NaN));
+            var nanQuantity = ForcePerLength.FromNewtonsPerMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

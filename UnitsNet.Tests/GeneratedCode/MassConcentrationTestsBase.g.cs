@@ -125,16 +125,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new MassConcentration(double.PositiveInfinity, MassConcentrationUnit.KilogramPerCubicMeter));
-            Assert.Throws<ArgumentException>(() => new MassConcentration(double.NegativeInfinity, MassConcentrationUnit.KilogramPerCubicMeter));
+            var positiveInfinityQuantity = new MassConcentration(double.PositiveInfinity, MassConcentrationUnit.KilogramPerCubicMeter);
+            var negativeInfinityQuantity = new MassConcentration(double.NegativeInfinity, MassConcentrationUnit.KilogramPerCubicMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new MassConcentration(double.NaN, MassConcentrationUnit.KilogramPerCubicMeter));
+            var nanQuantity = new MassConcentration(double.NaN, MassConcentrationUnit.KilogramPerCubicMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -229,16 +233,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromKilogramsPerCubicMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromKilogramsPerCubicMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => MassConcentration.FromKilogramsPerCubicMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => MassConcentration.FromKilogramsPerCubicMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = MassConcentration.FromKilogramsPerCubicMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = MassConcentration.FromKilogramsPerCubicMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromKilogramsPerCubicMeter_WithNanValue_ThrowsArgumentException()
+        public void FromKilogramsPerCubicMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => MassConcentration.FromKilogramsPerCubicMeter(double.NaN));
+            var nanQuantity = MassConcentration.FromKilogramsPerCubicMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

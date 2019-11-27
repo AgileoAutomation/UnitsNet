@@ -47,16 +47,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new LuminousIntensity(double.PositiveInfinity, LuminousIntensityUnit.Candela));
-            Assert.Throws<ArgumentException>(() => new LuminousIntensity(double.NegativeInfinity, LuminousIntensityUnit.Candela));
+            var positiveInfinityQuantity = new LuminousIntensity(double.PositiveInfinity, LuminousIntensityUnit.Candela);
+            var negativeInfinityQuantity = new LuminousIntensity(double.NegativeInfinity, LuminousIntensityUnit.Candela);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new LuminousIntensity(double.NaN, LuminousIntensityUnit.Candela));
+            var nanQuantity = new LuminousIntensity(double.NaN, LuminousIntensityUnit.Candela);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -73,16 +77,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromCandela_WithInfinityValue_ThrowsArgumentException()
+        public void FromCandela_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => LuminousIntensity.FromCandela(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => LuminousIntensity.FromCandela(double.NegativeInfinity));
+            var positiveInfinityQuantity = LuminousIntensity.FromCandela(double.PositiveInfinity);
+            var negativeInfinityQuantity = LuminousIntensity.FromCandela(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromCandela_WithNanValue_ThrowsArgumentException()
+        public void FromCandela_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => LuminousIntensity.FromCandela(double.NaN));
+            var nanQuantity = LuminousIntensity.FromCandela(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

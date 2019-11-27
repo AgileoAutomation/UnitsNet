@@ -67,16 +67,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ForceChangeRate(double.PositiveInfinity, ForceChangeRateUnit.NewtonPerSecond));
-            Assert.Throws<ArgumentException>(() => new ForceChangeRate(double.NegativeInfinity, ForceChangeRateUnit.NewtonPerSecond));
+            var positiveInfinityQuantity = new ForceChangeRate(double.PositiveInfinity, ForceChangeRateUnit.NewtonPerSecond);
+            var negativeInfinityQuantity = new ForceChangeRate(double.NegativeInfinity, ForceChangeRateUnit.NewtonPerSecond);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ForceChangeRate(double.NaN, ForceChangeRateUnit.NewtonPerSecond));
+            var nanQuantity = new ForceChangeRate(double.NaN, ForceChangeRateUnit.NewtonPerSecond);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -113,16 +117,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromNewtonsPerSecond_WithInfinityValue_ThrowsArgumentException()
+        public void FromNewtonsPerSecond_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ForceChangeRate.FromNewtonsPerSecond(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ForceChangeRate.FromNewtonsPerSecond(double.NegativeInfinity));
+            var positiveInfinityQuantity = ForceChangeRate.FromNewtonsPerSecond(double.PositiveInfinity);
+            var negativeInfinityQuantity = ForceChangeRate.FromNewtonsPerSecond(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromNewtonsPerSecond_WithNanValue_ThrowsArgumentException()
+        public void FromNewtonsPerSecond_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ForceChangeRate.FromNewtonsPerSecond(double.NaN));
+            var nanQuantity = ForceChangeRate.FromNewtonsPerSecond(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

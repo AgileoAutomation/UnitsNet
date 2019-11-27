@@ -61,16 +61,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Molarity(double.PositiveInfinity, MolarityUnit.MolesPerCubicMeter));
-            Assert.Throws<ArgumentException>(() => new Molarity(double.NegativeInfinity, MolarityUnit.MolesPerCubicMeter));
+            var positiveInfinityQuantity = new Molarity(double.PositiveInfinity, MolarityUnit.MolesPerCubicMeter);
+            var negativeInfinityQuantity = new Molarity(double.NegativeInfinity, MolarityUnit.MolesPerCubicMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Molarity(double.NaN, MolarityUnit.MolesPerCubicMeter));
+            var nanQuantity = new Molarity(double.NaN, MolarityUnit.MolesPerCubicMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -101,16 +105,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromMolesPerCubicMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromMolesPerCubicMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Molarity.FromMolesPerCubicMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Molarity.FromMolesPerCubicMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = Molarity.FromMolesPerCubicMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = Molarity.FromMolesPerCubicMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromMolesPerCubicMeter_WithNanValue_ThrowsArgumentException()
+        public void FromMolesPerCubicMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Molarity.FromMolesPerCubicMeter(double.NaN));
+            var nanQuantity = Molarity.FromMolesPerCubicMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

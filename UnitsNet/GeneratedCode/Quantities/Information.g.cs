@@ -37,7 +37,7 @@ namespace UnitsNet
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
-        private readonly decimal _value;
+        private readonly double _value;
 
         /// <summary>
         ///     The unit this quantity was constructed with.
@@ -86,7 +86,7 @@ namespace UnitsNet
         /// <param name="value">The numeric value to construct this quantity with.</param>
         /// <param name="unit">The unit representation to construct this quantity with.</param>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        public Information(decimal value, InformationUnit unit)
+        public Information(double value, InformationUnit unit)
         {
             if(unit == InformationUnit.Undefined)
               throw new ArgumentException("The quantity can not be created with an undefined unit.", nameof(unit));
@@ -103,7 +103,7 @@ namespace UnitsNet
         /// <param name="unitSystem">The unit system to create the quantity with.</param>
         /// <exception cref="ArgumentNullException">The given <see cref="UnitSystem"/> is null.</exception>
         /// <exception cref="ArgumentException">No unit was found for the given <see cref="UnitSystem"/>.</exception>
-        public Information(decimal value, UnitSystem unitSystem)
+        public Information(double value, UnitSystem unitSystem)
         {
             if(unitSystem == null) throw new ArgumentNullException(nameof(unitSystem));
 
@@ -132,12 +132,12 @@ namespace UnitsNet
         /// <summary>
         /// Represents the largest possible value of Information
         /// </summary>
-        public static Information MaxValue { get; } = new Information(decimal.MaxValue, BaseUnit);
+        public static Information MaxValue { get; } = new Information(double.MaxValue, BaseUnit);
 
         /// <summary>
         /// Represents the smallest possible value of Information
         /// </summary>
-        public static Information MinValue { get; } = new Information(decimal.MinValue, BaseUnit);
+        public static Information MinValue { get; } = new Information(double.MinValue, BaseUnit);
 
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.
@@ -161,9 +161,7 @@ namespace UnitsNet
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
-        public decimal Value => _value;
-
-        double IQuantity.Value => (double) _value;
+        public double Value => _value;
 
         Enum IQuantity.Unit => Unit;
 
@@ -355,7 +353,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromBits(QuantityValue bits)
         {
-            decimal value = (decimal) bits;
+            double value = (double) bits;
             return new Information(value, InformationUnit.Bit);
         }
         /// <summary>
@@ -364,7 +362,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromBytes(QuantityValue bytes)
         {
-            decimal value = (decimal) bytes;
+            double value = (double) bytes;
             return new Information(value, InformationUnit.Byte);
         }
         /// <summary>
@@ -373,7 +371,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromExabits(QuantityValue exabits)
         {
-            decimal value = (decimal) exabits;
+            double value = (double) exabits;
             return new Information(value, InformationUnit.Exabit);
         }
         /// <summary>
@@ -382,7 +380,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromExabytes(QuantityValue exabytes)
         {
-            decimal value = (decimal) exabytes;
+            double value = (double) exabytes;
             return new Information(value, InformationUnit.Exabyte);
         }
         /// <summary>
@@ -391,7 +389,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromExbibits(QuantityValue exbibits)
         {
-            decimal value = (decimal) exbibits;
+            double value = (double) exbibits;
             return new Information(value, InformationUnit.Exbibit);
         }
         /// <summary>
@@ -400,7 +398,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromExbibytes(QuantityValue exbibytes)
         {
-            decimal value = (decimal) exbibytes;
+            double value = (double) exbibytes;
             return new Information(value, InformationUnit.Exbibyte);
         }
         /// <summary>
@@ -409,7 +407,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromGibibits(QuantityValue gibibits)
         {
-            decimal value = (decimal) gibibits;
+            double value = (double) gibibits;
             return new Information(value, InformationUnit.Gibibit);
         }
         /// <summary>
@@ -418,7 +416,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromGibibytes(QuantityValue gibibytes)
         {
-            decimal value = (decimal) gibibytes;
+            double value = (double) gibibytes;
             return new Information(value, InformationUnit.Gibibyte);
         }
         /// <summary>
@@ -427,7 +425,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromGigabits(QuantityValue gigabits)
         {
-            decimal value = (decimal) gigabits;
+            double value = (double) gigabits;
             return new Information(value, InformationUnit.Gigabit);
         }
         /// <summary>
@@ -436,7 +434,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromGigabytes(QuantityValue gigabytes)
         {
-            decimal value = (decimal) gigabytes;
+            double value = (double) gigabytes;
             return new Information(value, InformationUnit.Gigabyte);
         }
         /// <summary>
@@ -445,7 +443,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromKibibits(QuantityValue kibibits)
         {
-            decimal value = (decimal) kibibits;
+            double value = (double) kibibits;
             return new Information(value, InformationUnit.Kibibit);
         }
         /// <summary>
@@ -454,7 +452,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromKibibytes(QuantityValue kibibytes)
         {
-            decimal value = (decimal) kibibytes;
+            double value = (double) kibibytes;
             return new Information(value, InformationUnit.Kibibyte);
         }
         /// <summary>
@@ -463,7 +461,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromKilobits(QuantityValue kilobits)
         {
-            decimal value = (decimal) kilobits;
+            double value = (double) kilobits;
             return new Information(value, InformationUnit.Kilobit);
         }
         /// <summary>
@@ -472,7 +470,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromKilobytes(QuantityValue kilobytes)
         {
-            decimal value = (decimal) kilobytes;
+            double value = (double) kilobytes;
             return new Information(value, InformationUnit.Kilobyte);
         }
         /// <summary>
@@ -481,7 +479,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromMebibits(QuantityValue mebibits)
         {
-            decimal value = (decimal) mebibits;
+            double value = (double) mebibits;
             return new Information(value, InformationUnit.Mebibit);
         }
         /// <summary>
@@ -490,7 +488,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromMebibytes(QuantityValue mebibytes)
         {
-            decimal value = (decimal) mebibytes;
+            double value = (double) mebibytes;
             return new Information(value, InformationUnit.Mebibyte);
         }
         /// <summary>
@@ -499,7 +497,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromMegabits(QuantityValue megabits)
         {
-            decimal value = (decimal) megabits;
+            double value = (double) megabits;
             return new Information(value, InformationUnit.Megabit);
         }
         /// <summary>
@@ -508,7 +506,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromMegabytes(QuantityValue megabytes)
         {
-            decimal value = (decimal) megabytes;
+            double value = (double) megabytes;
             return new Information(value, InformationUnit.Megabyte);
         }
         /// <summary>
@@ -517,7 +515,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromPebibits(QuantityValue pebibits)
         {
-            decimal value = (decimal) pebibits;
+            double value = (double) pebibits;
             return new Information(value, InformationUnit.Pebibit);
         }
         /// <summary>
@@ -526,7 +524,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromPebibytes(QuantityValue pebibytes)
         {
-            decimal value = (decimal) pebibytes;
+            double value = (double) pebibytes;
             return new Information(value, InformationUnit.Pebibyte);
         }
         /// <summary>
@@ -535,7 +533,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromPetabits(QuantityValue petabits)
         {
-            decimal value = (decimal) petabits;
+            double value = (double) petabits;
             return new Information(value, InformationUnit.Petabit);
         }
         /// <summary>
@@ -544,7 +542,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromPetabytes(QuantityValue petabytes)
         {
-            decimal value = (decimal) petabytes;
+            double value = (double) petabytes;
             return new Information(value, InformationUnit.Petabyte);
         }
         /// <summary>
@@ -553,7 +551,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromTebibits(QuantityValue tebibits)
         {
-            decimal value = (decimal) tebibits;
+            double value = (double) tebibits;
             return new Information(value, InformationUnit.Tebibit);
         }
         /// <summary>
@@ -562,7 +560,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromTebibytes(QuantityValue tebibytes)
         {
-            decimal value = (decimal) tebibytes;
+            double value = (double) tebibytes;
             return new Information(value, InformationUnit.Tebibyte);
         }
         /// <summary>
@@ -571,7 +569,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromTerabits(QuantityValue terabits)
         {
-            decimal value = (decimal) terabits;
+            double value = (double) terabits;
             return new Information(value, InformationUnit.Terabit);
         }
         /// <summary>
@@ -580,7 +578,7 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static Information FromTerabytes(QuantityValue terabytes)
         {
-            decimal value = (decimal) terabytes;
+            double value = (double) terabytes;
             return new Information(value, InformationUnit.Terabyte);
         }
 
@@ -592,7 +590,7 @@ namespace UnitsNet
         /// <returns>Information unit value.</returns>
         public static Information From(QuantityValue value, InformationUnit fromUnit)
         {
-            return new Information((decimal)value, fromUnit);
+            return new Information((double)value, fromUnit);
         }
 
         #endregion
@@ -762,19 +760,19 @@ namespace UnitsNet
         }
 
         /// <summary>Get <see cref="Information"/> from multiplying value and <see cref="Information"/>.</summary>
-        public static Information operator *(decimal left, Information right)
+        public static Information operator *(double left, Information right)
         {
             return new Information(left * right.Value, right.Unit);
         }
 
         /// <summary>Get <see cref="Information"/> from multiplying value and <see cref="Information"/>.</summary>
-        public static Information operator *(Information left, decimal right)
+        public static Information operator *(Information left, double right)
         {
             return new Information(left.Value * right, left.Unit);
         }
 
         /// <summary>Get <see cref="Information"/> from dividing <see cref="Information"/> by value.</summary>
-        public static Information operator /(Information left, decimal right)
+        public static Information operator /(Information left, double right)
         {
             return new Information(left.Value / right, left.Unit);
         }
@@ -1008,36 +1006,36 @@ namespace UnitsNet
         ///     This is typically the first step in converting from one unit to another.
         /// </summary>
         /// <returns>The value in the base unit representation.</returns>
-        private decimal GetValueInBaseUnit()
+        private double GetValueInBaseUnit()
         {
             switch(Unit)
             {
                 case InformationUnit.Bit: return _value;
-                case InformationUnit.Byte: return _value*8m;
-                case InformationUnit.Exabit: return (_value) * 1e18m;
-                case InformationUnit.Exabyte: return (_value*8m) * 1e18m;
-                case InformationUnit.Exbibit: return (_value) * (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Exbibyte: return (_value*8m) * (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Gibibit: return (_value) * (1024m * 1024 * 1024);
-                case InformationUnit.Gibibyte: return (_value*8m) * (1024m * 1024 * 1024);
-                case InformationUnit.Gigabit: return (_value) * 1e9m;
-                case InformationUnit.Gigabyte: return (_value*8m) * 1e9m;
-                case InformationUnit.Kibibit: return (_value) * 1024m;
-                case InformationUnit.Kibibyte: return (_value*8m) * 1024m;
-                case InformationUnit.Kilobit: return (_value) * 1e3m;
-                case InformationUnit.Kilobyte: return (_value*8m) * 1e3m;
-                case InformationUnit.Mebibit: return (_value) * (1024m * 1024);
-                case InformationUnit.Mebibyte: return (_value*8m) * (1024m * 1024);
-                case InformationUnit.Megabit: return (_value) * 1e6m;
-                case InformationUnit.Megabyte: return (_value*8m) * 1e6m;
-                case InformationUnit.Pebibit: return (_value) * (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Pebibyte: return (_value*8m) * (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Petabit: return (_value) * 1e15m;
-                case InformationUnit.Petabyte: return (_value*8m) * 1e15m;
-                case InformationUnit.Tebibit: return (_value) * (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Tebibyte: return (_value*8m) * (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Terabit: return (_value) * 1e12m;
-                case InformationUnit.Terabyte: return (_value*8m) * 1e12m;
+                case InformationUnit.Byte: return _value*8;
+                case InformationUnit.Exabit: return (_value) * 1e18d;
+                case InformationUnit.Exabyte: return (_value*8) * 1e18d;
+                case InformationUnit.Exbibit: return (_value) * (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Exbibyte: return (_value*8) * (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Gibibit: return (_value) * (1024d * 1024 * 1024);
+                case InformationUnit.Gibibyte: return (_value*8) * (1024d * 1024 * 1024);
+                case InformationUnit.Gigabit: return (_value) * 1e9d;
+                case InformationUnit.Gigabyte: return (_value*8) * 1e9d;
+                case InformationUnit.Kibibit: return (_value) * 1024d;
+                case InformationUnit.Kibibyte: return (_value*8) * 1024d;
+                case InformationUnit.Kilobit: return (_value) * 1e3d;
+                case InformationUnit.Kilobyte: return (_value*8) * 1e3d;
+                case InformationUnit.Mebibit: return (_value) * (1024d * 1024);
+                case InformationUnit.Mebibyte: return (_value*8) * (1024d * 1024);
+                case InformationUnit.Megabit: return (_value) * 1e6d;
+                case InformationUnit.Megabyte: return (_value*8) * 1e6d;
+                case InformationUnit.Pebibit: return (_value) * (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Pebibyte: return (_value*8) * (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Petabit: return (_value) * 1e15d;
+                case InformationUnit.Petabyte: return (_value*8) * 1e15d;
+                case InformationUnit.Tebibit: return (_value) * (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Tebibyte: return (_value*8) * (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Terabit: return (_value) * 1e12d;
+                case InformationUnit.Terabyte: return (_value*8) * 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -1054,7 +1052,7 @@ namespace UnitsNet
             return new Information(baseUnitValue, BaseUnit);
         }
 
-        private decimal GetValueAs(InformationUnit unit)
+        private double GetValueAs(InformationUnit unit)
         {
             if(Unit == unit)
                 return _value;
@@ -1064,31 +1062,31 @@ namespace UnitsNet
             switch(unit)
             {
                 case InformationUnit.Bit: return baseUnitValue;
-                case InformationUnit.Byte: return baseUnitValue/8m;
-                case InformationUnit.Exabit: return (baseUnitValue) / 1e18m;
-                case InformationUnit.Exabyte: return (baseUnitValue/8m) / 1e18m;
-                case InformationUnit.Exbibit: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Exbibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Gibibit: return (baseUnitValue) / (1024m * 1024 * 1024);
-                case InformationUnit.Gibibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024);
-                case InformationUnit.Gigabit: return (baseUnitValue) / 1e9m;
-                case InformationUnit.Gigabyte: return (baseUnitValue/8m) / 1e9m;
-                case InformationUnit.Kibibit: return (baseUnitValue) / 1024m;
-                case InformationUnit.Kibibyte: return (baseUnitValue/8m) / 1024m;
-                case InformationUnit.Kilobit: return (baseUnitValue) / 1e3m;
-                case InformationUnit.Kilobyte: return (baseUnitValue/8m) / 1e3m;
-                case InformationUnit.Mebibit: return (baseUnitValue) / (1024m * 1024);
-                case InformationUnit.Mebibyte: return (baseUnitValue/8m) / (1024m * 1024);
-                case InformationUnit.Megabit: return (baseUnitValue) / 1e6m;
-                case InformationUnit.Megabyte: return (baseUnitValue/8m) / 1e6m;
-                case InformationUnit.Pebibit: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Pebibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024 * 1024);
-                case InformationUnit.Petabit: return (baseUnitValue) / 1e15m;
-                case InformationUnit.Petabyte: return (baseUnitValue/8m) / 1e15m;
-                case InformationUnit.Tebibit: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Tebibyte: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024);
-                case InformationUnit.Terabit: return (baseUnitValue) / 1e12m;
-                case InformationUnit.Terabyte: return (baseUnitValue/8m) / 1e12m;
+                case InformationUnit.Byte: return baseUnitValue/8;
+                case InformationUnit.Exabit: return (baseUnitValue) / 1e18d;
+                case InformationUnit.Exabyte: return (baseUnitValue/8) / 1e18d;
+                case InformationUnit.Exbibit: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Exbibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Gibibit: return (baseUnitValue) / (1024d * 1024 * 1024);
+                case InformationUnit.Gibibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024);
+                case InformationUnit.Gigabit: return (baseUnitValue) / 1e9d;
+                case InformationUnit.Gigabyte: return (baseUnitValue/8) / 1e9d;
+                case InformationUnit.Kibibit: return (baseUnitValue) / 1024d;
+                case InformationUnit.Kibibyte: return (baseUnitValue/8) / 1024d;
+                case InformationUnit.Kilobit: return (baseUnitValue) / 1e3d;
+                case InformationUnit.Kilobyte: return (baseUnitValue/8) / 1e3d;
+                case InformationUnit.Mebibit: return (baseUnitValue) / (1024d * 1024);
+                case InformationUnit.Mebibyte: return (baseUnitValue/8) / (1024d * 1024);
+                case InformationUnit.Megabit: return (baseUnitValue) / 1e6d;
+                case InformationUnit.Megabyte: return (baseUnitValue/8) / 1e6d;
+                case InformationUnit.Pebibit: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Pebibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024 * 1024);
+                case InformationUnit.Petabit: return (baseUnitValue) / 1e15d;
+                case InformationUnit.Petabyte: return (baseUnitValue/8) / 1e15d;
+                case InformationUnit.Tebibit: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Tebibyte: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024);
+                case InformationUnit.Terabit: return (baseUnitValue) / 1e12d;
+                case InformationUnit.Terabyte: return (baseUnitValue/8) / 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

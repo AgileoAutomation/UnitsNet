@@ -49,16 +49,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new ThermalConductivity(double.PositiveInfinity, ThermalConductivityUnit.WattPerMeterKelvin));
-            Assert.Throws<ArgumentException>(() => new ThermalConductivity(double.NegativeInfinity, ThermalConductivityUnit.WattPerMeterKelvin));
+            var positiveInfinityQuantity = new ThermalConductivity(double.PositiveInfinity, ThermalConductivityUnit.WattPerMeterKelvin);
+            var negativeInfinityQuantity = new ThermalConductivity(double.NegativeInfinity, ThermalConductivityUnit.WattPerMeterKelvin);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new ThermalConductivity(double.NaN, ThermalConductivityUnit.WattPerMeterKelvin));
+            var nanQuantity = new ThermalConductivity(double.NaN, ThermalConductivityUnit.WattPerMeterKelvin);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -77,16 +81,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromWattsPerMeterKelvin_WithInfinityValue_ThrowsArgumentException()
+        public void FromWattsPerMeterKelvin_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => ThermalConductivity.FromWattsPerMeterKelvin(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => ThermalConductivity.FromWattsPerMeterKelvin(double.NegativeInfinity));
+            var positiveInfinityQuantity = ThermalConductivity.FromWattsPerMeterKelvin(double.PositiveInfinity);
+            var negativeInfinityQuantity = ThermalConductivity.FromWattsPerMeterKelvin(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromWattsPerMeterKelvin_WithNanValue_ThrowsArgumentException()
+        public void FromWattsPerMeterKelvin_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => ThermalConductivity.FromWattsPerMeterKelvin(double.NaN));
+            var nanQuantity = ThermalConductivity.FromWattsPerMeterKelvin(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

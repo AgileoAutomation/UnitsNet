@@ -42,7 +42,7 @@ namespace UnitsNet
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
-        private readonly decimal _value;
+        private readonly double _value;
 
         /// <summary>
         ///     The unit this quantity was constructed with.
@@ -74,7 +74,7 @@ namespace UnitsNet
         /// <param name="unit">The unit representation to construct this quantity with.</param>
         /// <remarks>Value parameter cannot be named 'value' due to constraint when targeting Windows Runtime Component.</remarks>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        private BitRate(decimal value, BitRateUnit unit)
+        private BitRate(double value, BitRateUnit unit)
         {
             if(unit == BitRateUnit.Undefined)
               throw new ArgumentException("The quantity can not be created with an undefined unit.", nameof(unit));
@@ -103,12 +103,12 @@ namespace UnitsNet
         /// <summary>
         /// Represents the largest possible value of BitRate
         /// </summary>
-        public static BitRate MaxValue { get; } = new BitRate(decimal.MaxValue, BaseUnit);
+        public static BitRate MaxValue { get; } = new BitRate(double.MaxValue, BaseUnit);
 
         /// <summary>
         /// Represents the smallest possible value of BitRate
         /// </summary>
-        public static BitRate MinValue { get; } = new BitRate(decimal.MinValue, BaseUnit);
+        public static BitRate MinValue { get; } = new BitRate(double.MinValue, BaseUnit);
 
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.
@@ -325,7 +325,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromBitsPerSecond(double bitspersecond)
         {
-            decimal value = (decimal) bitspersecond;
+            double value = (double) bitspersecond;
             return new BitRate(value, BitRateUnit.BitPerSecond);
         }
         /// <summary>
@@ -335,7 +335,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromBytesPerSecond(double bytespersecond)
         {
-            decimal value = (decimal) bytespersecond;
+            double value = (double) bytespersecond;
             return new BitRate(value, BitRateUnit.BytePerSecond);
         }
         /// <summary>
@@ -345,7 +345,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromExabitsPerSecond(double exabitspersecond)
         {
-            decimal value = (decimal) exabitspersecond;
+            double value = (double) exabitspersecond;
             return new BitRate(value, BitRateUnit.ExabitPerSecond);
         }
         /// <summary>
@@ -355,7 +355,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromExabytesPerSecond(double exabytespersecond)
         {
-            decimal value = (decimal) exabytespersecond;
+            double value = (double) exabytespersecond;
             return new BitRate(value, BitRateUnit.ExabytePerSecond);
         }
         /// <summary>
@@ -365,7 +365,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromExbibitsPerSecond(double exbibitspersecond)
         {
-            decimal value = (decimal) exbibitspersecond;
+            double value = (double) exbibitspersecond;
             return new BitRate(value, BitRateUnit.ExbibitPerSecond);
         }
         /// <summary>
@@ -375,7 +375,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromExbibytesPerSecond(double exbibytespersecond)
         {
-            decimal value = (decimal) exbibytespersecond;
+            double value = (double) exbibytespersecond;
             return new BitRate(value, BitRateUnit.ExbibytePerSecond);
         }
         /// <summary>
@@ -385,7 +385,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromGibibitsPerSecond(double gibibitspersecond)
         {
-            decimal value = (decimal) gibibitspersecond;
+            double value = (double) gibibitspersecond;
             return new BitRate(value, BitRateUnit.GibibitPerSecond);
         }
         /// <summary>
@@ -395,7 +395,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromGibibytesPerSecond(double gibibytespersecond)
         {
-            decimal value = (decimal) gibibytespersecond;
+            double value = (double) gibibytespersecond;
             return new BitRate(value, BitRateUnit.GibibytePerSecond);
         }
         /// <summary>
@@ -405,7 +405,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromGigabitsPerSecond(double gigabitspersecond)
         {
-            decimal value = (decimal) gigabitspersecond;
+            double value = (double) gigabitspersecond;
             return new BitRate(value, BitRateUnit.GigabitPerSecond);
         }
         /// <summary>
@@ -415,7 +415,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromGigabytesPerSecond(double gigabytespersecond)
         {
-            decimal value = (decimal) gigabytespersecond;
+            double value = (double) gigabytespersecond;
             return new BitRate(value, BitRateUnit.GigabytePerSecond);
         }
         /// <summary>
@@ -425,7 +425,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromKibibitsPerSecond(double kibibitspersecond)
         {
-            decimal value = (decimal) kibibitspersecond;
+            double value = (double) kibibitspersecond;
             return new BitRate(value, BitRateUnit.KibibitPerSecond);
         }
         /// <summary>
@@ -435,7 +435,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromKibibytesPerSecond(double kibibytespersecond)
         {
-            decimal value = (decimal) kibibytespersecond;
+            double value = (double) kibibytespersecond;
             return new BitRate(value, BitRateUnit.KibibytePerSecond);
         }
         /// <summary>
@@ -445,7 +445,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromKilobitsPerSecond(double kilobitspersecond)
         {
-            decimal value = (decimal) kilobitspersecond;
+            double value = (double) kilobitspersecond;
             return new BitRate(value, BitRateUnit.KilobitPerSecond);
         }
         /// <summary>
@@ -455,7 +455,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromKilobytesPerSecond(double kilobytespersecond)
         {
-            decimal value = (decimal) kilobytespersecond;
+            double value = (double) kilobytespersecond;
             return new BitRate(value, BitRateUnit.KilobytePerSecond);
         }
         /// <summary>
@@ -465,7 +465,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromMebibitsPerSecond(double mebibitspersecond)
         {
-            decimal value = (decimal) mebibitspersecond;
+            double value = (double) mebibitspersecond;
             return new BitRate(value, BitRateUnit.MebibitPerSecond);
         }
         /// <summary>
@@ -475,7 +475,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromMebibytesPerSecond(double mebibytespersecond)
         {
-            decimal value = (decimal) mebibytespersecond;
+            double value = (double) mebibytespersecond;
             return new BitRate(value, BitRateUnit.MebibytePerSecond);
         }
         /// <summary>
@@ -485,7 +485,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromMegabitsPerSecond(double megabitspersecond)
         {
-            decimal value = (decimal) megabitspersecond;
+            double value = (double) megabitspersecond;
             return new BitRate(value, BitRateUnit.MegabitPerSecond);
         }
         /// <summary>
@@ -495,7 +495,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromMegabytesPerSecond(double megabytespersecond)
         {
-            decimal value = (decimal) megabytespersecond;
+            double value = (double) megabytespersecond;
             return new BitRate(value, BitRateUnit.MegabytePerSecond);
         }
         /// <summary>
@@ -505,7 +505,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromPebibitsPerSecond(double pebibitspersecond)
         {
-            decimal value = (decimal) pebibitspersecond;
+            double value = (double) pebibitspersecond;
             return new BitRate(value, BitRateUnit.PebibitPerSecond);
         }
         /// <summary>
@@ -515,7 +515,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromPebibytesPerSecond(double pebibytespersecond)
         {
-            decimal value = (decimal) pebibytespersecond;
+            double value = (double) pebibytespersecond;
             return new BitRate(value, BitRateUnit.PebibytePerSecond);
         }
         /// <summary>
@@ -525,7 +525,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromPetabitsPerSecond(double petabitspersecond)
         {
-            decimal value = (decimal) petabitspersecond;
+            double value = (double) petabitspersecond;
             return new BitRate(value, BitRateUnit.PetabitPerSecond);
         }
         /// <summary>
@@ -535,7 +535,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromPetabytesPerSecond(double petabytespersecond)
         {
-            decimal value = (decimal) petabytespersecond;
+            double value = (double) petabytespersecond;
             return new BitRate(value, BitRateUnit.PetabytePerSecond);
         }
         /// <summary>
@@ -545,7 +545,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromTebibitsPerSecond(double tebibitspersecond)
         {
-            decimal value = (decimal) tebibitspersecond;
+            double value = (double) tebibitspersecond;
             return new BitRate(value, BitRateUnit.TebibitPerSecond);
         }
         /// <summary>
@@ -555,7 +555,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromTebibytesPerSecond(double tebibytespersecond)
         {
-            decimal value = (decimal) tebibytespersecond;
+            double value = (double) tebibytespersecond;
             return new BitRate(value, BitRateUnit.TebibytePerSecond);
         }
         /// <summary>
@@ -565,7 +565,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromTerabitsPerSecond(double terabitspersecond)
         {
-            decimal value = (decimal) terabitspersecond;
+            double value = (double) terabitspersecond;
             return new BitRate(value, BitRateUnit.TerabitPerSecond);
         }
         /// <summary>
@@ -575,7 +575,7 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public static BitRate FromTerabytesPerSecond(double terabytespersecond)
         {
-            decimal value = (decimal) terabytespersecond;
+            double value = (double) terabytespersecond;
             return new BitRate(value, BitRateUnit.TerabytePerSecond);
         }
 
@@ -589,7 +589,7 @@ namespace UnitsNet
         [return: System.Runtime.InteropServices.WindowsRuntime.ReturnValueName("returnValue")]
         public static BitRate From(double value, BitRateUnit fromUnit)
         {
-            return new BitRate((decimal)value, fromUnit);
+            return new BitRate((double)value, fromUnit);
         }
 
         #endregion
@@ -865,42 +865,42 @@ namespace UnitsNet
         ///     This is typically the first step in converting from one unit to another.
         /// </summary>
         /// <returns>The value in the base unit representation.</returns>
-        private decimal AsBaseUnit()
+        private double AsBaseUnit()
         {
             switch(Unit)
             {
                 case BitRateUnit.BitPerSecond: return _value;
-                case BitRateUnit.BytePerSecond: return _value*8m;
-                case BitRateUnit.ExabitPerSecond: return (_value) * 1e18m;
-                case BitRateUnit.ExabytePerSecond: return (_value*8m) * 1e18m;
-                case BitRateUnit.ExbibitPerSecond: return (_value) * (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.ExbibytePerSecond: return (_value*8m) * (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.GibibitPerSecond: return (_value) * (1024m * 1024 * 1024);
-                case BitRateUnit.GibibytePerSecond: return (_value*8m) * (1024m * 1024 * 1024);
-                case BitRateUnit.GigabitPerSecond: return (_value) * 1e9m;
-                case BitRateUnit.GigabytePerSecond: return (_value*8m) * 1e9m;
-                case BitRateUnit.KibibitPerSecond: return (_value) * 1024m;
-                case BitRateUnit.KibibytePerSecond: return (_value*8m) * 1024m;
-                case BitRateUnit.KilobitPerSecond: return (_value) * 1e3m;
-                case BitRateUnit.KilobytePerSecond: return (_value*8m) * 1e3m;
-                case BitRateUnit.MebibitPerSecond: return (_value) * (1024m * 1024);
-                case BitRateUnit.MebibytePerSecond: return (_value*8m) * (1024m * 1024);
-                case BitRateUnit.MegabitPerSecond: return (_value) * 1e6m;
-                case BitRateUnit.MegabytePerSecond: return (_value*8m) * 1e6m;
-                case BitRateUnit.PebibitPerSecond: return (_value) * (1024m * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.PebibytePerSecond: return (_value*8m) * (1024m * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.PetabitPerSecond: return (_value) * 1e15m;
-                case BitRateUnit.PetabytePerSecond: return (_value*8m) * 1e15m;
-                case BitRateUnit.TebibitPerSecond: return (_value) * (1024m * 1024 * 1024 * 1024);
-                case BitRateUnit.TebibytePerSecond: return (_value*8m) * (1024m * 1024 * 1024 * 1024);
-                case BitRateUnit.TerabitPerSecond: return (_value) * 1e12m;
-                case BitRateUnit.TerabytePerSecond: return (_value*8m) * 1e12m;
+                case BitRateUnit.BytePerSecond: return _value*8;
+                case BitRateUnit.ExabitPerSecond: return (_value) * 1e18d;
+                case BitRateUnit.ExabytePerSecond: return (_value*8) * 1e18d;
+                case BitRateUnit.ExbibitPerSecond: return (_value) * (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.ExbibytePerSecond: return (_value*8) * (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.GibibitPerSecond: return (_value) * (1024d * 1024 * 1024);
+                case BitRateUnit.GibibytePerSecond: return (_value*8) * (1024d * 1024 * 1024);
+                case BitRateUnit.GigabitPerSecond: return (_value) * 1e9d;
+                case BitRateUnit.GigabytePerSecond: return (_value*8) * 1e9d;
+                case BitRateUnit.KibibitPerSecond: return (_value) * 1024d;
+                case BitRateUnit.KibibytePerSecond: return (_value*8) * 1024d;
+                case BitRateUnit.KilobitPerSecond: return (_value) * 1e3d;
+                case BitRateUnit.KilobytePerSecond: return (_value*8) * 1e3d;
+                case BitRateUnit.MebibitPerSecond: return (_value) * (1024d * 1024);
+                case BitRateUnit.MebibytePerSecond: return (_value*8) * (1024d * 1024);
+                case BitRateUnit.MegabitPerSecond: return (_value) * 1e6d;
+                case BitRateUnit.MegabytePerSecond: return (_value*8) * 1e6d;
+                case BitRateUnit.PebibitPerSecond: return (_value) * (1024d * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.PebibytePerSecond: return (_value*8) * (1024d * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.PetabitPerSecond: return (_value) * 1e15d;
+                case BitRateUnit.PetabytePerSecond: return (_value*8) * 1e15d;
+                case BitRateUnit.TebibitPerSecond: return (_value) * (1024d * 1024 * 1024 * 1024);
+                case BitRateUnit.TebibytePerSecond: return (_value*8) * (1024d * 1024 * 1024 * 1024);
+                case BitRateUnit.TerabitPerSecond: return (_value) * 1e12d;
+                case BitRateUnit.TerabytePerSecond: return (_value*8) * 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
         }
 
-        private decimal AsBaseNumericType(BitRateUnit unit)
+        private double AsBaseNumericType(BitRateUnit unit)
         {
             if(Unit == unit)
                 return _value;
@@ -910,31 +910,31 @@ namespace UnitsNet
             switch(unit)
             {
                 case BitRateUnit.BitPerSecond: return baseUnitValue;
-                case BitRateUnit.BytePerSecond: return baseUnitValue/8m;
-                case BitRateUnit.ExabitPerSecond: return (baseUnitValue) / 1e18m;
-                case BitRateUnit.ExabytePerSecond: return (baseUnitValue/8m) / 1e18m;
-                case BitRateUnit.ExbibitPerSecond: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.ExbibytePerSecond: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.GibibitPerSecond: return (baseUnitValue) / (1024m * 1024 * 1024);
-                case BitRateUnit.GibibytePerSecond: return (baseUnitValue/8m) / (1024m * 1024 * 1024);
-                case BitRateUnit.GigabitPerSecond: return (baseUnitValue) / 1e9m;
-                case BitRateUnit.GigabytePerSecond: return (baseUnitValue/8m) / 1e9m;
-                case BitRateUnit.KibibitPerSecond: return (baseUnitValue) / 1024m;
-                case BitRateUnit.KibibytePerSecond: return (baseUnitValue/8m) / 1024m;
-                case BitRateUnit.KilobitPerSecond: return (baseUnitValue) / 1e3m;
-                case BitRateUnit.KilobytePerSecond: return (baseUnitValue/8m) / 1e3m;
-                case BitRateUnit.MebibitPerSecond: return (baseUnitValue) / (1024m * 1024);
-                case BitRateUnit.MebibytePerSecond: return (baseUnitValue/8m) / (1024m * 1024);
-                case BitRateUnit.MegabitPerSecond: return (baseUnitValue) / 1e6m;
-                case BitRateUnit.MegabytePerSecond: return (baseUnitValue/8m) / 1e6m;
-                case BitRateUnit.PebibitPerSecond: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.PebibytePerSecond: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024 * 1024);
-                case BitRateUnit.PetabitPerSecond: return (baseUnitValue) / 1e15m;
-                case BitRateUnit.PetabytePerSecond: return (baseUnitValue/8m) / 1e15m;
-                case BitRateUnit.TebibitPerSecond: return (baseUnitValue) / (1024m * 1024 * 1024 * 1024);
-                case BitRateUnit.TebibytePerSecond: return (baseUnitValue/8m) / (1024m * 1024 * 1024 * 1024);
-                case BitRateUnit.TerabitPerSecond: return (baseUnitValue) / 1e12m;
-                case BitRateUnit.TerabytePerSecond: return (baseUnitValue/8m) / 1e12m;
+                case BitRateUnit.BytePerSecond: return baseUnitValue/8;
+                case BitRateUnit.ExabitPerSecond: return (baseUnitValue) / 1e18d;
+                case BitRateUnit.ExabytePerSecond: return (baseUnitValue/8) / 1e18d;
+                case BitRateUnit.ExbibitPerSecond: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.ExbibytePerSecond: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.GibibitPerSecond: return (baseUnitValue) / (1024d * 1024 * 1024);
+                case BitRateUnit.GibibytePerSecond: return (baseUnitValue/8) / (1024d * 1024 * 1024);
+                case BitRateUnit.GigabitPerSecond: return (baseUnitValue) / 1e9d;
+                case BitRateUnit.GigabytePerSecond: return (baseUnitValue/8) / 1e9d;
+                case BitRateUnit.KibibitPerSecond: return (baseUnitValue) / 1024d;
+                case BitRateUnit.KibibytePerSecond: return (baseUnitValue/8) / 1024d;
+                case BitRateUnit.KilobitPerSecond: return (baseUnitValue) / 1e3d;
+                case BitRateUnit.KilobytePerSecond: return (baseUnitValue/8) / 1e3d;
+                case BitRateUnit.MebibitPerSecond: return (baseUnitValue) / (1024d * 1024);
+                case BitRateUnit.MebibytePerSecond: return (baseUnitValue/8) / (1024d * 1024);
+                case BitRateUnit.MegabitPerSecond: return (baseUnitValue) / 1e6d;
+                case BitRateUnit.MegabytePerSecond: return (baseUnitValue/8) / 1e6d;
+                case BitRateUnit.PebibitPerSecond: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.PebibytePerSecond: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024 * 1024);
+                case BitRateUnit.PetabitPerSecond: return (baseUnitValue) / 1e15d;
+                case BitRateUnit.PetabytePerSecond: return (baseUnitValue/8) / 1e15d;
+                case BitRateUnit.TebibitPerSecond: return (baseUnitValue) / (1024d * 1024 * 1024 * 1024);
+                case BitRateUnit.TebibytePerSecond: return (baseUnitValue/8) / (1024d * 1024 * 1024 * 1024);
+                case BitRateUnit.TerabitPerSecond: return (baseUnitValue) / 1e12d;
+                case BitRateUnit.TerabytePerSecond: return (baseUnitValue/8) / 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

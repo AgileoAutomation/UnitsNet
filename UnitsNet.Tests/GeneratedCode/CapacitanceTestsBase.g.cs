@@ -59,16 +59,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Capacitance(double.PositiveInfinity, CapacitanceUnit.Farad));
-            Assert.Throws<ArgumentException>(() => new Capacitance(double.NegativeInfinity, CapacitanceUnit.Farad));
+            var positiveInfinityQuantity = new Capacitance(double.PositiveInfinity, CapacitanceUnit.Farad);
+            var negativeInfinityQuantity = new Capacitance(double.NegativeInfinity, CapacitanceUnit.Farad);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Capacitance(double.NaN, CapacitanceUnit.Farad));
+            var nanQuantity = new Capacitance(double.NaN, CapacitanceUnit.Farad);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -97,16 +101,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromFarads_WithInfinityValue_ThrowsArgumentException()
+        public void FromFarads_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Capacitance.FromFarads(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Capacitance.FromFarads(double.NegativeInfinity));
+            var positiveInfinityQuantity = Capacitance.FromFarads(double.PositiveInfinity);
+            var negativeInfinityQuantity = Capacitance.FromFarads(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromFarads_WithNanValue_ThrowsArgumentException()
+        public void FromFarads_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Capacitance.FromFarads(double.NaN));
+            var nanQuantity = Capacitance.FromFarads(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

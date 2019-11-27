@@ -22,6 +22,9 @@ namespace UnitsNet.Tests.CustomQuantities
         private static readonly HowMuch Zero = new HowMuch(0, HowMuchUnit.Some);
 
         public QuantityType Type => QuantityType.Undefined;
+
+        public bool IsValidValue => !double.IsNaN(Value) && !double.IsInfinity(Value);
+
         public BaseDimensions Dimensions => BaseDimensions.Dimensionless;
 
         public QuantityInfo QuantityInfo => new QuantityInfo(Type,

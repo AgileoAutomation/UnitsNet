@@ -53,16 +53,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new Illuminance(double.PositiveInfinity, IlluminanceUnit.Lux));
-            Assert.Throws<ArgumentException>(() => new Illuminance(double.NegativeInfinity, IlluminanceUnit.Lux));
+            var positiveInfinityQuantity = new Illuminance(double.PositiveInfinity, IlluminanceUnit.Lux);
+            var negativeInfinityQuantity = new Illuminance(double.NegativeInfinity, IlluminanceUnit.Lux);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new Illuminance(double.NaN, IlluminanceUnit.Lux));
+            var nanQuantity = new Illuminance(double.NaN, IlluminanceUnit.Lux);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -85,16 +89,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromLux_WithInfinityValue_ThrowsArgumentException()
+        public void FromLux_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => Illuminance.FromLux(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => Illuminance.FromLux(double.NegativeInfinity));
+            var positiveInfinityQuantity = Illuminance.FromLux(double.PositiveInfinity);
+            var negativeInfinityQuantity = Illuminance.FromLux(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromLux_WithNanValue_ThrowsArgumentException()
+        public void FromLux_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => Illuminance.FromLux(double.NaN));
+            var nanQuantity = Illuminance.FromLux(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

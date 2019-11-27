@@ -47,16 +47,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new MagneticFlux(double.PositiveInfinity, MagneticFluxUnit.Weber));
-            Assert.Throws<ArgumentException>(() => new MagneticFlux(double.NegativeInfinity, MagneticFluxUnit.Weber));
+            var positiveInfinityQuantity = new MagneticFlux(double.PositiveInfinity, MagneticFluxUnit.Weber);
+            var negativeInfinityQuantity = new MagneticFlux(double.NegativeInfinity, MagneticFluxUnit.Weber);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new MagneticFlux(double.NaN, MagneticFluxUnit.Weber));
+            var nanQuantity = new MagneticFlux(double.NaN, MagneticFluxUnit.Weber);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -73,16 +77,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromWebers_WithInfinityValue_ThrowsArgumentException()
+        public void FromWebers_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => MagneticFlux.FromWebers(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => MagneticFlux.FromWebers(double.NegativeInfinity));
+            var positiveInfinityQuantity = MagneticFlux.FromWebers(double.PositiveInfinity);
+            var negativeInfinityQuantity = MagneticFlux.FromWebers(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromWebers_WithNanValue_ThrowsArgumentException()
+        public void FromWebers_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => MagneticFlux.FromWebers(double.NaN));
+            var nanQuantity = MagneticFlux.FromWebers(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

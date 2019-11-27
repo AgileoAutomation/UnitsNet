@@ -49,16 +49,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => new MassFlux(double.PositiveInfinity, MassFluxUnit.KilogramPerSecondPerSquareMeter));
-            Assert.Throws<ArgumentException>(() => new MassFlux(double.NegativeInfinity, MassFluxUnit.KilogramPerSecondPerSquareMeter));
+            var positiveInfinityQuantity = new MassFlux(double.PositiveInfinity, MassFluxUnit.KilogramPerSecondPerSquareMeter);
+            var negativeInfinityQuantity = new MassFlux(double.NegativeInfinity, MassFluxUnit.KilogramPerSecondPerSquareMeter);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => new MassFlux(double.NaN, MassFluxUnit.KilogramPerSecondPerSquareMeter));
+            var nanQuantity = new MassFlux(double.NaN, MassFluxUnit.KilogramPerSecondPerSquareMeter);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]
@@ -77,16 +81,20 @@ namespace UnitsNet.Tests
         }
 
         [Fact]
-        public void FromKilogramsPerSecondPerSquareMeter_WithInfinityValue_ThrowsArgumentException()
+        public void FromKilogramsPerSecondPerSquareMeter_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {
-            Assert.Throws<ArgumentException>(() => MassFlux.FromKilogramsPerSecondPerSquareMeter(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => MassFlux.FromKilogramsPerSecondPerSquareMeter(double.NegativeInfinity));
+            var positiveInfinityQuantity = MassFlux.FromKilogramsPerSecondPerSquareMeter(double.PositiveInfinity);
+            var negativeInfinityQuantity = MassFlux.FromKilogramsPerSecondPerSquareMeter(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }
 
         [Fact]
-        public void FromKilogramsPerSecondPerSquareMeter_WithNanValue_ThrowsArgumentException()
+        public void FromKilogramsPerSecondPerSquareMeter_WithNanValue_CreateQuantityAndAffectNaNValue()
         {
-            Assert.Throws<ArgumentException>(() => MassFlux.FromKilogramsPerSecondPerSquareMeter(double.NaN));
+            var nanQuantity = MassFlux.FromKilogramsPerSecondPerSquareMeter(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }
 
         [Fact]

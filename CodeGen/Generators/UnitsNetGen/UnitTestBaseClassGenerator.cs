@@ -60,16 +60,20 @@ namespace UnitsNet.Tests
 ");
             if (_quantity.BaseType == "double") Writer.WL($@"
         [Fact]
-        public void Ctor_WithInfinityValue_ThrowsArgumentException()
+        public void Ctor_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {{
-            Assert.Throws<ArgumentException>(() => new {_quantity.Name}(double.PositiveInfinity, {_unitEnumName}.{_baseUnit.SingularName}));
-            Assert.Throws<ArgumentException>(() => new {_quantity.Name}(double.NegativeInfinity, {_unitEnumName}.{_baseUnit.SingularName}));
+            var positiveInfinityQuantity = new {_quantity.Name}(double.PositiveInfinity, {_unitEnumName}.{_baseUnit.SingularName});
+            var negativeInfinityQuantity = new {_quantity.Name}(double.NegativeInfinity, {_unitEnumName}.{_baseUnit.SingularName});
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }}
 
         [Fact]
-        public void Ctor_WithNaNValue_ThrowsArgumentException()
+        public void Ctor_WithNaNValue_CreateQuantityAndAffectNaNValue()
         {{
-            Assert.Throws<ArgumentException>(() => new {_quantity.Name}(double.NaN, {_unitEnumName}.{_baseUnit.SingularName}));
+            var nanQuantity = new {_quantity.Name}(double.NaN, {_unitEnumName}.{_baseUnit.SingularName});
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }}
 "); Writer.WL($@"
 
@@ -93,16 +97,20 @@ namespace UnitsNet.Tests
 ");
             if (_quantity.BaseType == "double") Writer.WL($@"
         [Fact]
-        public void From{_baseUnit.PluralName}_WithInfinityValue_ThrowsArgumentException()
+        public void From{_baseUnit.PluralName}_WithInfinityValue_CreateQuantityAndAffectInfinityValue()
         {{
-            Assert.Throws<ArgumentException>(() => {_quantity.Name}.From{_baseUnit.PluralName}(double.PositiveInfinity));
-            Assert.Throws<ArgumentException>(() => {_quantity.Name}.From{_baseUnit.PluralName}(double.NegativeInfinity));
+            var positiveInfinityQuantity = {_quantity.Name}.From{_baseUnit.PluralName}(double.PositiveInfinity);
+            var negativeInfinityQuantity = {_quantity.Name}.From{_baseUnit.PluralName}(double.NegativeInfinity);
+
+            Assert.True(double.IsPositiveInfinity(positiveInfinityQuantity.Value));
+            Assert.True(double.IsNegativeInfinity(negativeInfinityQuantity.Value));
         }}
 
         [Fact]
-        public void From{_baseUnit.PluralName}_WithNanValue_ThrowsArgumentException()
+        public void From{_baseUnit.PluralName}_WithNanValue_CreateQuantityAndAffectNaNValue()
         {{
-            Assert.Throws<ArgumentException>(() => {_quantity.Name}.From{_baseUnit.PluralName}(double.NaN));
+            var nanQuantity = {_quantity.Name}.From{_baseUnit.PluralName}(double.NaN);
+            Assert.True(double.IsNaN(nanQuantity.Value));
         }}
 "); Writer.WL($@"
 
