@@ -9,10 +9,11 @@ trigger:
       - master
       - feature/*
       - release/*
+      - refs/tags/*
   paths:
     exclude:
-      - 'docs/*'
-      - 'README.md'
+      - docs/*
+      - README.md
 
 pr:
   branches:
@@ -27,6 +28,9 @@ variables:
   nugetToolVersion: '5.x'
   includeWindowsRuntimeComponent: false
   buildConfiguration: 'Release'
+
+workspace:
+  clean: all
 
 steps:
   - task: UseDotNet@2
