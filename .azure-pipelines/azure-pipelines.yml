@@ -101,7 +101,7 @@ steps:
       reportDirectory: '$(Build.SourcesDirectory)/Artifacts/Coverage/Report'
 
   - task: DotNetCoreCLI@2
-    displayName: 'Generate UnitsNet package'
+    displayName: 'Generate UnitsNet.Agileo package'
     inputs:
       command: 'pack'
       packagesToPack: '$(Build.SourcesDirectory)/UnitsNet/UnitsNet.csproj'
@@ -131,7 +131,7 @@ steps:
       )
 
   - task: DotNetCoreCLI@2
-    displayName: 'Generate UnitsNet.Serialization.JsonNet package'
+    displayName: 'Generate UnitsNet.Agileo.Serialization.JsonNet package'
     inputs:
       command: 'pack'
       packagesToPack: '$(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet/UnitsNet.Serialization.JsonNet.csproj'
