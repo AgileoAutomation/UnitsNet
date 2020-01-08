@@ -2,16 +2,16 @@
   <!-- NuGet properties -->
   <PropertyGroup>
     <PackageId>UnitsNet.Agileo</PackageId>
-    <Version>4.40.0</Version>
+    <Version>4.42.0</Version>
     <Authors>Andreas Gullberg Larsen</Authors>
     <Title>Units.NET</Title>
     <Description>Get all the common units of measurement and the conversions between them. It is light-weight and thoroughly tested.</Description>
     <Copyright>Copyright 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com).</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <RepositoryUrl>https://github.com/GuillaumeLebeau/UnitsNet</RepositoryUrl>
+    <RepositoryUrl>https://github.com/AgileoAutomation/UnitsNet</RepositoryUrl>
     <PackageIcon>logo-128.png</PackageIcon>
-    <PackageIconUrl>https://raw.githubusercontent.com/GuillaumeLebeau/UnitsNet/master/Docs/Images/logo-128.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/GuillaumeLebeau/UnitsNet</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/AgileoAutomation/UnitsNet/master/Docs/Images/logo-128.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/AgileoAutomation/UnitsNet</PackageProjectUrl>
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>unit units quantity quantities measurement si metric imperial abbreviation abbreviations convert conversion parse immutable</PackageTags>
@@ -21,7 +21,7 @@
   <!-- Assembly and msbuild properties -->
   <PropertyGroup>
     <AssemblyVersion>4.0.0.0</AssemblyVersion> <!-- Should reflect major part of Version -->
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
     <RootNamespace>UnitsNet</RootNamespace>
     <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
     <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
@@ -41,11 +41,11 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyName>UnitsNet</AssemblyName>
   </PropertyGroup>
-
+  
   <!-- NuGet references that work for both signed and unsigned -->
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 

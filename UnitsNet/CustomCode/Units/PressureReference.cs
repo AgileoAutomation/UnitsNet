@@ -18,41 +18,17 @@
 // Copyright 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com). Maintained at https://github.com/angularsen/UnitsNet.
 
 // ReSharper disable once CheckNamespace
-namespace UnitsNet.Units
+namespace UnitsNet.CustomCode.Units
 {
     // Disable missing XML comment warnings for the generated unit enums.
     #pragma warning disable 1591
 
-    public enum EnergyUnit
+    public enum PressureReference
     {
         Undefined = 0,
-        BritishThermalUnit,
-        Calorie,
-        DecathermEc,
-        DecathermImperial,
-        DecathermUs,
-        ElectronVolt,
-        Erg,
-        FootPound,
-        GigabritishThermalUnit,
-        Gigajoule,
-        GigawattHour,
-        Joule,
-        KilobritishThermalUnit,
-        Kilocalorie,
-        Kilojoule,
-        KilowattHour,
-        MegabritishThermalUnit,
-        Megacalorie,
-        Megajoule,
-        MegawattHour,
-        Millijoule,
-        TerawattHour,
-        ThermEc,
-        ThermImperial,
-        ThermUs,
-        WattHour,
+        Absolute,
+        Gauge,
+        Vacuum,
     }
-
-    #pragma warning restore 1591
+#pragma warning restore 1591
 }
