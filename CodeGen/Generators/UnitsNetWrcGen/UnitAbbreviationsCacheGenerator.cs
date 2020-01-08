@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using CodeGen.JsonTypes;
 
 namespace CodeGen.Generators.UnitsNetWrcGen
@@ -25,7 +25,7 @@ namespace UnitsNet
 {
     public sealed partial class UnitAbbreviationsCache
     {
-        private static readonly (string CultureName, Type UnitType, int UnitValue, string[] UnitAbbreviations)[] GeneratedLocalizations
+        private static readonly Tuple<string, Type, int, string[]>[] GeneratedLocalizations
             = new []
             {");
             foreach (var quantity in _quantities)
@@ -43,7 +43,7 @@ namespace UnitsNet
                             ? string.Join(", ", localization.Abbreviations.Select(abbr => $"\"{abbr}\""))
                             : "\"\"";
                         Writer.WL($@"
-                (""{cultureName}"", typeof({unitEnumName}), (int){unitEnumName}.{unit.SingularName}, new string[]{{{abbreviationParams}}}),");
+                Tuple.Create(""{cultureName}"", typeof({unitEnumName}), (int){unitEnumName}.{unit.SingularName}, new string[]{{{abbreviationParams}}}),");
                     }
                 }
             }
