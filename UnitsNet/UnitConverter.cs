@@ -10,7 +10,11 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
+#if NET40
+    using ConversionFunctionLookupKey = Tuple<Type, Enum, Type, Enum>;
+#else
     using ConversionFunctionLookupKey = ValueTuple<Type, Enum, Type, Enum>;
+#endif
 
     /// <summary>
     ///

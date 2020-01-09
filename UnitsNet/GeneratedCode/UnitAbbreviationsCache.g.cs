@@ -26,1301 +26,6473 @@ namespace UnitsNet
 {
     public partial class UnitAbbreviationsCache
     {
+#if NET40
+        private static readonly Tuple<string, Type, int, string[]>[] GeneratedLocalizations
+#else
         private static readonly (string CultureName, Type UnitType, int UnitValue, string[] UnitAbbreviations)[] GeneratedLocalizations
+#endif
             = new []
             {
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.CentimeterPerSecondSquared, new string[]{"cm/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.CentimeterPerSecondSquared, new string[]{"cm/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.DecimeterPerSecondSquared, new string[]{"dm/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.DecimeterPerSecondSquared, new string[]{"dm/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.FootPerSecondSquared, new string[]{"ft/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.FootPerSecondSquared, new string[]{"ft/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.InchPerSecondSquared, new string[]{"in/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.InchPerSecondSquared, new string[]{"in/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KilometerPerSecondSquared, new string[]{"km/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KilometerPerSecondSquared, new string[]{"km/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KnotPerHour, new string[]{"kn/h"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KnotPerHour, new string[]{"kn/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KnotPerMinute, new string[]{"kn/min"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KnotPerMinute, new string[]{"kn/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KnotPerSecond, new string[]{"kn/s"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.KnotPerSecond, new string[]{"kn/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.MeterPerSecondSquared, new string[]{"m/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.MeterPerSecondSquared, new string[]{"m/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.MicrometerPerSecondSquared, new string[]{"µm/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.MicrometerPerSecondSquared, new string[]{"µm/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.MillimeterPerSecondSquared, new string[]{"mm/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.MillimeterPerSecondSquared, new string[]{"mm/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.NanometerPerSecondSquared, new string[]{"nm/s²"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.NanometerPerSecondSquared, new string[]{"nm/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.StandardGravity, new string[]{"g"}),
+#else
                 ("en-US", typeof(AccelerationUnit), (int)AccelerationUnit.StandardGravity, new string[]{"g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Centimole, new string[]{"cmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Centimole, new string[]{"cmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.CentipoundMole, new string[]{"clbmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.CentipoundMole, new string[]{"clbmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Decimole, new string[]{"dmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Decimole, new string[]{"dmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.DecipoundMole, new string[]{"dlbmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.DecipoundMole, new string[]{"dlbmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Kilomole, new string[]{"kmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Kilomole, new string[]{"kmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.KilopoundMole, new string[]{"klbmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.KilopoundMole, new string[]{"klbmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Megamole, new string[]{"Mmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Megamole, new string[]{"Mmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Micromole, new string[]{"µmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Micromole, new string[]{"µmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.MicropoundMole, new string[]{"µlbmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.MicropoundMole, new string[]{"µlbmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Millimole, new string[]{"mmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Millimole, new string[]{"mmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.MillipoundMole, new string[]{"mlbmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.MillipoundMole, new string[]{"mlbmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Mole, new string[]{"mol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Mole, new string[]{"mol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Nanomole, new string[]{"nmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.Nanomole, new string[]{"nmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.NanopoundMole, new string[]{"nlbmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.NanopoundMole, new string[]{"nlbmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.PoundMole, new string[]{"lbmol"}),
+#else
                 ("en-US", typeof(AmountOfSubstanceUnit), (int)AmountOfSubstanceUnit.PoundMole, new string[]{"lbmol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelMicrovolt, new string[]{"dBµV"}),
+#else
                 ("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelMicrovolt, new string[]{"dBµV"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelMillivolt, new string[]{"dBmV"}),
+#else
                 ("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelMillivolt, new string[]{"dBmV"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelUnloaded, new string[]{"dBu"}),
+#else
                 ("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelUnloaded, new string[]{"dBu"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelVolt, new string[]{"dBV"}),
+#else
                 ("en-US", typeof(AmplitudeRatioUnit), (int)AmplitudeRatioUnit.DecibelVolt, new string[]{"dBV"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Arcminute, new string[]{"'", "arcmin", "amin", "min"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Arcminute, new string[]{"'", "arcmin", "amin", "min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Arcsecond, new string[]{"″", "arcsec", "asec", "sec"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Arcsecond, new string[]{"″", "arcsec", "asec", "sec"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Centiradian, new string[]{"crad"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Centiradian, new string[]{"crad"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Centiradian, new string[]{"срад"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Centiradian, new string[]{"срад"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Deciradian, new string[]{"drad"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Deciradian, new string[]{"drad"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Deciradian, new string[]{"драд"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Deciradian, new string[]{"драд"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Degree, new string[]{"°", "deg"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Degree, new string[]{"°", "deg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Degree, new string[]{"°"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Degree, new string[]{"°"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Gradian, new string[]{"g"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Gradian, new string[]{"g"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Gradian, new string[]{"g"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Gradian, new string[]{"g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Microdegree, new string[]{"µ°", "µdeg"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Microdegree, new string[]{"µ°", "µdeg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Microdegree, new string[]{"мк°"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Microdegree, new string[]{"мк°"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Microradian, new string[]{"µrad"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Microradian, new string[]{"µrad"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Microradian, new string[]{"мкрад"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Microradian, new string[]{"мкрад"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Millidegree, new string[]{"m°", "mdeg"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Millidegree, new string[]{"m°", "mdeg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Millidegree, new string[]{"м°"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Millidegree, new string[]{"м°"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Milliradian, new string[]{"mrad"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Milliradian, new string[]{"mrad"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Milliradian, new string[]{"мрад"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Milliradian, new string[]{"мрад"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Nanodegree, new string[]{"n°", "ndeg"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Nanodegree, new string[]{"n°", "ndeg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Nanodegree, new string[]{"н°"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Nanodegree, new string[]{"н°"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Nanoradian, new string[]{"nrad"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Nanoradian, new string[]{"nrad"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Nanoradian, new string[]{"нрад"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Nanoradian, new string[]{"нрад"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Radian, new string[]{"rad"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Radian, new string[]{"rad"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Radian, new string[]{"рад"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Radian, new string[]{"рад"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AngleUnit), (int)AngleUnit.Revolution, new string[]{"r"}),
+#else
                 ("en-US", typeof(AngleUnit), (int)AngleUnit.Revolution, new string[]{"r"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AngleUnit), (int)AngleUnit.Revolution, new string[]{"r"}),
+#else
                 ("ru-RU", typeof(AngleUnit), (int)AngleUnit.Revolution, new string[]{"r"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ApparentEnergyUnit), (int)ApparentEnergyUnit.KilovoltampereHour, new string[]{"kVAh"}),
+#else
                 ("en-US", typeof(ApparentEnergyUnit), (int)ApparentEnergyUnit.KilovoltampereHour, new string[]{"kVAh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ApparentEnergyUnit), (int)ApparentEnergyUnit.MegavoltampereHour, new string[]{"MVAh"}),
+#else
                 ("en-US", typeof(ApparentEnergyUnit), (int)ApparentEnergyUnit.MegavoltampereHour, new string[]{"MVAh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ApparentEnergyUnit), (int)ApparentEnergyUnit.VoltampereHour, new string[]{"VAh"}),
+#else
                 ("en-US", typeof(ApparentEnergyUnit), (int)ApparentEnergyUnit.VoltampereHour, new string[]{"VAh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Gigavoltampere, new string[]{"GVA"}),
+#else
                 ("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Gigavoltampere, new string[]{"GVA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Kilovoltampere, new string[]{"kVA"}),
+#else
                 ("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Kilovoltampere, new string[]{"kVA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Megavoltampere, new string[]{"MVA"}),
+#else
                 ("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Megavoltampere, new string[]{"MVA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Voltampere, new string[]{"VA"}),
+#else
                 ("en-US", typeof(ApparentPowerUnit), (int)ApparentPowerUnit.Voltampere, new string[]{"VA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.Acre, new string[]{"ac"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.Acre, new string[]{"ac"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.Hectare, new string[]{"ha"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.Hectare, new string[]{"ha"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareCentimeter, new string[]{"cm²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareCentimeter, new string[]{"cm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareCentimeter, new string[]{"см²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareCentimeter, new string[]{"см²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareDecimeter, new string[]{"dm²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareDecimeter, new string[]{"dm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareDecimeter, new string[]{"дм²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareDecimeter, new string[]{"дм²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareFoot, new string[]{"ft²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareFoot, new string[]{"ft²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareFoot, new string[]{"фут²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareFoot, new string[]{"фут²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareInch, new string[]{"in²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareInch, new string[]{"in²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareInch, new string[]{"дюйм²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareInch, new string[]{"дюйм²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareKilometer, new string[]{"km²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareKilometer, new string[]{"km²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareKilometer, new string[]{"км²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareKilometer, new string[]{"км²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMeter, new string[]{"m²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMeter, new string[]{"m²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMeter, new string[]{"м²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMeter, new string[]{"м²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMicrometer, new string[]{"µm²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMicrometer, new string[]{"µm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMicrometer, new string[]{"мкм²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMicrometer, new string[]{"мкм²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMile, new string[]{"mi²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMile, new string[]{"mi²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMile, new string[]{"миля²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMile, new string[]{"миля²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMillimeter, new string[]{"mm²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareMillimeter, new string[]{"mm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMillimeter, new string[]{"мм²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareMillimeter, new string[]{"мм²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareNauticalMile, new string[]{"nmi²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareNauticalMile, new string[]{"nmi²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.SquareYard, new string[]{"yd²"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.SquareYard, new string[]{"yd²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareYard, new string[]{"ярд²"}),
+#else
                 ("ru-RU", typeof(AreaUnit), (int)AreaUnit.SquareYard, new string[]{"ярд²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaUnit), (int)AreaUnit.UsSurveySquareFoot, new string[]{"ft² (US)"}),
+#else
                 ("en-US", typeof(AreaUnit), (int)AreaUnit.UsSurveySquareFoot, new string[]{"ft² (US)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaDensityUnit), (int)AreaDensityUnit.KilogramPerSquareMeter, new string[]{"kg/m²"}),
+#else
                 ("en-US", typeof(AreaDensityUnit), (int)AreaDensityUnit.KilogramPerSquareMeter, new string[]{"kg/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.CentimeterToTheFourth, new string[]{"cm⁴", "cm^4"}),
+#else
                 ("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.CentimeterToTheFourth, new string[]{"cm⁴", "cm^4"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.DecimeterToTheFourth, new string[]{"dm⁴", "dm^4"}),
+#else
                 ("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.DecimeterToTheFourth, new string[]{"dm⁴", "dm^4"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.FootToTheFourth, new string[]{"ft⁴", "ft^4"}),
+#else
                 ("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.FootToTheFourth, new string[]{"ft⁴", "ft^4"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.InchToTheFourth, new string[]{"in⁴", "in^4"}),
+#else
                 ("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.InchToTheFourth, new string[]{"in⁴", "in^4"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.MeterToTheFourth, new string[]{"m⁴", "m^4"}),
+#else
                 ("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.MeterToTheFourth, new string[]{"m⁴", "m^4"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.MillimeterToTheFourth, new string[]{"mm⁴", "mm^4"}),
+#else
                 ("en-US", typeof(AreaMomentOfInertiaUnit), (int)AreaMomentOfInertiaUnit.MillimeterToTheFourth, new string[]{"mm⁴", "mm^4"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.BitPerSecond, new string[]{"bit/s", "bps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.BitPerSecond, new string[]{"bit/s", "bps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.BytePerSecond, new string[]{"B/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.BytePerSecond, new string[]{"B/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExabitPerSecond, new string[]{"Ebit/s", "Ebps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExabitPerSecond, new string[]{"Ebit/s", "Ebps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExabytePerSecond, new string[]{"EB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExabytePerSecond, new string[]{"EB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExbibitPerSecond, new string[]{"Eibit/s", "Eibps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExbibitPerSecond, new string[]{"Eibit/s", "Eibps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExbibytePerSecond, new string[]{"EiB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.ExbibytePerSecond, new string[]{"EiB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.GibibitPerSecond, new string[]{"Gibit/s", "Gibps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.GibibitPerSecond, new string[]{"Gibit/s", "Gibps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.GibibytePerSecond, new string[]{"GiB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.GibibytePerSecond, new string[]{"GiB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.GigabitPerSecond, new string[]{"Gbit/s", "Gbps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.GigabitPerSecond, new string[]{"Gbit/s", "Gbps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.GigabytePerSecond, new string[]{"GB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.GigabytePerSecond, new string[]{"GB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.KibibitPerSecond, new string[]{"Kibit/s", "Kibps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.KibibitPerSecond, new string[]{"Kibit/s", "Kibps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.KibibytePerSecond, new string[]{"KiB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.KibibytePerSecond, new string[]{"KiB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.KilobitPerSecond, new string[]{"kbit/s", "kbps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.KilobitPerSecond, new string[]{"kbit/s", "kbps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.KilobytePerSecond, new string[]{"kB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.KilobytePerSecond, new string[]{"kB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.MebibitPerSecond, new string[]{"Mibit/s", "Mibps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.MebibitPerSecond, new string[]{"Mibit/s", "Mibps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.MebibytePerSecond, new string[]{"MiB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.MebibytePerSecond, new string[]{"MiB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.MegabitPerSecond, new string[]{"Mbit/s", "Mbps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.MegabitPerSecond, new string[]{"Mbit/s", "Mbps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.MegabytePerSecond, new string[]{"MB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.MegabytePerSecond, new string[]{"MB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.PebibitPerSecond, new string[]{"Pibit/s", "Pibps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.PebibitPerSecond, new string[]{"Pibit/s", "Pibps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.PebibytePerSecond, new string[]{"PiB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.PebibytePerSecond, new string[]{"PiB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.PetabitPerSecond, new string[]{"Pbit/s", "Pbps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.PetabitPerSecond, new string[]{"Pbit/s", "Pbps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.PetabytePerSecond, new string[]{"PB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.PetabytePerSecond, new string[]{"PB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.TebibitPerSecond, new string[]{"Tibit/s", "Tibps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.TebibitPerSecond, new string[]{"Tibit/s", "Tibps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.TebibytePerSecond, new string[]{"TiB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.TebibytePerSecond, new string[]{"TiB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.TerabitPerSecond, new string[]{"Tbit/s", "Tbps"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.TerabitPerSecond, new string[]{"Tbit/s", "Tbps"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BitRateUnit), (int)BitRateUnit.TerabytePerSecond, new string[]{"TB/s"}),
+#else
                 ("en-US", typeof(BitRateUnit), (int)BitRateUnit.TerabytePerSecond, new string[]{"TB/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BrakeSpecificFuelConsumptionUnit), (int)BrakeSpecificFuelConsumptionUnit.GramPerKiloWattHour, new string[]{"g/kWh"}),
+#else
                 ("en-US", typeof(BrakeSpecificFuelConsumptionUnit), (int)BrakeSpecificFuelConsumptionUnit.GramPerKiloWattHour, new string[]{"g/kWh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BrakeSpecificFuelConsumptionUnit), (int)BrakeSpecificFuelConsumptionUnit.KilogramPerJoule, new string[]{"kg/J"}),
+#else
                 ("en-US", typeof(BrakeSpecificFuelConsumptionUnit), (int)BrakeSpecificFuelConsumptionUnit.KilogramPerJoule, new string[]{"kg/J"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(BrakeSpecificFuelConsumptionUnit), (int)BrakeSpecificFuelConsumptionUnit.PoundPerMechanicalHorsepowerHour, new string[]{"lb/hph"}),
+#else
                 ("en-US", typeof(BrakeSpecificFuelConsumptionUnit), (int)BrakeSpecificFuelConsumptionUnit.PoundPerMechanicalHorsepowerHour, new string[]{"lb/hph"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Farad, new string[]{"F"}),
+#else
                 ("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Farad, new string[]{"F"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Kilofarad, new string[]{"kF"}),
+#else
                 ("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Kilofarad, new string[]{"kF"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Megafarad, new string[]{"MF"}),
+#else
                 ("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Megafarad, new string[]{"MF"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Microfarad, new string[]{"µF"}),
+#else
                 ("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Microfarad, new string[]{"µF"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Millifarad, new string[]{"mF"}),
+#else
                 ("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Millifarad, new string[]{"mF"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Nanofarad, new string[]{"nF"}),
+#else
                 ("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Nanofarad, new string[]{"nF"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Picofarad, new string[]{"pF"}),
+#else
                 ("en-US", typeof(CapacitanceUnit), (int)CapacitanceUnit.Picofarad, new string[]{"pF"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CoefficientOfThermalExpansionUnit), (int)CoefficientOfThermalExpansionUnit.InverseDegreeCelsius, new string[]{"°C⁻¹", "1/°C"}),
+#else
                 ("en-US", typeof(CoefficientOfThermalExpansionUnit), (int)CoefficientOfThermalExpansionUnit.InverseDegreeCelsius, new string[]{"°C⁻¹", "1/°C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CoefficientOfThermalExpansionUnit), (int)CoefficientOfThermalExpansionUnit.InverseDegreeFahrenheit, new string[]{"°F⁻¹", "1/°F"}),
+#else
                 ("en-US", typeof(CoefficientOfThermalExpansionUnit), (int)CoefficientOfThermalExpansionUnit.InverseDegreeFahrenheit, new string[]{"°F⁻¹", "1/°F"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(CoefficientOfThermalExpansionUnit), (int)CoefficientOfThermalExpansionUnit.InverseKelvin, new string[]{"K⁻¹", "1/K"}),
+#else
                 ("en-US", typeof(CoefficientOfThermalExpansionUnit), (int)CoefficientOfThermalExpansionUnit.InverseKelvin, new string[]{"K⁻¹", "1/K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerDeciliter, new string[]{"cg/dl"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerDeciliter, new string[]{"cg/dl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerLiter, new string[]{"cg/L"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerLiter, new string[]{"cg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerMilliliter, new string[]{"cg/ml"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerMilliliter, new string[]{"cg/ml"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.DecigramPerDeciliter, new string[]{"dg/dl"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.DecigramPerDeciliter, new string[]{"dg/dl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.DecigramPerLiter, new string[]{"dg/L"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.DecigramPerLiter, new string[]{"dg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.DecigramPerMilliliter, new string[]{"dg/ml"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.DecigramPerMilliliter, new string[]{"dg/ml"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerCubicCentimeter, new string[]{"g/cm³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerCubicCentimeter, new string[]{"g/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerCubicMeter, new string[]{"g/m³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerCubicMeter, new string[]{"g/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DensityUnit), (int)DensityUnit.GramPerCubicMeter, new string[]{"г/м³"}),
+#else
                 ("ru-RU", typeof(DensityUnit), (int)DensityUnit.GramPerCubicMeter, new string[]{"г/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerCubicMillimeter, new string[]{"g/mm³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerCubicMillimeter, new string[]{"g/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerDeciliter, new string[]{"g/dl"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerDeciliter, new string[]{"g/dl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerLiter, new string[]{"g/L"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerLiter, new string[]{"g/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerMilliliter, new string[]{"g/ml"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.GramPerMilliliter, new string[]{"g/ml"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicCentimeter, new string[]{"kg/cm³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicCentimeter, new string[]{"kg/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicMeter, new string[]{"kg/m³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicMeter, new string[]{"kg/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicMeter, new string[]{"кг/м³"}),
+#else
                 ("ru-RU", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicMeter, new string[]{"кг/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicMillimeter, new string[]{"kg/mm³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerCubicMillimeter, new string[]{"kg/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerLiter, new string[]{"kg/l"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.KilogramPerLiter, new string[]{"kg/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.KilopoundPerCubicFoot, new string[]{"kip/ft³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.KilopoundPerCubicFoot, new string[]{"kip/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.KilopoundPerCubicInch, new string[]{"kip/in³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.KilopoundPerCubicInch, new string[]{"kip/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerCubicMeter, new string[]{"µg/m³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerCubicMeter, new string[]{"µg/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DensityUnit), (int)DensityUnit.MicrogramPerCubicMeter, new string[]{"мкг/м³"}),
+#else
                 ("ru-RU", typeof(DensityUnit), (int)DensityUnit.MicrogramPerCubicMeter, new string[]{"мкг/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerDeciliter, new string[]{"µg/dl"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerDeciliter, new string[]{"µg/dl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerLiter, new string[]{"µg/L"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerLiter, new string[]{"µg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerMilliliter, new string[]{"µg/ml"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MicrogramPerMilliliter, new string[]{"µg/ml"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerCubicMeter, new string[]{"mg/m³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerCubicMeter, new string[]{"mg/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DensityUnit), (int)DensityUnit.MilligramPerCubicMeter, new string[]{"мг/м³"}),
+#else
                 ("ru-RU", typeof(DensityUnit), (int)DensityUnit.MilligramPerCubicMeter, new string[]{"мг/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerDeciliter, new string[]{"mg/dl"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerDeciliter, new string[]{"mg/dl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerLiter, new string[]{"mg/L"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerLiter, new string[]{"mg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerMilliliter, new string[]{"mg/ml"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.MilligramPerMilliliter, new string[]{"mg/ml"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.NanogramPerDeciliter, new string[]{"ng/dl"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.NanogramPerDeciliter, new string[]{"ng/dl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.NanogramPerLiter, new string[]{"ng/L"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.NanogramPerLiter, new string[]{"ng/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.NanogramPerMilliliter, new string[]{"ng/ml"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.NanogramPerMilliliter, new string[]{"ng/ml"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.PicogramPerDeciliter, new string[]{"pg/dl"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.PicogramPerDeciliter, new string[]{"pg/dl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.PicogramPerLiter, new string[]{"pg/L"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.PicogramPerLiter, new string[]{"pg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.PicogramPerMilliliter, new string[]{"pg/ml"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.PicogramPerMilliliter, new string[]{"pg/ml"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerCubicFoot, new string[]{"lb/ft³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerCubicFoot, new string[]{"lb/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerCubicInch, new string[]{"lb/in³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerCubicInch, new string[]{"lb/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerImperialGallon, new string[]{"ppg (imp.)"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerImperialGallon, new string[]{"ppg (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerUSGallon, new string[]{"ppg (U.S.)"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.PoundPerUSGallon, new string[]{"ppg (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.SlugPerCubicFoot, new string[]{"slug/ft³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.SlugPerCubicFoot, new string[]{"slug/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.TonnePerCubicCentimeter, new string[]{"t/cm³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.TonnePerCubicCentimeter, new string[]{"t/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.TonnePerCubicMeter, new string[]{"t/m³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.TonnePerCubicMeter, new string[]{"t/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.TonnePerCubicMillimeter, new string[]{"t/mm³"}),
+#else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.TonnePerCubicMillimeter, new string[]{"t/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Day, new string[]{"d", "day", "days"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Day, new string[]{"d", "day", "days"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Day, new string[]{"д"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Day, new string[]{"д"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Hour, new string[]{"h", "hr", "hrs", "hour", "hours"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Hour, new string[]{"h", "hr", "hrs", "hour", "hours"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Hour, new string[]{"ч"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Hour, new string[]{"ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Microsecond, new string[]{"µs", "µsec", "µsecs", "µsecond", "µseconds"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Microsecond, new string[]{"µs", "µsec", "µsecs", "µsecond", "µseconds"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Microsecond, new string[]{"мкс", "мксек"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Microsecond, new string[]{"мкс", "мксек"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Millisecond, new string[]{"ms", "msec", "msecs", "msecond", "mseconds"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Millisecond, new string[]{"ms", "msec", "msecs", "msecond", "mseconds"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Millisecond, new string[]{"мс", "мсек"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Millisecond, new string[]{"мс", "мсек"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Minute, new string[]{"m", "min", "minute", "minutes"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Minute, new string[]{"m", "min", "minute", "minutes"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Minute, new string[]{"мин"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Minute, new string[]{"мин"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Month30, new string[]{"mo", "month", "months"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Month30, new string[]{"mo", "month", "months"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Month30, new string[]{"месяц"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Month30, new string[]{"месяц"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Nanosecond, new string[]{"ns", "nsec", "nsecs", "nsecond", "nseconds"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Nanosecond, new string[]{"ns", "nsec", "nsecs", "nsecond", "nseconds"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Nanosecond, new string[]{"нс", "нсек"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Nanosecond, new string[]{"нс", "нсек"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Second, new string[]{"s", "sec", "secs", "second", "seconds"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Second, new string[]{"s", "sec", "secs", "second", "seconds"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Second, new string[]{"с", "сек"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Second, new string[]{"с", "сек"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Week, new string[]{"wk", "week", "weeks"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Week, new string[]{"wk", "week", "weeks"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Week, new string[]{"мин"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Week, new string[]{"мин"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DurationUnit), (int)DurationUnit.Year365, new string[]{"yr", "year", "years"}),
+#else
                 ("en-US", typeof(DurationUnit), (int)DurationUnit.Year365, new string[]{"yr", "year", "years"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(DurationUnit), (int)DurationUnit.Year365, new string[]{"год"}),
+#else
                 ("ru-RU", typeof(DurationUnit), (int)DurationUnit.Year365, new string[]{"год"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.Centipoise, new string[]{"cP"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.Centipoise, new string[]{"cP"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.MicropascalSecond, new string[]{"µPa·s", "µPaS"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.MicropascalSecond, new string[]{"µPa·s", "µPaS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.MillipascalSecond, new string[]{"mPa·s", "mPaS"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.MillipascalSecond, new string[]{"mPa·s", "mPaS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.NewtonSecondPerMeterSquared, new string[]{"Ns/m²"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.NewtonSecondPerMeterSquared, new string[]{"Ns/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.PascalSecond, new string[]{"Pa·s", "PaS"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.PascalSecond, new string[]{"Pa·s", "PaS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.Poise, new string[]{"P"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.Poise, new string[]{"P"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.PoundForceSecondPerSquareFoot, new string[]{"lbf·s/ft²"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.PoundForceSecondPerSquareFoot, new string[]{"lbf·s/ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.PoundForceSecondPerSquareInch, new string[]{"lbf·s/in²"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.PoundForceSecondPerSquareInch, new string[]{"lbf·s/in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.Reyn, new string[]{"reyn"}),
+#else
                 ("en-US", typeof(DynamicViscosityUnit), (int)DynamicViscosityUnit.Reyn, new string[]{"reyn"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Microsiemens, new string[]{"µS"}),
+#else
                 ("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Microsiemens, new string[]{"µS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Millisiemens, new string[]{"mS"}),
+#else
                 ("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Millisiemens, new string[]{"mS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Nanosiemens, new string[]{"nS"}),
+#else
                 ("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Nanosiemens, new string[]{"nS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Siemens, new string[]{"S"}),
+#else
                 ("en-US", typeof(ElectricAdmittanceUnit), (int)ElectricAdmittanceUnit.Siemens, new string[]{"S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.AmpereHour, new string[]{"A-h", "Ah"}),
+#else
                 ("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.AmpereHour, new string[]{"A-h", "Ah"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.Coulomb, new string[]{"C"}),
+#else
                 ("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.Coulomb, new string[]{"C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.KiloampereHour, new string[]{"kA-h", "kAh"}),
+#else
                 ("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.KiloampereHour, new string[]{"kA-h", "kAh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.MegaampereHour, new string[]{"MA-h", "MAh"}),
+#else
                 ("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.MegaampereHour, new string[]{"MA-h", "MAh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.MilliampereHour, new string[]{"mA-h", "mAh"}),
+#else
                 ("en-US", typeof(ElectricChargeUnit), (int)ElectricChargeUnit.MilliampereHour, new string[]{"mA-h", "mAh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricChargeDensityUnit), (int)ElectricChargeDensityUnit.CoulombPerCubicMeter, new string[]{"C/m³"}),
+#else
                 ("en-US", typeof(ElectricChargeDensityUnit), (int)ElectricChargeDensityUnit.CoulombPerCubicMeter, new string[]{"C/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricConductanceUnit), (int)ElectricConductanceUnit.Microsiemens, new string[]{"µS"}),
+#else
                 ("en-US", typeof(ElectricConductanceUnit), (int)ElectricConductanceUnit.Microsiemens, new string[]{"µS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricConductanceUnit), (int)ElectricConductanceUnit.Millisiemens, new string[]{"mS"}),
+#else
                 ("en-US", typeof(ElectricConductanceUnit), (int)ElectricConductanceUnit.Millisiemens, new string[]{"mS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricConductanceUnit), (int)ElectricConductanceUnit.Siemens, new string[]{"S"}),
+#else
                 ("en-US", typeof(ElectricConductanceUnit), (int)ElectricConductanceUnit.Siemens, new string[]{"S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricConductivityUnit), (int)ElectricConductivityUnit.SiemensPerFoot, new string[]{"S/ft"}),
+#else
                 ("en-US", typeof(ElectricConductivityUnit), (int)ElectricConductivityUnit.SiemensPerFoot, new string[]{"S/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricConductivityUnit), (int)ElectricConductivityUnit.SiemensPerInch, new string[]{"S/in"}),
+#else
                 ("en-US", typeof(ElectricConductivityUnit), (int)ElectricConductivityUnit.SiemensPerInch, new string[]{"S/in"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricConductivityUnit), (int)ElectricConductivityUnit.SiemensPerMeter, new string[]{"S/m"}),
+#else
                 ("en-US", typeof(ElectricConductivityUnit), (int)ElectricConductivityUnit.SiemensPerMeter, new string[]{"S/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Ampere, new string[]{"A"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Ampere, new string[]{"A"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Centiampere, new string[]{"cA"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Centiampere, new string[]{"cA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Kiloampere, new string[]{"kA"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Kiloampere, new string[]{"kA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Megaampere, new string[]{"MA"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Megaampere, new string[]{"MA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Microampere, new string[]{"µA"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Microampere, new string[]{"µA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Milliampere, new string[]{"mA"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Milliampere, new string[]{"mA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Nanoampere, new string[]{"nA"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Nanoampere, new string[]{"nA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Picoampere, new string[]{"pA"}),
+#else
                 ("en-US", typeof(ElectricCurrentUnit), (int)ElectricCurrentUnit.Picoampere, new string[]{"pA"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentDensityUnit), (int)ElectricCurrentDensityUnit.AmperePerSquareFoot, new string[]{"A/ft²"}),
+#else
                 ("en-US", typeof(ElectricCurrentDensityUnit), (int)ElectricCurrentDensityUnit.AmperePerSquareFoot, new string[]{"A/ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentDensityUnit), (int)ElectricCurrentDensityUnit.AmperePerSquareInch, new string[]{"A/in²"}),
+#else
                 ("en-US", typeof(ElectricCurrentDensityUnit), (int)ElectricCurrentDensityUnit.AmperePerSquareInch, new string[]{"A/in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentDensityUnit), (int)ElectricCurrentDensityUnit.AmperePerSquareMeter, new string[]{"A/m²"}),
+#else
                 ("en-US", typeof(ElectricCurrentDensityUnit), (int)ElectricCurrentDensityUnit.AmperePerSquareMeter, new string[]{"A/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricCurrentGradientUnit), (int)ElectricCurrentGradientUnit.AmperePerSecond, new string[]{"A/s"}),
+#else
                 ("en-US", typeof(ElectricCurrentGradientUnit), (int)ElectricCurrentGradientUnit.AmperePerSecond, new string[]{"A/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricFieldUnit), (int)ElectricFieldUnit.VoltPerMeter, new string[]{"V/m"}),
+#else
                 ("en-US", typeof(ElectricFieldUnit), (int)ElectricFieldUnit.VoltPerMeter, new string[]{"V/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Henry, new string[]{"H"}),
+#else
                 ("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Henry, new string[]{"H"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Microhenry, new string[]{"µH"}),
+#else
                 ("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Microhenry, new string[]{"µH"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Millihenry, new string[]{"mH"}),
+#else
                 ("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Millihenry, new string[]{"mH"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Nanohenry, new string[]{"nH"}),
+#else
                 ("en-US", typeof(ElectricInductanceUnit), (int)ElectricInductanceUnit.Nanohenry, new string[]{"nH"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Kilovolt, new string[]{"kV"}),
+#else
                 ("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Kilovolt, new string[]{"kV"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Kilovolt, new string[]{"кВ"}),
+#else
                 ("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Kilovolt, new string[]{"кВ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Megavolt, new string[]{"MV"}),
+#else
                 ("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Megavolt, new string[]{"MV"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Megavolt, new string[]{"МВ"}),
+#else
                 ("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Megavolt, new string[]{"МВ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Microvolt, new string[]{"µV"}),
+#else
                 ("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Microvolt, new string[]{"µV"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Microvolt, new string[]{"мкВ"}),
+#else
                 ("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Microvolt, new string[]{"мкВ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Millivolt, new string[]{"mV"}),
+#else
                 ("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Millivolt, new string[]{"mV"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Millivolt, new string[]{"мВ"}),
+#else
                 ("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Millivolt, new string[]{"мВ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Volt, new string[]{"V"}),
+#else
                 ("en-US", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Volt, new string[]{"V"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Volt, new string[]{"В"}),
+#else
                 ("ru-RU", typeof(ElectricPotentialUnit), (int)ElectricPotentialUnit.Volt, new string[]{"В"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.KilovoltAc, new string[]{"kVac"}),
+#else
                 ("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.KilovoltAc, new string[]{"kVac"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.MegavoltAc, new string[]{"MVac"}),
+#else
                 ("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.MegavoltAc, new string[]{"MVac"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.MicrovoltAc, new string[]{"µVac"}),
+#else
                 ("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.MicrovoltAc, new string[]{"µVac"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.MillivoltAc, new string[]{"mVac"}),
+#else
                 ("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.MillivoltAc, new string[]{"mVac"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.VoltAc, new string[]{"Vac"}),
+#else
                 ("en-US", typeof(ElectricPotentialAcUnit), (int)ElectricPotentialAcUnit.VoltAc, new string[]{"Vac"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.KilovoltDc, new string[]{"kVdc"}),
+#else
                 ("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.KilovoltDc, new string[]{"kVdc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.MegavoltDc, new string[]{"MVdc"}),
+#else
                 ("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.MegavoltDc, new string[]{"MVdc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.MicrovoltDc, new string[]{"µVdc"}),
+#else
                 ("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.MicrovoltDc, new string[]{"µVdc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.MillivoltDc, new string[]{"mVdc"}),
+#else
                 ("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.MillivoltDc, new string[]{"mVdc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.VoltDc, new string[]{"Vdc"}),
+#else
                 ("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.VoltDc, new string[]{"Vdc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Gigaohm, new string[]{"GΩ"}),
+#else
                 ("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Gigaohm, new string[]{"GΩ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Kiloohm, new string[]{"kΩ"}),
+#else
                 ("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Kiloohm, new string[]{"kΩ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Megaohm, new string[]{"MΩ"}),
+#else
                 ("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Megaohm, new string[]{"MΩ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Milliohm, new string[]{"mΩ"}),
+#else
                 ("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Milliohm, new string[]{"mΩ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Ohm, new string[]{"Ω"}),
+#else
                 ("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Ohm, new string[]{"Ω"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.KiloohmCentimeter, new string[]{"kΩ·cm"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.KiloohmCentimeter, new string[]{"kΩ·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.KiloohmMeter, new string[]{"kΩ·m"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.KiloohmMeter, new string[]{"kΩ·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MegaohmCentimeter, new string[]{"MΩ·cm"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MegaohmCentimeter, new string[]{"MΩ·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MegaohmMeter, new string[]{"MΩ·m"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MegaohmMeter, new string[]{"MΩ·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MicroohmCentimeter, new string[]{"µΩ·cm"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MicroohmCentimeter, new string[]{"µΩ·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MicroohmMeter, new string[]{"µΩ·m"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MicroohmMeter, new string[]{"µΩ·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MilliohmCentimeter, new string[]{"mΩ·cm"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MilliohmCentimeter, new string[]{"mΩ·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MilliohmMeter, new string[]{"mΩ·m"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.MilliohmMeter, new string[]{"mΩ·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.NanoohmCentimeter, new string[]{"nΩ·cm"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.NanoohmCentimeter, new string[]{"nΩ·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.NanoohmMeter, new string[]{"nΩ·m"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.NanoohmMeter, new string[]{"nΩ·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.OhmCentimeter, new string[]{"Ω·cm"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.OhmCentimeter, new string[]{"Ω·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.OhmMeter, new string[]{"Ω·m"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.OhmMeter, new string[]{"Ω·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.PicoohmCentimeter, new string[]{"pΩ·cm"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.PicoohmCentimeter, new string[]{"pΩ·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.PicoohmMeter, new string[]{"pΩ·m"}),
+#else
                 ("en-US", typeof(ElectricResistivityUnit), (int)ElectricResistivityUnit.PicoohmMeter, new string[]{"pΩ·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricSurfaceChargeDensityUnit), (int)ElectricSurfaceChargeDensityUnit.CoulombPerSquareCentimeter, new string[]{"C/cm²"}),
+#else
                 ("en-US", typeof(ElectricSurfaceChargeDensityUnit), (int)ElectricSurfaceChargeDensityUnit.CoulombPerSquareCentimeter, new string[]{"C/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricSurfaceChargeDensityUnit), (int)ElectricSurfaceChargeDensityUnit.CoulombPerSquareInch, new string[]{"C/in²"}),
+#else
                 ("en-US", typeof(ElectricSurfaceChargeDensityUnit), (int)ElectricSurfaceChargeDensityUnit.CoulombPerSquareInch, new string[]{"C/in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricSurfaceChargeDensityUnit), (int)ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter, new string[]{"C/m²"}),
+#else
                 ("en-US", typeof(ElectricSurfaceChargeDensityUnit), (int)ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter, new string[]{"C/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.BritishThermalUnit, new string[]{"BTU"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.BritishThermalUnit, new string[]{"BTU"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Calorie, new string[]{"cal"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Calorie, new string[]{"cal"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.DecathermEc, new string[]{"Dth (E.C.)"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.DecathermEc, new string[]{"Dth (E.C.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.DecathermEc, new string[]{"Европейский декатерм"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.DecathermEc, new string[]{"Европейский декатерм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.DecathermImperial, new string[]{"Dth (imp.)"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.DecathermImperial, new string[]{"Dth (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.DecathermImperial, new string[]{"Английский декатерм"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.DecathermImperial, new string[]{"Английский декатерм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.DecathermUs, new string[]{"Dth (U.S.)"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.DecathermUs, new string[]{"Dth (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.DecathermUs, new string[]{"Американский декатерм"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.DecathermUs, new string[]{"Американский декатерм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.ElectronVolt, new string[]{"eV"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.ElectronVolt, new string[]{"eV"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Erg, new string[]{"erg"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Erg, new string[]{"erg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.FootPound, new string[]{"ft·lb"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.FootPound, new string[]{"ft·lb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.GigabritishThermalUnit, new string[]{"GBTU"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.GigabritishThermalUnit, new string[]{"GBTU"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Gigajoule, new string[]{"GJ"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Gigajoule, new string[]{"GJ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.GigawattHour, new string[]{"GWh"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.GigawattHour, new string[]{"GWh"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.GigawattHour, new string[]{"ГВт/ч"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.GigawattHour, new string[]{"ГВт/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Joule, new string[]{"J"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Joule, new string[]{"J"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.KilobritishThermalUnit, new string[]{"kBTU"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.KilobritishThermalUnit, new string[]{"kBTU"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Kilocalorie, new string[]{"kcal"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Kilocalorie, new string[]{"kcal"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Kilojoule, new string[]{"kJ"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Kilojoule, new string[]{"kJ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.KilowattHour, new string[]{"kWh"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.KilowattHour, new string[]{"kWh"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.KilowattHour, new string[]{"кВт/ч"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.KilowattHour, new string[]{"кВт/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.MegabritishThermalUnit, new string[]{"MBTU"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.MegabritishThermalUnit, new string[]{"MBTU"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Megacalorie, new string[]{"Mcal"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Megacalorie, new string[]{"Mcal"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Megajoule, new string[]{"MJ"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Megajoule, new string[]{"MJ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.MegawattHour, new string[]{"MWh"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.MegawattHour, new string[]{"MWh"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.MegawattHour, new string[]{"МВт/ч"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.MegawattHour, new string[]{"МВт/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.Millijoule, new string[]{"mJ"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.Millijoule, new string[]{"mJ"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.TerawattHour, new string[]{"TWh"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.TerawattHour, new string[]{"TWh"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.TerawattHour, new string[]{"ТВт/ч"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.TerawattHour, new string[]{"ТВт/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.ThermEc, new string[]{"th (E.C.)"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.ThermEc, new string[]{"th (E.C.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.ThermEc, new string[]{"Европейский терм"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.ThermEc, new string[]{"Европейский терм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.ThermImperial, new string[]{"th (imp.)"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.ThermImperial, new string[]{"th (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.ThermImperial, new string[]{"Английский терм"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.ThermImperial, new string[]{"Английский терм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.ThermUs, new string[]{"th (U.S.)"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.ThermUs, new string[]{"th (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.ThermUs, new string[]{"Американский терм"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.ThermUs, new string[]{"Американский терм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EnergyUnit), (int)EnergyUnit.WattHour, new string[]{"Wh"}),
+#else
                 ("en-US", typeof(EnergyUnit), (int)EnergyUnit.WattHour, new string[]{"Wh"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.WattHour, new string[]{"Вт/ч"}),
+#else
                 ("ru-RU", typeof(EnergyUnit), (int)EnergyUnit.WattHour, new string[]{"Вт/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EntropyUnit), (int)EntropyUnit.CaloriePerKelvin, new string[]{"cal/K"}),
+#else
                 ("en-US", typeof(EntropyUnit), (int)EntropyUnit.CaloriePerKelvin, new string[]{"cal/K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EntropyUnit), (int)EntropyUnit.JoulePerDegreeCelsius, new string[]{"J/C"}),
+#else
                 ("en-US", typeof(EntropyUnit), (int)EntropyUnit.JoulePerDegreeCelsius, new string[]{"J/C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EntropyUnit), (int)EntropyUnit.JoulePerKelvin, new string[]{"J/K"}),
+#else
                 ("en-US", typeof(EntropyUnit), (int)EntropyUnit.JoulePerKelvin, new string[]{"J/K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EntropyUnit), (int)EntropyUnit.KilocaloriePerKelvin, new string[]{"kcal/K"}),
+#else
                 ("en-US", typeof(EntropyUnit), (int)EntropyUnit.KilocaloriePerKelvin, new string[]{"kcal/K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EntropyUnit), (int)EntropyUnit.KilojoulePerDegreeCelsius, new string[]{"kJ/C"}),
+#else
                 ("en-US", typeof(EntropyUnit), (int)EntropyUnit.KilojoulePerDegreeCelsius, new string[]{"kJ/C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EntropyUnit), (int)EntropyUnit.KilojoulePerKelvin, new string[]{"kJ/K"}),
+#else
                 ("en-US", typeof(EntropyUnit), (int)EntropyUnit.KilojoulePerKelvin, new string[]{"kJ/K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(EntropyUnit), (int)EntropyUnit.MegajoulePerKelvin, new string[]{"MJ/K"}),
+#else
                 ("en-US", typeof(EntropyUnit), (int)EntropyUnit.MegajoulePerKelvin, new string[]{"MJ/K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Decanewton, new string[]{"daN"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Decanewton, new string[]{"daN"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Decanewton, new string[]{"даН"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Decanewton, new string[]{"даН"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Dyn, new string[]{"dyn"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Dyn, new string[]{"dyn"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Dyn, new string[]{"дин"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Dyn, new string[]{"дин"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.KilogramForce, new string[]{"kgf"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.KilogramForce, new string[]{"kgf"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.KilogramForce, new string[]{"кгс"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.KilogramForce, new string[]{"кгс"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Kilonewton, new string[]{"kN"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Kilonewton, new string[]{"kN"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Kilonewton, new string[]{"кН"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Kilonewton, new string[]{"кН"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.KiloPond, new string[]{"kp"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.KiloPond, new string[]{"kp"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.KiloPond, new string[]{"кгс"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.KiloPond, new string[]{"кгс"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Meganewton, new string[]{"MN"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Meganewton, new string[]{"MN"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Meganewton, new string[]{"МН"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Meganewton, new string[]{"МН"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Micronewton, new string[]{"µN"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Micronewton, new string[]{"µN"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Micronewton, new string[]{"мкН"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Micronewton, new string[]{"мкН"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Millinewton, new string[]{"mN"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Millinewton, new string[]{"mN"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Millinewton, new string[]{"мН"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Millinewton, new string[]{"мН"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Newton, new string[]{"N"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Newton, new string[]{"N"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Newton, new string[]{"Н"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Newton, new string[]{"Н"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.OunceForce, new string[]{"ozf"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.OunceForce, new string[]{"ozf"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.Poundal, new string[]{"pdl"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.Poundal, new string[]{"pdl"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.Poundal, new string[]{"паундаль"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.Poundal, new string[]{"паундаль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.PoundForce, new string[]{"lbf"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.PoundForce, new string[]{"lbf"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.PoundForce, new string[]{"фунт-сила"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.PoundForce, new string[]{"фунт-сила"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceUnit), (int)ForceUnit.TonneForce, new string[]{"Ton"}),
+#else
                 ("en-US", typeof(ForceUnit), (int)ForceUnit.TonneForce, new string[]{"Ton"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForceUnit), (int)ForceUnit.TonneForce, new string[]{"тс"}),
+#else
                 ("ru-RU", typeof(ForceUnit), (int)ForceUnit.TonneForce, new string[]{"тс"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.CentinewtonPerSecond, new string[]{"cN/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.CentinewtonPerSecond, new string[]{"cN/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.DecanewtonPerMinute, new string[]{"daN/min"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.DecanewtonPerMinute, new string[]{"daN/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.DecanewtonPerSecond, new string[]{"daN/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.DecanewtonPerSecond, new string[]{"daN/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.DecinewtonPerSecond, new string[]{"dN/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.DecinewtonPerSecond, new string[]{"dN/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.KilonewtonPerMinute, new string[]{"kN/min"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.KilonewtonPerMinute, new string[]{"kN/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.KilonewtonPerSecond, new string[]{"kN/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.KilonewtonPerSecond, new string[]{"kN/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.MicronewtonPerSecond, new string[]{"µN/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.MicronewtonPerSecond, new string[]{"µN/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.MillinewtonPerSecond, new string[]{"mN/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.MillinewtonPerSecond, new string[]{"mN/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.NanonewtonPerSecond, new string[]{"nN/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.NanonewtonPerSecond, new string[]{"nN/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.NewtonPerMinute, new string[]{"N/min"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.NewtonPerMinute, new string[]{"N/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.NewtonPerSecond, new string[]{"N/s"}),
+#else
                 ("en-US", typeof(ForceChangeRateUnit), (int)ForceChangeRateUnit.NewtonPerSecond, new string[]{"N/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.CentinewtonPerMeter, new string[]{"cN/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.CentinewtonPerMeter, new string[]{"cN/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.DecinewtonPerMeter, new string[]{"dN/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.DecinewtonPerMeter, new string[]{"dN/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.KilogramForcePerMeter, new string[]{"kgf/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.KilogramForcePerMeter, new string[]{"kgf/m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.KilogramForcePerMeter, new string[]{"кгс/м"}),
+#else
                 ("ru-RU", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.KilogramForcePerMeter, new string[]{"кгс/м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.KilonewtonPerMeter, new string[]{"kN/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.KilonewtonPerMeter, new string[]{"kN/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.MeganewtonPerMeter, new string[]{"MN/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.MeganewtonPerMeter, new string[]{"MN/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.MicronewtonPerMeter, new string[]{"µN/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.MicronewtonPerMeter, new string[]{"µN/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.MillinewtonPerMeter, new string[]{"mN/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.MillinewtonPerMeter, new string[]{"mN/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.NanonewtonPerMeter, new string[]{"nN/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.NanonewtonPerMeter, new string[]{"nN/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.NewtonPerMeter, new string[]{"N/m"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.NewtonPerMeter, new string[]{"N/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.PoundForcePerFoot, new string[]{"lbf/ft"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.PoundForcePerFoot, new string[]{"lbf/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.PoundForcePerInch, new string[]{"lbf/in"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.PoundForcePerInch, new string[]{"lbf/in"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.PoundForcePerYard, new string[]{"lbf/yd"}),
+#else
                 ("en-US", typeof(ForcePerLengthUnit), (int)ForcePerLengthUnit.PoundForcePerYard, new string[]{"lbf/yd"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.BeatPerMinute, new string[]{"bpm"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.BeatPerMinute, new string[]{"bpm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.CyclePerHour, new string[]{"cph"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.CyclePerHour, new string[]{"cph"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.CyclePerMinute, new string[]{"cpm"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.CyclePerMinute, new string[]{"cpm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Gigahertz, new string[]{"GHz"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Gigahertz, new string[]{"GHz"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Hertz, new string[]{"Hz"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Hertz, new string[]{"Hz"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Kilohertz, new string[]{"kHz"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Kilohertz, new string[]{"kHz"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Megahertz, new string[]{"MHz"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Megahertz, new string[]{"MHz"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.RadianPerSecond, new string[]{"rad/s"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.RadianPerSecond, new string[]{"rad/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Terahertz, new string[]{"THz"}),
+#else
                 ("en-US", typeof(FrequencyUnit), (int)FrequencyUnit.Terahertz, new string[]{"THz"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.KilometerPerLiter, new string[]{"km/L"}),
+#else
                 ("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.KilometerPerLiter, new string[]{"km/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.LiterPer100Kilometers, new string[]{"L/100km"}),
+#else
                 ("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.LiterPer100Kilometers, new string[]{"L/100km"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.MilePerUkGallon, new string[]{"mpg (imp.)"}),
+#else
                 ("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.MilePerUkGallon, new string[]{"mpg (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.MilePerUsGallon, new string[]{"mpg (U.S.)"}),
+#else
                 ("en-US", typeof(FuelEfficiencyUnit), (int)FuelEfficiencyUnit.MilePerUsGallon, new string[]{"mpg (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerHourSquareFoot, new string[]{"BTU/h·ft²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerHourSquareFoot, new string[]{"BTU/h·ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerMinuteSquareFoot, new string[]{"BTU/min·ft²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerMinuteSquareFoot, new string[]{"BTU/min·ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerSecondSquareFoot, new string[]{"BTU/s·ft²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerSecondSquareFoot, new string[]{"BTU/s·ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerSecondSquareInch, new string[]{"BTU/s·in²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.BtuPerSecondSquareInch, new string[]{"BTU/s·in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.CaloriePerSecondSquareCentimeter, new string[]{"cal/s·cm²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.CaloriePerSecondSquareCentimeter, new string[]{"cal/s·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.CentiwattPerSquareMeter, new string[]{"cW/m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.CentiwattPerSquareMeter, new string[]{"cW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.DeciwattPerSquareMeter, new string[]{"dW/m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.DeciwattPerSquareMeter, new string[]{"dW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.KilocaloriePerHourSquareMeter, new string[]{"kcal/h·m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.KilocaloriePerHourSquareMeter, new string[]{"kcal/h·m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.KilocaloriePerSecondSquareCentimeter, new string[]{"kcal/s·cm²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.KilocaloriePerSecondSquareCentimeter, new string[]{"kcal/s·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.KilowattPerSquareMeter, new string[]{"kW/m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.KilowattPerSquareMeter, new string[]{"kW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.MicrowattPerSquareMeter, new string[]{"µW/m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.MicrowattPerSquareMeter, new string[]{"µW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.MilliwattPerSquareMeter, new string[]{"mW/m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.MilliwattPerSquareMeter, new string[]{"mW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.NanowattPerSquareMeter, new string[]{"nW/m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.NanowattPerSquareMeter, new string[]{"nW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.PoundForcePerFootSecond, new string[]{"lbf/(ft·s)"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.PoundForcePerFootSecond, new string[]{"lbf/(ft·s)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.PoundPerSecondCubed, new string[]{"lb/s³", "lbm/s³"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.PoundPerSecondCubed, new string[]{"lb/s³", "lbm/s³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.WattPerSquareFoot, new string[]{"W/ft²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.WattPerSquareFoot, new string[]{"W/ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.WattPerSquareInch, new string[]{"W/in²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.WattPerSquareInch, new string[]{"W/in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.WattPerSquareMeter, new string[]{"W/m²"}),
+#else
                 ("en-US", typeof(HeatFluxUnit), (int)HeatFluxUnit.WattPerSquareMeter, new string[]{"W/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit, new string[]{"Btu/ft²·hr·°F"}),
+#else
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit, new string[]{"Btu/ft²·hr·°F"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.WattPerSquareMeterCelsius, new string[]{"W/m²·°C"}),
+#else
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.WattPerSquareMeterCelsius, new string[]{"W/m²·°C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.WattPerSquareMeterKelvin, new string[]{"W/m²·K"}),
+#else
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.WattPerSquareMeterKelvin, new string[]{"W/m²·K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Kilolux, new string[]{"klx"}),
+#else
                 ("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Kilolux, new string[]{"klx"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Lux, new string[]{"lx"}),
+#else
                 ("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Lux, new string[]{"lx"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Megalux, new string[]{"Mlx"}),
+#else
                 ("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Megalux, new string[]{"Mlx"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Millilux, new string[]{"mlx"}),
+#else
                 ("en-US", typeof(IlluminanceUnit), (int)IlluminanceUnit.Millilux, new string[]{"mlx"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Bit, new string[]{"b"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Bit, new string[]{"b"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Byte, new string[]{"B"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Byte, new string[]{"B"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Exabit, new string[]{"Eb"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Exabit, new string[]{"Eb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Exabyte, new string[]{"EB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Exabyte, new string[]{"EB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Exbibit, new string[]{"Eib"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Exbibit, new string[]{"Eib"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Exbibyte, new string[]{"EiB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Exbibyte, new string[]{"EiB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Gibibit, new string[]{"Gib"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Gibibit, new string[]{"Gib"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Gibibyte, new string[]{"GiB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Gibibyte, new string[]{"GiB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Gigabit, new string[]{"Gb"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Gigabit, new string[]{"Gb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Gigabyte, new string[]{"GB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Gigabyte, new string[]{"GB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Kibibit, new string[]{"Kib"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Kibibit, new string[]{"Kib"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Kibibyte, new string[]{"KiB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Kibibyte, new string[]{"KiB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Kilobit, new string[]{"kb"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Kilobit, new string[]{"kb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Kilobyte, new string[]{"kB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Kilobyte, new string[]{"kB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Mebibit, new string[]{"Mib"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Mebibit, new string[]{"Mib"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Mebibyte, new string[]{"MiB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Mebibyte, new string[]{"MiB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Megabit, new string[]{"Mb"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Megabit, new string[]{"Mb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Megabyte, new string[]{"MB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Megabyte, new string[]{"MB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Pebibit, new string[]{"Pib"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Pebibit, new string[]{"Pib"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Pebibyte, new string[]{"PiB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Pebibyte, new string[]{"PiB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Petabit, new string[]{"Pb"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Petabit, new string[]{"Pb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Petabyte, new string[]{"PB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Petabyte, new string[]{"PB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Tebibit, new string[]{"Tib"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Tebibit, new string[]{"Tib"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Tebibyte, new string[]{"TiB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Tebibyte, new string[]{"TiB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Terabit, new string[]{"Tb"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Terabit, new string[]{"Tb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(InformationUnit), (int)InformationUnit.Terabyte, new string[]{"TB"}),
+#else
                 ("en-US", typeof(InformationUnit), (int)InformationUnit.Terabyte, new string[]{"TB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.KilowattPerSquareCentimeter, new string[]{"kW/cm²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.KilowattPerSquareCentimeter, new string[]{"kW/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.KilowattPerSquareMeter, new string[]{"kW/m²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.KilowattPerSquareMeter, new string[]{"kW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MegawattPerSquareCentimeter, new string[]{"MW/cm²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MegawattPerSquareCentimeter, new string[]{"MW/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MegawattPerSquareMeter, new string[]{"MW/m²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MegawattPerSquareMeter, new string[]{"MW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MicrowattPerSquareCentimeter, new string[]{"µW/cm²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MicrowattPerSquareCentimeter, new string[]{"µW/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MicrowattPerSquareMeter, new string[]{"µW/m²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MicrowattPerSquareMeter, new string[]{"µW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MilliwattPerSquareCentimeter, new string[]{"mW/cm²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MilliwattPerSquareCentimeter, new string[]{"mW/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MilliwattPerSquareMeter, new string[]{"mW/m²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.MilliwattPerSquareMeter, new string[]{"mW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.NanowattPerSquareCentimeter, new string[]{"nW/cm²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.NanowattPerSquareCentimeter, new string[]{"nW/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.NanowattPerSquareMeter, new string[]{"nW/m²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.NanowattPerSquareMeter, new string[]{"nW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.PicowattPerSquareCentimeter, new string[]{"pW/cm²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.PicowattPerSquareCentimeter, new string[]{"pW/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.PicowattPerSquareMeter, new string[]{"pW/m²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.PicowattPerSquareMeter, new string[]{"pW/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.WattPerSquareCentimeter, new string[]{"W/cm²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.WattPerSquareCentimeter, new string[]{"W/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.WattPerSquareMeter, new string[]{"W/m²"}),
+#else
                 ("en-US", typeof(IrradianceUnit), (int)IrradianceUnit.WattPerSquareMeter, new string[]{"W/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.JoulePerSquareCentimeter, new string[]{"J/cm²"}),
+#else
                 ("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.JoulePerSquareCentimeter, new string[]{"J/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.JoulePerSquareMeter, new string[]{"J/m²"}),
+#else
                 ("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.JoulePerSquareMeter, new string[]{"J/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.JoulePerSquareMillimeter, new string[]{"J/mm²"}),
+#else
                 ("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.JoulePerSquareMillimeter, new string[]{"J/mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.KilojoulePerSquareMeter, new string[]{"kJ/m²"}),
+#else
                 ("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.KilojoulePerSquareMeter, new string[]{"kJ/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.KilowattHourPerSquareMeter, new string[]{"kWh/m²"}),
+#else
                 ("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.KilowattHourPerSquareMeter, new string[]{"kWh/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.MillijoulePerSquareCentimeter, new string[]{"mJ/cm²"}),
+#else
                 ("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.MillijoulePerSquareCentimeter, new string[]{"mJ/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.WattHourPerSquareMeter, new string[]{"Wh/m²"}),
+#else
                 ("en-US", typeof(IrradiationUnit), (int)IrradiationUnit.WattHourPerSquareMeter, new string[]{"Wh/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Centistokes, new string[]{"cSt"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Centistokes, new string[]{"cSt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Centistokes, new string[]{"сСт"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Centistokes, new string[]{"сСт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Decistokes, new string[]{"dSt"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Decistokes, new string[]{"dSt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Decistokes, new string[]{"дСт"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Decistokes, new string[]{"дСт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Kilostokes, new string[]{"kSt"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Kilostokes, new string[]{"kSt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Kilostokes, new string[]{"кСт"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Kilostokes, new string[]{"кСт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Microstokes, new string[]{"µSt"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Microstokes, new string[]{"µSt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Microstokes, new string[]{"мкСт"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Microstokes, new string[]{"мкСт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Millistokes, new string[]{"mSt"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Millistokes, new string[]{"mSt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Millistokes, new string[]{"мСт"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Millistokes, new string[]{"мСт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Nanostokes, new string[]{"nSt"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Nanostokes, new string[]{"nSt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Nanostokes, new string[]{"нСт"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Nanostokes, new string[]{"нСт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.SquareMeterPerSecond, new string[]{"m²/s"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.SquareMeterPerSecond, new string[]{"m²/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.SquareMeterPerSecond, new string[]{"м²/с"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.SquareMeterPerSecond, new string[]{"м²/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Stokes, new string[]{"St"}),
+#else
                 ("en-US", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Stokes, new string[]{"St"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Stokes, new string[]{"Ст"}),
+#else
                 ("ru-RU", typeof(KinematicViscosityUnit), (int)KinematicViscosityUnit.Stokes, new string[]{"Ст"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LapseRateUnit), (int)LapseRateUnit.DegreeCelsiusPerKilometer, new string[]{"∆°C/km"}),
+#else
                 ("en-US", typeof(LapseRateUnit), (int)LapseRateUnit.DegreeCelsiusPerKilometer, new string[]{"∆°C/km"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.AstronomicalUnit, new string[]{"au", "ua"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.AstronomicalUnit, new string[]{"au", "ua"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Centimeter, new string[]{"cm"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Centimeter, new string[]{"cm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Centimeter, new string[]{"см"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Centimeter, new string[]{"см"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Decimeter, new string[]{"dm"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Decimeter, new string[]{"dm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Decimeter, new string[]{"дм"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Decimeter, new string[]{"дм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.DtpPica, new string[]{"pica"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.DtpPica, new string[]{"pica"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.DtpPoint, new string[]{"pt"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.DtpPoint, new string[]{"pt"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Fathom, new string[]{"fathom"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Fathom, new string[]{"fathom"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Foot, new string[]{"ft", "'", "′"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Foot, new string[]{"ft", "'", "′"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Foot, new string[]{"фут"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Foot, new string[]{"фут"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Hand, new string[]{"h", "hh"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Hand, new string[]{"h", "hh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Hectometer, new string[]{"hm"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Hectometer, new string[]{"hm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Hectometer, new string[]{"гм"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Hectometer, new string[]{"гм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Inch, new string[]{"in", "\"", "″"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Inch, new string[]{"in", "\"", "″"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Inch, new string[]{"дюйм"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Inch, new string[]{"дюйм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.KilolightYear, new string[]{"kly"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.KilolightYear, new string[]{"kly"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Kilometer, new string[]{"km"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Kilometer, new string[]{"km"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Kilometer, new string[]{"км"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Kilometer, new string[]{"км"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Kiloparsec, new string[]{"kpc"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Kiloparsec, new string[]{"kpc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.LightYear, new string[]{"ly"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.LightYear, new string[]{"ly"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.MegalightYear, new string[]{"Mly"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.MegalightYear, new string[]{"Mly"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Megaparsec, new string[]{"Mpc"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Megaparsec, new string[]{"Mpc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Meter, new string[]{"m"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Meter, new string[]{"m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Meter, new string[]{"м"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Meter, new string[]{"м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Microinch, new string[]{"µin"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Microinch, new string[]{"µin"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Microinch, new string[]{"микродюйм"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Microinch, new string[]{"микродюйм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Micrometer, new string[]{"µm"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Micrometer, new string[]{"µm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Micrometer, new string[]{"мкм"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Micrometer, new string[]{"мкм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Mil, new string[]{"mil"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Mil, new string[]{"mil"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Mil, new string[]{"мил"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Mil, new string[]{"мил"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Mile, new string[]{"mi"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Mile, new string[]{"mi"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Mile, new string[]{"миля"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Mile, new string[]{"миля"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Millimeter, new string[]{"mm"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Millimeter, new string[]{"mm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Millimeter, new string[]{"мм"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Millimeter, new string[]{"мм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Nanometer, new string[]{"nm"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Nanometer, new string[]{"nm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Nanometer, new string[]{"нм"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Nanometer, new string[]{"нм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.NauticalMile, new string[]{"NM"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.NauticalMile, new string[]{"NM"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.NauticalMile, new string[]{"мил"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.NauticalMile, new string[]{"мил"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Parsec, new string[]{"pc"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Parsec, new string[]{"pc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.PrinterPica, new string[]{"pica"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.PrinterPica, new string[]{"pica"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.PrinterPoint, new string[]{"pt"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.PrinterPoint, new string[]{"pt"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Shackle, new string[]{"shackle"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Shackle, new string[]{"shackle"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.SolarRadius, new string[]{"R⊙"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.SolarRadius, new string[]{"R⊙"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Twip, new string[]{"twip"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Twip, new string[]{"twip"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.UsSurveyFoot, new string[]{"ftUS"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.UsSurveyFoot, new string[]{"ftUS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LengthUnit), (int)LengthUnit.Yard, new string[]{"yd"}),
+#else
                 ("en-US", typeof(LengthUnit), (int)LengthUnit.Yard, new string[]{"yd"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(LengthUnit), (int)LengthUnit.Yard, new string[]{"ярд"}),
+#else
                 ("ru-RU", typeof(LengthUnit), (int)LengthUnit.Yard, new string[]{"ярд"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LevelUnit), (int)LevelUnit.Decibel, new string[]{"dB"}),
+#else
                 ("en-US", typeof(LevelUnit), (int)LevelUnit.Decibel, new string[]{"dB"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LevelUnit), (int)LevelUnit.Neper, new string[]{"Np"}),
+#else
                 ("en-US", typeof(LevelUnit), (int)LevelUnit.Neper, new string[]{"Np"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LinearDensityUnit), (int)LinearDensityUnit.GramPerMeter, new string[]{"g/m"}),
+#else
                 ("en-US", typeof(LinearDensityUnit), (int)LinearDensityUnit.GramPerMeter, new string[]{"g/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LinearDensityUnit), (int)LinearDensityUnit.KilogramPerMeter, new string[]{"kg/m"}),
+#else
                 ("en-US", typeof(LinearDensityUnit), (int)LinearDensityUnit.KilogramPerMeter, new string[]{"kg/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LinearDensityUnit), (int)LinearDensityUnit.PoundPerFoot, new string[]{"lb/ft"}),
+#else
                 ("en-US", typeof(LinearDensityUnit), (int)LinearDensityUnit.PoundPerFoot, new string[]{"lb/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Decawatt, new string[]{"daW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Decawatt, new string[]{"daW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Deciwatt, new string[]{"dW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Deciwatt, new string[]{"dW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Femtowatt, new string[]{"fW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Femtowatt, new string[]{"fW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Gigawatt, new string[]{"GW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Gigawatt, new string[]{"GW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Kilowatt, new string[]{"kW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Kilowatt, new string[]{"kW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Megawatt, new string[]{"MW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Megawatt, new string[]{"MW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Microwatt, new string[]{"µW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Microwatt, new string[]{"µW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Milliwatt, new string[]{"mW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Milliwatt, new string[]{"mW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Nanowatt, new string[]{"nW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Nanowatt, new string[]{"nW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Petawatt, new string[]{"PW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Petawatt, new string[]{"PW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Picowatt, new string[]{"pW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Picowatt, new string[]{"pW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.SolarLuminosity, new string[]{"L⊙"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.SolarLuminosity, new string[]{"L⊙"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Terawatt, new string[]{"TW"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Terawatt, new string[]{"TW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Watt, new string[]{"W"}),
+#else
                 ("en-US", typeof(LuminosityUnit), (int)LuminosityUnit.Watt, new string[]{"W"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminousFluxUnit), (int)LuminousFluxUnit.Lumen, new string[]{"lm"}),
+#else
                 ("en-US", typeof(LuminousFluxUnit), (int)LuminousFluxUnit.Lumen, new string[]{"lm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(LuminousIntensityUnit), (int)LuminousIntensityUnit.Candela, new string[]{"cd"}),
+#else
                 ("en-US", typeof(LuminousIntensityUnit), (int)LuminousIntensityUnit.Candela, new string[]{"cd"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Microtesla, new string[]{"µT"}),
+#else
                 ("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Microtesla, new string[]{"µT"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Millitesla, new string[]{"mT"}),
+#else
                 ("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Millitesla, new string[]{"mT"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Nanotesla, new string[]{"nT"}),
+#else
                 ("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Nanotesla, new string[]{"nT"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Tesla, new string[]{"T"}),
+#else
                 ("en-US", typeof(MagneticFieldUnit), (int)MagneticFieldUnit.Tesla, new string[]{"T"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MagneticFluxUnit), (int)MagneticFluxUnit.Weber, new string[]{"Wb"}),
+#else
                 ("en-US", typeof(MagneticFluxUnit), (int)MagneticFluxUnit.Weber, new string[]{"Wb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MagnetizationUnit), (int)MagnetizationUnit.AmperePerMeter, new string[]{"A/m"}),
+#else
                 ("en-US", typeof(MagnetizationUnit), (int)MagnetizationUnit.AmperePerMeter, new string[]{"A/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Centigram, new string[]{"cg"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Centigram, new string[]{"cg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Centigram, new string[]{"сг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Centigram, new string[]{"сг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Decagram, new string[]{"dag"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Decagram, new string[]{"dag"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Decagram, new string[]{"даг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Decagram, new string[]{"даг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Decigram, new string[]{"dg"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Decigram, new string[]{"dg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Decigram, new string[]{"дг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Decigram, new string[]{"дг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.EarthMass, new string[]{"em"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.EarthMass, new string[]{"em"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Grain, new string[]{"gr"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Grain, new string[]{"gr"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Gram, new string[]{"g"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Gram, new string[]{"g"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Gram, new string[]{"г"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Gram, new string[]{"г"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Hectogram, new string[]{"hg"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Hectogram, new string[]{"hg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Hectogram, new string[]{"гг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Hectogram, new string[]{"гг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Kilogram, new string[]{"kg"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Kilogram, new string[]{"kg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Kilogram, new string[]{"кг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Kilogram, new string[]{"кг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Kilopound, new string[]{"klb", "klbs", "klbm"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Kilopound, new string[]{"klb", "klbs", "klbm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Kilopound, new string[]{"кфунт"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Kilopound, new string[]{"кфунт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Kilotonne, new string[]{"kt"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Kilotonne, new string[]{"kt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Kilotonne, new string[]{"кт"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Kilotonne, new string[]{"кт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.LongHundredweight, new string[]{"cwt"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.LongHundredweight, new string[]{"cwt"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.LongTon, new string[]{"long tn"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.LongTon, new string[]{"long tn"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.LongTon, new string[]{"тонна большая"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.LongTon, new string[]{"тонна большая"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Megapound, new string[]{"Mlb", "Mlbs", "Mlbm"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Megapound, new string[]{"Mlb", "Mlbs", "Mlbm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Megapound, new string[]{"Мфунт"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Megapound, new string[]{"Мфунт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Megatonne, new string[]{"Mt"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Megatonne, new string[]{"Mt"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Megatonne, new string[]{"Мт"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Megatonne, new string[]{"Мт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Microgram, new string[]{"µg"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Microgram, new string[]{"µg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Microgram, new string[]{"мкг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Microgram, new string[]{"мкг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Milligram, new string[]{"mg"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Milligram, new string[]{"mg"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Milligram, new string[]{"мг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Milligram, new string[]{"мг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Nanogram, new string[]{"ng"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Nanogram, new string[]{"ng"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Nanogram, new string[]{"нг"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Nanogram, new string[]{"нг"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Ounce, new string[]{"oz"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Ounce, new string[]{"oz"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Pound, new string[]{"lb", "lbs", "lbm"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Pound, new string[]{"lb", "lbs", "lbm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Pound, new string[]{"фунт"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Pound, new string[]{"фунт"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.ShortHundredweight, new string[]{"cwt"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.ShortHundredweight, new string[]{"cwt"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.ShortTon, new string[]{"short tn"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.ShortTon, new string[]{"short tn"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.ShortTon, new string[]{"тонна малая"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.ShortTon, new string[]{"тонна малая"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Slug, new string[]{"slug"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Slug, new string[]{"slug"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.SolarMass, new string[]{"M⊙"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.SolarMass, new string[]{"M⊙"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Stone, new string[]{"st"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Stone, new string[]{"st"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassUnit), (int)MassUnit.Tonne, new string[]{"t"}),
+#else
                 ("en-US", typeof(MassUnit), (int)MassUnit.Tonne, new string[]{"t"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassUnit), (int)MassUnit.Tonne, new string[]{"т"}),
+#else
                 ("ru-RU", typeof(MassUnit), (int)MassUnit.Tonne, new string[]{"т"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.CentigramPerDeciliter, new string[]{"cg/dL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.CentigramPerDeciliter, new string[]{"cg/dL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.CentigramPerLiter, new string[]{"cg/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.CentigramPerLiter, new string[]{"cg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.CentigramPerMilliliter, new string[]{"cg/mL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.CentigramPerMilliliter, new string[]{"cg/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.DecigramPerDeciliter, new string[]{"dg/dL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.DecigramPerDeciliter, new string[]{"dg/dL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.DecigramPerLiter, new string[]{"dg/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.DecigramPerLiter, new string[]{"dg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.DecigramPerMilliliter, new string[]{"dg/mL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.DecigramPerMilliliter, new string[]{"dg/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicCentimeter, new string[]{"g/cm³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicCentimeter, new string[]{"g/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicMeter, new string[]{"g/m³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicMeter, new string[]{"g/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicMeter, new string[]{"г/м³"}),
+#else
                 ("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicMeter, new string[]{"г/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicMillimeter, new string[]{"g/mm³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerCubicMillimeter, new string[]{"g/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerDeciliter, new string[]{"g/dL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerDeciliter, new string[]{"g/dL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerLiter, new string[]{"g/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerLiter, new string[]{"g/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerMilliliter, new string[]{"g/mL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.GramPerMilliliter, new string[]{"g/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicCentimeter, new string[]{"kg/cm³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicCentimeter, new string[]{"kg/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicMeter, new string[]{"kg/m³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicMeter, new string[]{"kg/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicMeter, new string[]{"кг/м³"}),
+#else
                 ("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicMeter, new string[]{"кг/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicMillimeter, new string[]{"kg/mm³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerCubicMillimeter, new string[]{"kg/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerLiter, new string[]{"kg/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilogramPerLiter, new string[]{"kg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilopoundPerCubicFoot, new string[]{"kip/ft³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilopoundPerCubicFoot, new string[]{"kip/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilopoundPerCubicInch, new string[]{"kip/in³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.KilopoundPerCubicInch, new string[]{"kip/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerCubicMeter, new string[]{"µg/m³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerCubicMeter, new string[]{"µg/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerCubicMeter, new string[]{"мкг/м³"}),
+#else
                 ("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerCubicMeter, new string[]{"мкг/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerDeciliter, new string[]{"µg/dL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerDeciliter, new string[]{"µg/dL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerLiter, new string[]{"µg/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerLiter, new string[]{"µg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerMilliliter, new string[]{"µg/mL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MicrogramPerMilliliter, new string[]{"µg/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerCubicMeter, new string[]{"mg/m³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerCubicMeter, new string[]{"mg/m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerCubicMeter, new string[]{"мг/м³"}),
+#else
                 ("ru-RU", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerCubicMeter, new string[]{"мг/м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerDeciliter, new string[]{"mg/dL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerDeciliter, new string[]{"mg/dL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerLiter, new string[]{"mg/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerLiter, new string[]{"mg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerMilliliter, new string[]{"mg/mL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.MilligramPerMilliliter, new string[]{"mg/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.NanogramPerDeciliter, new string[]{"ng/dL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.NanogramPerDeciliter, new string[]{"ng/dL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.NanogramPerLiter, new string[]{"ng/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.NanogramPerLiter, new string[]{"ng/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.NanogramPerMilliliter, new string[]{"ng/mL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.NanogramPerMilliliter, new string[]{"ng/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PicogramPerDeciliter, new string[]{"pg/dL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PicogramPerDeciliter, new string[]{"pg/dL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PicogramPerLiter, new string[]{"pg/L"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PicogramPerLiter, new string[]{"pg/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PicogramPerMilliliter, new string[]{"pg/mL"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PicogramPerMilliliter, new string[]{"pg/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerCubicFoot, new string[]{"lb/ft³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerCubicFoot, new string[]{"lb/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerCubicInch, new string[]{"lb/in³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerCubicInch, new string[]{"lb/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerImperialGallon, new string[]{"ppg (imp.)"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerImperialGallon, new string[]{"ppg (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerUSGallon, new string[]{"ppg (U.S.)"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.PoundPerUSGallon, new string[]{"ppg (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.SlugPerCubicFoot, new string[]{"slug/ft³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.SlugPerCubicFoot, new string[]{"slug/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.TonnePerCubicCentimeter, new string[]{"t/cm³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.TonnePerCubicCentimeter, new string[]{"t/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.TonnePerCubicMeter, new string[]{"t/m³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.TonnePerCubicMeter, new string[]{"t/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.TonnePerCubicMillimeter, new string[]{"t/mm³"}),
+#else
                 ("en-US", typeof(MassConcentrationUnit), (int)MassConcentrationUnit.TonnePerCubicMillimeter, new string[]{"t/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.CentigramPerDay, new string[]{"cg/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.CentigramPerDay, new string[]{"cg/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.CentigramPerSecond, new string[]{"cg/s", "cg/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.CentigramPerSecond, new string[]{"cg/s", "cg/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecagramPerDay, new string[]{"dag/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecagramPerDay, new string[]{"dag/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecagramPerSecond, new string[]{"dag/s", "dag/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecagramPerSecond, new string[]{"dag/s", "dag/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecigramPerDay, new string[]{"dg/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecigramPerDay, new string[]{"dg/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecigramPerSecond, new string[]{"dg/s", "dg/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.DecigramPerSecond, new string[]{"dg/s", "dg/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.GramPerDay, new string[]{"g/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.GramPerDay, new string[]{"g/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.GramPerHour, new string[]{"g/h"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.GramPerHour, new string[]{"g/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.GramPerSecond, new string[]{"g/s", "g/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.GramPerSecond, new string[]{"g/s", "g/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.HectogramPerDay, new string[]{"hg/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.HectogramPerDay, new string[]{"hg/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.HectogramPerSecond, new string[]{"hg/s", "hg/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.HectogramPerSecond, new string[]{"hg/s", "hg/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerDay, new string[]{"kg/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerDay, new string[]{"kg/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerHour, new string[]{"kg/h"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerHour, new string[]{"kg/h"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerHour, new string[]{"кг/ч"}),
+#else
                 ("ru-RU", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerHour, new string[]{"кг/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerMinute, new string[]{"kg/min"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerMinute, new string[]{"kg/min"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerMinute, new string[]{"кг/мин"}),
+#else
                 ("ru-RU", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerMinute, new string[]{"кг/мин"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerSecond, new string[]{"kg/s", "kg/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.KilogramPerSecond, new string[]{"kg/s", "kg/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegagramPerDay, new string[]{"Mg/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegagramPerDay, new string[]{"Mg/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerDay, new string[]{"Mlb/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerDay, new string[]{"Mlb/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerHour, new string[]{"Mlb/h"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerHour, new string[]{"Mlb/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerMinute, new string[]{"Mlb/min"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerMinute, new string[]{"Mlb/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerSecond, new string[]{"Mlb/s"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MegapoundPerSecond, new string[]{"Mlb/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MicrogramPerDay, new string[]{"µg/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MicrogramPerDay, new string[]{"µg/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MicrogramPerSecond, new string[]{"µg/s", "µg/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MicrogramPerSecond, new string[]{"µg/s", "µg/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MilligramPerDay, new string[]{"mg/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MilligramPerDay, new string[]{"mg/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MilligramPerSecond, new string[]{"mg/s", "mg/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.MilligramPerSecond, new string[]{"mg/s", "mg/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.NanogramPerDay, new string[]{"ng/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.NanogramPerDay, new string[]{"ng/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.NanogramPerSecond, new string[]{"ng/s", "ng/S"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.NanogramPerSecond, new string[]{"ng/s", "ng/S"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerDay, new string[]{"lb/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerDay, new string[]{"lb/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerHour, new string[]{"lb/h"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerHour, new string[]{"lb/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerMinute, new string[]{"lb/min"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerMinute, new string[]{"lb/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerSecond, new string[]{"lb/s"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.PoundPerSecond, new string[]{"lb/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.ShortTonPerHour, new string[]{"short tn/h"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.ShortTonPerHour, new string[]{"short tn/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.TonnePerDay, new string[]{"t/d"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.TonnePerDay, new string[]{"t/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.TonnePerHour, new string[]{"t/h"}),
+#else
                 ("en-US", typeof(MassFlowUnit), (int)MassFlowUnit.TonnePerHour, new string[]{"t/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFluxUnit), (int)MassFluxUnit.GramPerSecondPerSquareMeter, new string[]{"g·s⁻¹·m⁻²"}),
+#else
                 ("en-US", typeof(MassFluxUnit), (int)MassFluxUnit.GramPerSecondPerSquareMeter, new string[]{"g·s⁻¹·m⁻²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFluxUnit), (int)MassFluxUnit.KilogramPerSecondPerSquareMeter, new string[]{"kg·s⁻¹·m⁻²"}),
+#else
                 ("en-US", typeof(MassFluxUnit), (int)MassFluxUnit.KilogramPerSecondPerSquareMeter, new string[]{"kg·s⁻¹·m⁻²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.CentigramPerGram, new string[]{"cg/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.CentigramPerGram, new string[]{"cg/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.CentigramPerKilogram, new string[]{"cg/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.CentigramPerKilogram, new string[]{"cg/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecagramPerGram, new string[]{"dag/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecagramPerGram, new string[]{"dag/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecagramPerKilogram, new string[]{"dag/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecagramPerKilogram, new string[]{"dag/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecigramPerGram, new string[]{"dg/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecigramPerGram, new string[]{"dg/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecigramPerKilogram, new string[]{"dg/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecigramPerKilogram, new string[]{"dg/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecimalFraction, new string[]{""}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.DecimalFraction, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.GramPerGram, new string[]{"g/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.GramPerGram, new string[]{"g/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.GramPerKilogram, new string[]{"g/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.GramPerKilogram, new string[]{"g/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.HectogramPerGram, new string[]{"hg/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.HectogramPerGram, new string[]{"hg/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.HectogramPerKilogram, new string[]{"hg/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.HectogramPerKilogram, new string[]{"hg/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.KilogramPerGram, new string[]{"kg/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.KilogramPerGram, new string[]{"kg/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.KilogramPerKilogram, new string[]{"kg/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.KilogramPerKilogram, new string[]{"kg/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MicrogramPerGram, new string[]{"µg/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MicrogramPerGram, new string[]{"µg/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MicrogramPerKilogram, new string[]{"µg/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MicrogramPerKilogram, new string[]{"µg/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MilligramPerGram, new string[]{"mg/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MilligramPerGram, new string[]{"mg/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MilligramPerKilogram, new string[]{"mg/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.MilligramPerKilogram, new string[]{"mg/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.NanogramPerGram, new string[]{"ng/g"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.NanogramPerGram, new string[]{"ng/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.NanogramPerKilogram, new string[]{"ng/kg"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.NanogramPerKilogram, new string[]{"ng/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerBillion, new string[]{"ppb"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerBillion, new string[]{"ppb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerMillion, new string[]{"ppm"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerMillion, new string[]{"ppm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerThousand, new string[]{"‰"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerThousand, new string[]{"‰"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerTrillion, new string[]{"ppt"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.PartPerTrillion, new string[]{"ppt"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.Percent, new string[]{"%", "% (w/w)"}),
+#else
                 ("en-US", typeof(MassFractionUnit), (int)MassFractionUnit.Percent, new string[]{"%", "% (w/w)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareCentimeter, new string[]{"g·cm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareCentimeter, new string[]{"g·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareDecimeter, new string[]{"g·dm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareDecimeter, new string[]{"g·dm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareMeter, new string[]{"g·m²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareMeter, new string[]{"g·m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareMillimeter, new string[]{"g·mm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.GramSquareMillimeter, new string[]{"g·mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareCentimeter, new string[]{"kg·cm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareCentimeter, new string[]{"kg·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareDecimeter, new string[]{"kg·dm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareDecimeter, new string[]{"kg·dm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareMeter, new string[]{"kg·m²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareMeter, new string[]{"kg·m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareMillimeter, new string[]{"kg·mm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilogramSquareMillimeter, new string[]{"kg·mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareCentimeter, new string[]{"kt·cm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareCentimeter, new string[]{"kt·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareDecimeter, new string[]{"kt·dm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareDecimeter, new string[]{"kt·dm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareMeter, new string[]{"kt·m²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareMeter, new string[]{"kt·m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareMilimeter, new string[]{"kt·mm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.KilotonneSquareMilimeter, new string[]{"kt·mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareCentimeter, new string[]{"Mt·cm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareCentimeter, new string[]{"Mt·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareDecimeter, new string[]{"Mt·dm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareDecimeter, new string[]{"Mt·dm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareMeter, new string[]{"Mt·m²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareMeter, new string[]{"Mt·m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareMilimeter, new string[]{"Mt·mm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MegatonneSquareMilimeter, new string[]{"Mt·mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareCentimeter, new string[]{"mg·cm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareCentimeter, new string[]{"mg·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareDecimeter, new string[]{"mg·dm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareDecimeter, new string[]{"mg·dm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareMeter, new string[]{"mg·m²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareMeter, new string[]{"mg·m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareMillimeter, new string[]{"mg·mm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.MilligramSquareMillimeter, new string[]{"mg·mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.PoundSquareFoot, new string[]{"lb·ft²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.PoundSquareFoot, new string[]{"lb·ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.PoundSquareInch, new string[]{"lb·in²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.PoundSquareInch, new string[]{"lb·in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.SlugSquareFoot, new string[]{"slug·ft²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.SlugSquareFoot, new string[]{"slug·ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.SlugSquareInch, new string[]{"slug·in²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.SlugSquareInch, new string[]{"slug·in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareCentimeter, new string[]{"t·cm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareCentimeter, new string[]{"t·cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareDecimeter, new string[]{"t·dm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareDecimeter, new string[]{"t·dm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareMeter, new string[]{"t·m²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareMeter, new string[]{"t·m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareMilimeter, new string[]{"t·mm²"}),
+#else
                 ("en-US", typeof(MassMomentOfInertiaUnit), (int)MassMomentOfInertiaUnit.TonneSquareMilimeter, new string[]{"t·mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarEnergyUnit), (int)MolarEnergyUnit.JoulePerMole, new string[]{"J/mol"}),
+#else
                 ("en-US", typeof(MolarEnergyUnit), (int)MolarEnergyUnit.JoulePerMole, new string[]{"J/mol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarEnergyUnit), (int)MolarEnergyUnit.KilojoulePerMole, new string[]{"kJ/mol"}),
+#else
                 ("en-US", typeof(MolarEnergyUnit), (int)MolarEnergyUnit.KilojoulePerMole, new string[]{"kJ/mol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarEnergyUnit), (int)MolarEnergyUnit.MegajoulePerMole, new string[]{"MJ/mol"}),
+#else
                 ("en-US", typeof(MolarEnergyUnit), (int)MolarEnergyUnit.MegajoulePerMole, new string[]{"MJ/mol"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarEntropyUnit), (int)MolarEntropyUnit.JoulePerMoleKelvin, new string[]{"J/(mol*K)"}),
+#else
                 ("en-US", typeof(MolarEntropyUnit), (int)MolarEntropyUnit.JoulePerMoleKelvin, new string[]{"J/(mol*K)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarEntropyUnit), (int)MolarEntropyUnit.KilojoulePerMoleKelvin, new string[]{"kJ/(mol*K)"}),
+#else
                 ("en-US", typeof(MolarEntropyUnit), (int)MolarEntropyUnit.KilojoulePerMoleKelvin, new string[]{"kJ/(mol*K)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarEntropyUnit), (int)MolarEntropyUnit.MegajoulePerMoleKelvin, new string[]{"MJ/(mol*K)"}),
+#else
                 ("en-US", typeof(MolarEntropyUnit), (int)MolarEntropyUnit.MegajoulePerMoleKelvin, new string[]{"MJ/(mol*K)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.CentimolesPerLiter, new string[]{"cmol/L", "cM"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.CentimolesPerLiter, new string[]{"cmol/L", "cM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.DecimolesPerLiter, new string[]{"dmol/L", "dM"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.DecimolesPerLiter, new string[]{"dmol/L", "dM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.MicromolesPerLiter, new string[]{"µmol/L", "µM"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.MicromolesPerLiter, new string[]{"µmol/L", "µM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.MillimolesPerLiter, new string[]{"mmol/L", "mM"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.MillimolesPerLiter, new string[]{"mmol/L", "mM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.MolesPerCubicMeter, new string[]{"mol/m³"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.MolesPerCubicMeter, new string[]{"mol/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.MolesPerLiter, new string[]{"mol/L", "M"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.MolesPerLiter, new string[]{"mol/L", "M"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.NanomolesPerLiter, new string[]{"nmol/L", "nM"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.NanomolesPerLiter, new string[]{"nmol/L", "nM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarityUnit), (int)MolarityUnit.PicomolesPerLiter, new string[]{"pmol/L", "pM"}),
+#else
                 ("en-US", typeof(MolarityUnit), (int)MolarityUnit.PicomolesPerLiter, new string[]{"pmol/L", "pM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.CentigramPerMole, new string[]{"cg/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.CentigramPerMole, new string[]{"cg/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.CentigramPerMole, new string[]{"сг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.CentigramPerMole, new string[]{"сг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.DecagramPerMole, new string[]{"dag/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.DecagramPerMole, new string[]{"dag/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.DecagramPerMole, new string[]{"даг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.DecagramPerMole, new string[]{"даг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.DecigramPerMole, new string[]{"dg/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.DecigramPerMole, new string[]{"dg/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.DecigramPerMole, new string[]{"дг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.DecigramPerMole, new string[]{"дг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.GramPerMole, new string[]{"g/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.GramPerMole, new string[]{"g/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.GramPerMole, new string[]{"г/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.GramPerMole, new string[]{"г/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.HectogramPerMole, new string[]{"hg/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.HectogramPerMole, new string[]{"hg/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.HectogramPerMole, new string[]{"гг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.HectogramPerMole, new string[]{"гг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.KilogramPerMole, new string[]{"kg/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.KilogramPerMole, new string[]{"kg/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.KilogramPerMole, new string[]{"кг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.KilogramPerMole, new string[]{"кг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.KilopoundPerMole, new string[]{"klb/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.KilopoundPerMole, new string[]{"klb/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.KilopoundPerMole, new string[]{"кфунт/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.KilopoundPerMole, new string[]{"кфунт/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.MegapoundPerMole, new string[]{"Mlb/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.MegapoundPerMole, new string[]{"Mlb/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.MegapoundPerMole, new string[]{"Мфунт/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.MegapoundPerMole, new string[]{"Мфунт/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.MicrogramPerMole, new string[]{"µg/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.MicrogramPerMole, new string[]{"µg/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.MicrogramPerMole, new string[]{"мкг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.MicrogramPerMole, new string[]{"мкг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.MilligramPerMole, new string[]{"mg/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.MilligramPerMole, new string[]{"mg/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.MilligramPerMole, new string[]{"мг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.MilligramPerMole, new string[]{"мг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.NanogramPerMole, new string[]{"ng/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.NanogramPerMole, new string[]{"ng/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.NanogramPerMole, new string[]{"нг/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.NanogramPerMole, new string[]{"нг/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.PoundPerMole, new string[]{"lb/mol"}),
+#else
                 ("en-US", typeof(MolarMassUnit), (int)MolarMassUnit.PoundPerMole, new string[]{"lb/mol"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.PoundPerMole, new string[]{"фунт/моль"}),
+#else
                 ("ru-RU", typeof(MolarMassUnit), (int)MolarMassUnit.PoundPerMole, new string[]{"фунт/моль"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PermeabilityUnit), (int)PermeabilityUnit.HenryPerMeter, new string[]{"H/m"}),
+#else
                 ("en-US", typeof(PermeabilityUnit), (int)PermeabilityUnit.HenryPerMeter, new string[]{"H/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PermittivityUnit), (int)PermittivityUnit.FaradPerMeter, new string[]{"F/m"}),
+#else
                 ("en-US", typeof(PermittivityUnit), (int)PermittivityUnit.FaradPerMeter, new string[]{"F/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.BoilerHorsepower, new string[]{"hp(S)"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.BoilerHorsepower, new string[]{"hp(S)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.BritishThermalUnitPerHour, new string[]{"Btu/h", "Btu/hr"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.BritishThermalUnitPerHour, new string[]{"Btu/h", "Btu/hr"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Decawatt, new string[]{"daW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Decawatt, new string[]{"daW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Deciwatt, new string[]{"dW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Deciwatt, new string[]{"dW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.ElectricalHorsepower, new string[]{"hp(E)"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.ElectricalHorsepower, new string[]{"hp(E)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Femtowatt, new string[]{"fW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Femtowatt, new string[]{"fW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.GigajoulePerHour, new string[]{"GJ/h"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.GigajoulePerHour, new string[]{"GJ/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Gigawatt, new string[]{"GW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Gigawatt, new string[]{"GW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.HydraulicHorsepower, new string[]{"hp(H)"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.HydraulicHorsepower, new string[]{"hp(H)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.JoulePerHour, new string[]{"J/h"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.JoulePerHour, new string[]{"J/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.KilobritishThermalUnitPerHour, new string[]{"kBtu/h", "kBtu/hr"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.KilobritishThermalUnitPerHour, new string[]{"kBtu/h", "kBtu/hr"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.KilojoulePerHour, new string[]{"kJ/h"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.KilojoulePerHour, new string[]{"kJ/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Kilowatt, new string[]{"kW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Kilowatt, new string[]{"kW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.MechanicalHorsepower, new string[]{"hp(I)"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.MechanicalHorsepower, new string[]{"hp(I)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.MegajoulePerHour, new string[]{"MJ/h"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.MegajoulePerHour, new string[]{"MJ/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Megawatt, new string[]{"MW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Megawatt, new string[]{"MW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.MetricHorsepower, new string[]{"hp(M)"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.MetricHorsepower, new string[]{"hp(M)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Microwatt, new string[]{"µW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Microwatt, new string[]{"µW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.MillijoulePerHour, new string[]{"mJ/h"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.MillijoulePerHour, new string[]{"mJ/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Milliwatt, new string[]{"mW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Milliwatt, new string[]{"mW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Nanowatt, new string[]{"nW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Nanowatt, new string[]{"nW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Petawatt, new string[]{"PW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Petawatt, new string[]{"PW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Picowatt, new string[]{"pW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Picowatt, new string[]{"pW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Terawatt, new string[]{"TW"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Terawatt, new string[]{"TW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerUnit), (int)PowerUnit.Watt, new string[]{"W"}),
+#else
                 ("en-US", typeof(PowerUnit), (int)PowerUnit.Watt, new string[]{"W"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerCubicFoot, new string[]{"daW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerCubicFoot, new string[]{"daW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerCubicInch, new string[]{"daW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerCubicInch, new string[]{"daW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerCubicMeter, new string[]{"daW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerCubicMeter, new string[]{"daW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerLiter, new string[]{"daW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DecawattPerLiter, new string[]{"daW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerCubicFoot, new string[]{"dW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerCubicFoot, new string[]{"dW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerCubicInch, new string[]{"dW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerCubicInch, new string[]{"dW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerCubicMeter, new string[]{"dW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerCubicMeter, new string[]{"dW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerLiter, new string[]{"dW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.DeciwattPerLiter, new string[]{"dW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerCubicFoot, new string[]{"GW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerCubicFoot, new string[]{"GW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerCubicInch, new string[]{"GW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerCubicInch, new string[]{"GW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerCubicMeter, new string[]{"GW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerCubicMeter, new string[]{"GW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerLiter, new string[]{"GW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.GigawattPerLiter, new string[]{"GW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerCubicFoot, new string[]{"kW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerCubicFoot, new string[]{"kW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerCubicInch, new string[]{"kW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerCubicInch, new string[]{"kW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerCubicMeter, new string[]{"kW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerCubicMeter, new string[]{"kW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerLiter, new string[]{"kW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.KilowattPerLiter, new string[]{"kW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerCubicFoot, new string[]{"MW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerCubicFoot, new string[]{"MW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerCubicInch, new string[]{"MW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerCubicInch, new string[]{"MW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerCubicMeter, new string[]{"MW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerCubicMeter, new string[]{"MW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerLiter, new string[]{"MW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MegawattPerLiter, new string[]{"MW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerCubicFoot, new string[]{"µW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerCubicFoot, new string[]{"µW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerCubicInch, new string[]{"µW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerCubicInch, new string[]{"µW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerCubicMeter, new string[]{"µW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerCubicMeter, new string[]{"µW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerLiter, new string[]{"µW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MicrowattPerLiter, new string[]{"µW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerCubicFoot, new string[]{"mW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerCubicFoot, new string[]{"mW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerCubicInch, new string[]{"mW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerCubicInch, new string[]{"mW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerCubicMeter, new string[]{"mW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerCubicMeter, new string[]{"mW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerLiter, new string[]{"mW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.MilliwattPerLiter, new string[]{"mW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerCubicFoot, new string[]{"nW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerCubicFoot, new string[]{"nW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerCubicInch, new string[]{"nW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerCubicInch, new string[]{"nW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerCubicMeter, new string[]{"nW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerCubicMeter, new string[]{"nW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerLiter, new string[]{"nW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.NanowattPerLiter, new string[]{"nW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerCubicFoot, new string[]{"pW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerCubicFoot, new string[]{"pW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerCubicInch, new string[]{"pW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerCubicInch, new string[]{"pW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerCubicMeter, new string[]{"pW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerCubicMeter, new string[]{"pW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerLiter, new string[]{"pW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.PicowattPerLiter, new string[]{"pW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerCubicFoot, new string[]{"TW/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerCubicFoot, new string[]{"TW/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerCubicInch, new string[]{"TW/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerCubicInch, new string[]{"TW/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerCubicMeter, new string[]{"TW/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerCubicMeter, new string[]{"TW/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerLiter, new string[]{"TW/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.TerawattPerLiter, new string[]{"TW/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerCubicFoot, new string[]{"W/ft³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerCubicFoot, new string[]{"W/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerCubicInch, new string[]{"W/in³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerCubicInch, new string[]{"W/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerCubicMeter, new string[]{"W/m³"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerCubicMeter, new string[]{"W/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerLiter, new string[]{"W/l"}),
+#else
                 ("en-US", typeof(PowerDensityUnit), (int)PowerDensityUnit.WattPerLiter, new string[]{"W/l"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerRatioUnit), (int)PowerRatioUnit.DecibelMilliwatt, new string[]{"dBmW", "dBm"}),
+#else
                 ("en-US", typeof(PowerRatioUnit), (int)PowerRatioUnit.DecibelMilliwatt, new string[]{"dBmW", "dBm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PowerRatioUnit), (int)PowerRatioUnit.DecibelWatt, new string[]{"dBW"}),
+#else
                 ("en-US", typeof(PowerRatioUnit), (int)PowerRatioUnit.DecibelWatt, new string[]{"dBW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Atmosphere, new string[]{"atm"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Atmosphere, new string[]{"atm"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Atmosphere, new string[]{"атм"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Atmosphere, new string[]{"атм"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Bar, new string[]{"bar"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Bar, new string[]{"bar"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Bar, new string[]{"бар"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Bar, new string[]{"бар"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Centibar, new string[]{"cbar"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Centibar, new string[]{"cbar"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Centibar, new string[]{"сбар"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Centibar, new string[]{"сбар"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Decapascal, new string[]{"daPa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Decapascal, new string[]{"daPa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Decapascal, new string[]{"даПа"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Decapascal, new string[]{"даПа"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Decibar, new string[]{"dbar"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Decibar, new string[]{"dbar"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Decibar, new string[]{"дбар"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Decibar, new string[]{"дбар"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.DynePerSquareCentimeter, new string[]{"dyn/cm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.DynePerSquareCentimeter, new string[]{"dyn/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.FootOfHead, new string[]{"ft of head"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.FootOfHead, new string[]{"ft of head"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Gigapascal, new string[]{"GPa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Gigapascal, new string[]{"GPa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Gigapascal, new string[]{"ГПа"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Gigapascal, new string[]{"ГПа"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Hectopascal, new string[]{"hPa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Hectopascal, new string[]{"hPa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Hectopascal, new string[]{"гПа"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Hectopascal, new string[]{"гПа"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.InchOfMercury, new string[]{"inHg"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.InchOfMercury, new string[]{"inHg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.InchOfWaterColumn, new string[]{"wc"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.InchOfWaterColumn, new string[]{"wc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Kilobar, new string[]{"kbar"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Kilobar, new string[]{"kbar"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Kilobar, new string[]{"кбар"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Kilobar, new string[]{"кбар"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareCentimeter, new string[]{"kgf/cm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareCentimeter, new string[]{"kgf/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareCentimeter, new string[]{"кгс/см²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareCentimeter, new string[]{"кгс/см²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMeter, new string[]{"kgf/m²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMeter, new string[]{"kgf/m²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMeter, new string[]{"кгс/м²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMeter, new string[]{"кгс/м²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMillimeter, new string[]{"kgf/mm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMillimeter, new string[]{"kgf/mm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMillimeter, new string[]{"кгс/мм²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilogramForcePerSquareMillimeter, new string[]{"кгс/мм²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareCentimeter, new string[]{"kN/cm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareCentimeter, new string[]{"kN/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareCentimeter, new string[]{"кН/см²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareCentimeter, new string[]{"кН/см²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMeter, new string[]{"kN/m²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMeter, new string[]{"kN/m²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMeter, new string[]{"кН/м²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMeter, new string[]{"кН/м²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMillimeter, new string[]{"kN/mm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMillimeter, new string[]{"kN/mm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMillimeter, new string[]{"кН/мм²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.KilonewtonPerSquareMillimeter, new string[]{"кН/мм²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Kilopascal, new string[]{"kPa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Kilopascal, new string[]{"kPa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Kilopascal, new string[]{"кПа"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Kilopascal, new string[]{"кПа"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilopoundForcePerSquareFoot, new string[]{"kipf/ft²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilopoundForcePerSquareFoot, new string[]{"kipf/ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.KilopoundForcePerSquareInch, new string[]{"kipf/in²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.KilopoundForcePerSquareInch, new string[]{"kipf/in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Megabar, new string[]{"Mbar"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Megabar, new string[]{"Mbar"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Megabar, new string[]{"Мбар"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Megabar, new string[]{"Мбар"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.MeganewtonPerSquareMeter, new string[]{"MN/m²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.MeganewtonPerSquareMeter, new string[]{"MN/m²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.MeganewtonPerSquareMeter, new string[]{"МН/м²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.MeganewtonPerSquareMeter, new string[]{"МН/м²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Megapascal, new string[]{"MPa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Megapascal, new string[]{"MPa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Megapascal, new string[]{"МПа"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Megapascal, new string[]{"МПа"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.MeterOfHead, new string[]{"m of head"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.MeterOfHead, new string[]{"m of head"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Microbar, new string[]{"µbar"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Microbar, new string[]{"µbar"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Microbar, new string[]{"мкбар"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Microbar, new string[]{"мкбар"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Micropascal, new string[]{"µPa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Micropascal, new string[]{"µPa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Micropascal, new string[]{"мкПа"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Micropascal, new string[]{"мкПа"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Millibar, new string[]{"mbar"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Millibar, new string[]{"mbar"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Millibar, new string[]{"мбар"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Millibar, new string[]{"мбар"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.MillimeterOfMercury, new string[]{"mmHg"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.MillimeterOfMercury, new string[]{"mmHg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Millipascal, new string[]{"mPa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Millipascal, new string[]{"mPa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Millipascal, new string[]{"мПа"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Millipascal, new string[]{"мПа"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareCentimeter, new string[]{"N/cm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareCentimeter, new string[]{"N/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareCentimeter, new string[]{"Н/см²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareCentimeter, new string[]{"Н/см²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMeter, new string[]{"N/m²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMeter, new string[]{"N/m²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMeter, new string[]{"Н/м²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMeter, new string[]{"Н/м²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMillimeter, new string[]{"N/mm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMillimeter, new string[]{"N/mm²"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMillimeter, new string[]{"Н/мм²"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.NewtonPerSquareMillimeter, new string[]{"Н/мм²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Pascal, new string[]{"Pa"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Pascal, new string[]{"Pa"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Pascal, new string[]{"Па"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Pascal, new string[]{"Па"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.PoundForcePerSquareFoot, new string[]{"lb/ft²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.PoundForcePerSquareFoot, new string[]{"lb/ft²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.PoundForcePerSquareInch, new string[]{"psi", "lb/in²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.PoundForcePerSquareInch, new string[]{"psi", "lb/in²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.PoundPerInchSecondSquared, new string[]{"lbm/(in·s²)", "lb/(in·s²)"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.PoundPerInchSecondSquared, new string[]{"lbm/(in·s²)", "lb/(in·s²)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.TechnicalAtmosphere, new string[]{"at"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.TechnicalAtmosphere, new string[]{"at"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.TechnicalAtmosphere, new string[]{"ат"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.TechnicalAtmosphere, new string[]{"ат"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.TonneForcePerSquareCentimeter, new string[]{"tf/cm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.TonneForcePerSquareCentimeter, new string[]{"tf/cm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.TonneForcePerSquareMeter, new string[]{"tf/m²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.TonneForcePerSquareMeter, new string[]{"tf/m²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.TonneForcePerSquareMillimeter, new string[]{"tf/mm²"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.TonneForcePerSquareMillimeter, new string[]{"tf/mm²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureUnit), (int)PressureUnit.Torr, new string[]{"torr"}),
+#else
                 ("en-US", typeof(PressureUnit), (int)PressureUnit.Torr, new string[]{"torr"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureUnit), (int)PressureUnit.Torr, new string[]{"торр"}),
+#else
                 ("ru-RU", typeof(PressureUnit), (int)PressureUnit.Torr, new string[]{"торр"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.AtmospherePerSecond, new string[]{"atm/s"}),
+#else
                 ("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.AtmospherePerSecond, new string[]{"atm/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.AtmospherePerSecond, new string[]{"атм/с"}),
+#else
                 ("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.AtmospherePerSecond, new string[]{"атм/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerMinute, new string[]{"kPa/min"}),
+#else
                 ("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerMinute, new string[]{"kPa/min"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerMinute, new string[]{"кПа/с"}),
+#else
                 ("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerMinute, new string[]{"кПа/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerSecond, new string[]{"kPa/s"}),
+#else
                 ("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerSecond, new string[]{"kPa/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerSecond, new string[]{"кПа/с"}),
+#else
                 ("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.KilopascalPerSecond, new string[]{"кПа/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerMinute, new string[]{"MPa/min"}),
+#else
                 ("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerMinute, new string[]{"MPa/min"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerMinute, new string[]{"МПа/с"}),
+#else
                 ("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerMinute, new string[]{"МПа/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerSecond, new string[]{"MPa/s"}),
+#else
                 ("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerSecond, new string[]{"MPa/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerSecond, new string[]{"МПа/с"}),
+#else
                 ("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.MegapascalPerSecond, new string[]{"МПа/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerMinute, new string[]{"Pa/min"}),
+#else
                 ("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerMinute, new string[]{"Pa/min"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerMinute, new string[]{"Па/с"}),
+#else
                 ("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerMinute, new string[]{"Па/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerSecond, new string[]{"Pa/s"}),
+#else
                 ("en-US", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerSecond, new string[]{"Pa/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerSecond, new string[]{"Па/с"}),
+#else
                 ("ru-RU", typeof(PressureChangeRateUnit), (int)PressureChangeRateUnit.PascalPerSecond, new string[]{"Па/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioUnit), (int)RatioUnit.DecimalFraction, new string[]{""}),
+#else
                 ("en-US", typeof(RatioUnit), (int)RatioUnit.DecimalFraction, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerBillion, new string[]{"ppb"}),
+#else
                 ("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerBillion, new string[]{"ppb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerMillion, new string[]{"ppm"}),
+#else
                 ("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerMillion, new string[]{"ppm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerThousand, new string[]{"‰"}),
+#else
                 ("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerThousand, new string[]{"‰"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerTrillion, new string[]{"ppt"}),
+#else
                 ("en-US", typeof(RatioUnit), (int)RatioUnit.PartPerTrillion, new string[]{"ppt"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioUnit), (int)RatioUnit.Percent, new string[]{"%"}),
+#else
                 ("en-US", typeof(RatioUnit), (int)RatioUnit.Percent, new string[]{"%"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioChangeRateUnit), (int)RatioChangeRateUnit.DecimalFractionPerSecond, new string[]{"/s"}),
+#else
                 ("en-US", typeof(RatioChangeRateUnit), (int)RatioChangeRateUnit.DecimalFractionPerSecond, new string[]{"/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RatioChangeRateUnit), (int)RatioChangeRateUnit.PercentPerSecond, new string[]{"%/s"}),
+#else
                 ("en-US", typeof(RatioChangeRateUnit), (int)RatioChangeRateUnit.PercentPerSecond, new string[]{"%/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ReactiveEnergyUnit), (int)ReactiveEnergyUnit.KilovoltampereReactiveHour, new string[]{"kvarh"}),
+#else
                 ("en-US", typeof(ReactiveEnergyUnit), (int)ReactiveEnergyUnit.KilovoltampereReactiveHour, new string[]{"kvarh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ReactiveEnergyUnit), (int)ReactiveEnergyUnit.MegavoltampereReactiveHour, new string[]{"Mvarh"}),
+#else
                 ("en-US", typeof(ReactiveEnergyUnit), (int)ReactiveEnergyUnit.MegavoltampereReactiveHour, new string[]{"Mvarh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ReactiveEnergyUnit), (int)ReactiveEnergyUnit.VoltampereReactiveHour, new string[]{"varh"}),
+#else
                 ("en-US", typeof(ReactiveEnergyUnit), (int)ReactiveEnergyUnit.VoltampereReactiveHour, new string[]{"varh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.GigavoltampereReactive, new string[]{"Gvar"}),
+#else
                 ("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.GigavoltampereReactive, new string[]{"Gvar"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.KilovoltampereReactive, new string[]{"kvar"}),
+#else
                 ("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.KilovoltampereReactive, new string[]{"kvar"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.MegavoltampereReactive, new string[]{"Mvar"}),
+#else
                 ("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.MegavoltampereReactive, new string[]{"Mvar"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.VoltampereReactive, new string[]{"var"}),
+#else
                 ("en-US", typeof(ReactivePowerUnit), (int)ReactivePowerUnit.VoltampereReactive, new string[]{"var"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.DegreePerSecondSquared, new string[]{"°/s²", "deg/s²"}),
+#else
                 ("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.DegreePerSecondSquared, new string[]{"°/s²", "deg/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.RadianPerSecondSquared, new string[]{"rad/s²"}),
+#else
                 ("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.RadianPerSecondSquared, new string[]{"rad/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.RevolutionPerMinutePerSecond, new string[]{"rpm/s"}),
+#else
                 ("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.RevolutionPerMinutePerSecond, new string[]{"rpm/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.RevolutionPerSecondSquared, new string[]{"r/s²"}),
+#else
                 ("en-US", typeof(RotationalAccelerationUnit), (int)RotationalAccelerationUnit.RevolutionPerSecondSquared, new string[]{"r/s²"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.CentiradianPerSecond, new string[]{"crad/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.CentiradianPerSecond, new string[]{"crad/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.CentiradianPerSecond, new string[]{"срад/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.CentiradianPerSecond, new string[]{"срад/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DeciradianPerSecond, new string[]{"drad/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DeciradianPerSecond, new string[]{"drad/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DeciradianPerSecond, new string[]{"драд/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DeciradianPerSecond, new string[]{"драд/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DegreePerMinute, new string[]{"°/min", "deg/min"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DegreePerMinute, new string[]{"°/min", "deg/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DegreePerSecond, new string[]{"°/s", "deg/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DegreePerSecond, new string[]{"°/s", "deg/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DegreePerSecond, new string[]{"°/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.DegreePerSecond, new string[]{"°/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicrodegreePerSecond, new string[]{"µ°/s", "µdeg/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicrodegreePerSecond, new string[]{"µ°/s", "µdeg/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicrodegreePerSecond, new string[]{"мк°/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicrodegreePerSecond, new string[]{"мк°/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicroradianPerSecond, new string[]{"µrad/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicroradianPerSecond, new string[]{"µrad/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicroradianPerSecond, new string[]{"мкрад/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MicroradianPerSecond, new string[]{"мкрад/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MillidegreePerSecond, new string[]{"m°/s", "mdeg/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MillidegreePerSecond, new string[]{"m°/s", "mdeg/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MillidegreePerSecond, new string[]{"м°/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MillidegreePerSecond, new string[]{"м°/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MilliradianPerSecond, new string[]{"mrad/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MilliradianPerSecond, new string[]{"mrad/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MilliradianPerSecond, new string[]{"мрад/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.MilliradianPerSecond, new string[]{"мрад/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanodegreePerSecond, new string[]{"n°/s", "ndeg/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanodegreePerSecond, new string[]{"n°/s", "ndeg/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanodegreePerSecond, new string[]{"н°/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanodegreePerSecond, new string[]{"н°/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanoradianPerSecond, new string[]{"nrad/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanoradianPerSecond, new string[]{"nrad/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanoradianPerSecond, new string[]{"нрад/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.NanoradianPerSecond, new string[]{"нрад/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RadianPerSecond, new string[]{"rad/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RadianPerSecond, new string[]{"rad/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RadianPerSecond, new string[]{"рад/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RadianPerSecond, new string[]{"рад/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerMinute, new string[]{"rpm", "r/min"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerMinute, new string[]{"rpm", "r/min"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerMinute, new string[]{"об/мин"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerMinute, new string[]{"об/мин"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerSecond, new string[]{"r/s"}),
+#else
                 ("en-US", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerSecond, new string[]{"r/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerSecond, new string[]{"об/с"}),
+#else
                 ("ru-RU", typeof(RotationalSpeedUnit), (int)RotationalSpeedUnit.RevolutionPerSecond, new string[]{"об/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalStiffnessUnit), (int)RotationalStiffnessUnit.KilonewtonMeterPerRadian, new string[]{"kN·m/rad", "kNm/rad"}),
+#else
                 ("en-US", typeof(RotationalStiffnessUnit), (int)RotationalStiffnessUnit.KilonewtonMeterPerRadian, new string[]{"kN·m/rad", "kNm/rad"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalStiffnessUnit), (int)RotationalStiffnessUnit.MeganewtonMeterPerRadian, new string[]{"MN·m/rad", "MNm/rad"}),
+#else
                 ("en-US", typeof(RotationalStiffnessUnit), (int)RotationalStiffnessUnit.MeganewtonMeterPerRadian, new string[]{"MN·m/rad", "MNm/rad"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalStiffnessUnit), (int)RotationalStiffnessUnit.NewtonMeterPerRadian, new string[]{"N·m/rad", "Nm/rad"}),
+#else
                 ("en-US", typeof(RotationalStiffnessUnit), (int)RotationalStiffnessUnit.NewtonMeterPerRadian, new string[]{"N·m/rad", "Nm/rad"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalStiffnessPerLengthUnit), (int)RotationalStiffnessPerLengthUnit.KilonewtonMeterPerRadianPerMeter, new string[]{"kN·m/rad/m", "kNm/rad/m"}),
+#else
                 ("en-US", typeof(RotationalStiffnessPerLengthUnit), (int)RotationalStiffnessPerLengthUnit.KilonewtonMeterPerRadianPerMeter, new string[]{"kN·m/rad/m", "kNm/rad/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalStiffnessPerLengthUnit), (int)RotationalStiffnessPerLengthUnit.MeganewtonMeterPerRadianPerMeter, new string[]{"MN·m/rad/m", "MNm/rad/m"}),
+#else
                 ("en-US", typeof(RotationalStiffnessPerLengthUnit), (int)RotationalStiffnessPerLengthUnit.MeganewtonMeterPerRadianPerMeter, new string[]{"MN·m/rad/m", "MNm/rad/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(RotationalStiffnessPerLengthUnit), (int)RotationalStiffnessPerLengthUnit.NewtonMeterPerRadianPerMeter, new string[]{"N·m/rad/m", "Nm/rad/m"}),
+#else
                 ("en-US", typeof(RotationalStiffnessPerLengthUnit), (int)RotationalStiffnessPerLengthUnit.NewtonMeterPerRadianPerMeter, new string[]{"N·m/rad/m", "Nm/rad/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SolidAngleUnit), (int)SolidAngleUnit.Steradian, new string[]{"sr"}),
+#else
                 ("en-US", typeof(SolidAngleUnit), (int)SolidAngleUnit.Steradian, new string[]{"sr"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.BtuPerPound, new string[]{"btu/lb"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.BtuPerPound, new string[]{"btu/lb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.CaloriePerGram, new string[]{"cal/g"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.CaloriePerGram, new string[]{"cal/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.JoulePerKilogram, new string[]{"J/kg"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.JoulePerKilogram, new string[]{"J/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.KilocaloriePerGram, new string[]{"kcal/g"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.KilocaloriePerGram, new string[]{"kcal/g"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.KilojoulePerKilogram, new string[]{"kJ/kg"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.KilojoulePerKilogram, new string[]{"kJ/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.KilowattHourPerKilogram, new string[]{"kWh/kg"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.KilowattHourPerKilogram, new string[]{"kWh/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.MegajoulePerKilogram, new string[]{"MJ/kg"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.MegajoulePerKilogram, new string[]{"MJ/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.MegawattHourPerKilogram, new string[]{"MWh/kg"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.MegawattHourPerKilogram, new string[]{"MWh/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.WattHourPerKilogram, new string[]{"Wh/kg"}),
+#else
                 ("en-US", typeof(SpecificEnergyUnit), (int)SpecificEnergyUnit.WattHourPerKilogram, new string[]{"Wh/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.BtuPerPoundFahrenheit, new string[]{"BTU/lb·°F", "BTU/lbm·°F"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.BtuPerPoundFahrenheit, new string[]{"BTU/lb·°F", "BTU/lbm·°F"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.CaloriePerGramKelvin, new string[]{"cal/g.K"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.CaloriePerGramKelvin, new string[]{"cal/g.K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.JoulePerKilogramDegreeCelsius, new string[]{"J/kg.C"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.JoulePerKilogramDegreeCelsius, new string[]{"J/kg.C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.JoulePerKilogramKelvin, new string[]{"J/kg.K"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.JoulePerKilogramKelvin, new string[]{"J/kg.K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.KilocaloriePerGramKelvin, new string[]{"kcal/g.K"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.KilocaloriePerGramKelvin, new string[]{"kcal/g.K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.KilojoulePerKilogramDegreeCelsius, new string[]{"kJ/kg.C"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.KilojoulePerKilogramDegreeCelsius, new string[]{"kJ/kg.C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.KilojoulePerKilogramKelvin, new string[]{"kJ/kg.K"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.KilojoulePerKilogramKelvin, new string[]{"kJ/kg.K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.MegajoulePerKilogramDegreeCelsius, new string[]{"MJ/kg.C"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.MegajoulePerKilogramDegreeCelsius, new string[]{"MJ/kg.C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.MegajoulePerKilogramKelvin, new string[]{"MJ/kg.K"}),
+#else
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.MegajoulePerKilogramKelvin, new string[]{"MJ/kg.K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificVolumeUnit), (int)SpecificVolumeUnit.CubicFootPerPound, new string[]{"ft³/lb"}),
+#else
                 ("en-US", typeof(SpecificVolumeUnit), (int)SpecificVolumeUnit.CubicFootPerPound, new string[]{"ft³/lb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificVolumeUnit), (int)SpecificVolumeUnit.CubicMeterPerKilogram, new string[]{"m³/kg"}),
+#else
                 ("en-US", typeof(SpecificVolumeUnit), (int)SpecificVolumeUnit.CubicMeterPerKilogram, new string[]{"m³/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificVolumeUnit), (int)SpecificVolumeUnit.MillicubicMeterPerKilogram, new string[]{"mm³/kg"}),
+#else
                 ("en-US", typeof(SpecificVolumeUnit), (int)SpecificVolumeUnit.MillicubicMeterPerKilogram, new string[]{"mm³/kg"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilogramForcePerCubicCentimeter, new string[]{"kgf/cm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilogramForcePerCubicCentimeter, new string[]{"kgf/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilogramForcePerCubicMeter, new string[]{"kgf/m³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilogramForcePerCubicMeter, new string[]{"kgf/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilogramForcePerCubicMillimeter, new string[]{"kgf/mm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilogramForcePerCubicMillimeter, new string[]{"kgf/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilonewtonPerCubicCentimeter, new string[]{"kN/cm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilonewtonPerCubicCentimeter, new string[]{"kN/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilonewtonPerCubicMeter, new string[]{"kN/m³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilonewtonPerCubicMeter, new string[]{"kN/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilonewtonPerCubicMillimeter, new string[]{"kN/mm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilonewtonPerCubicMillimeter, new string[]{"kN/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilopoundForcePerCubicFoot, new string[]{"kipf/ft³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilopoundForcePerCubicFoot, new string[]{"kipf/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilopoundForcePerCubicInch, new string[]{"kipf/in³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.KilopoundForcePerCubicInch, new string[]{"kipf/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.MeganewtonPerCubicMeter, new string[]{"MN/m³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.MeganewtonPerCubicMeter, new string[]{"MN/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.NewtonPerCubicCentimeter, new string[]{"N/cm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.NewtonPerCubicCentimeter, new string[]{"N/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.NewtonPerCubicMeter, new string[]{"N/m³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.NewtonPerCubicMeter, new string[]{"N/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.NewtonPerCubicMillimeter, new string[]{"N/mm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.NewtonPerCubicMillimeter, new string[]{"N/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.PoundForcePerCubicFoot, new string[]{"lbf/ft³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.PoundForcePerCubicFoot, new string[]{"lbf/ft³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.PoundForcePerCubicInch, new string[]{"lbf/in³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.PoundForcePerCubicInch, new string[]{"lbf/in³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.TonneForcePerCubicCentimeter, new string[]{"tf/cm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.TonneForcePerCubicCentimeter, new string[]{"tf/cm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.TonneForcePerCubicMeter, new string[]{"tf/m³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.TonneForcePerCubicMeter, new string[]{"tf/m³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.TonneForcePerCubicMillimeter, new string[]{"tf/mm³"}),
+#else
                 ("en-US", typeof(SpecificWeightUnit), (int)SpecificWeightUnit.TonneForcePerCubicMillimeter, new string[]{"tf/mm³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.CentimeterPerHour, new string[]{"cm/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.CentimeterPerHour, new string[]{"cm/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.CentimeterPerMinute, new string[]{"cm/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.CentimeterPerMinute, new string[]{"cm/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.CentimeterPerSecond, new string[]{"cm/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.CentimeterPerSecond, new string[]{"cm/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.DecimeterPerMinute, new string[]{"dm/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.DecimeterPerMinute, new string[]{"dm/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.DecimeterPerSecond, new string[]{"dm/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.DecimeterPerSecond, new string[]{"dm/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.FootPerHour, new string[]{"ft/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.FootPerHour, new string[]{"ft/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.FootPerMinute, new string[]{"ft/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.FootPerMinute, new string[]{"ft/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.FootPerSecond, new string[]{"ft/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.FootPerSecond, new string[]{"ft/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.InchPerHour, new string[]{"in/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.InchPerHour, new string[]{"in/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.InchPerMinute, new string[]{"in/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.InchPerMinute, new string[]{"in/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.InchPerSecond, new string[]{"in/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.InchPerSecond, new string[]{"in/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.KilometerPerHour, new string[]{"km/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.KilometerPerHour, new string[]{"km/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.KilometerPerMinute, new string[]{"km/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.KilometerPerMinute, new string[]{"km/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.KilometerPerSecond, new string[]{"km/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.KilometerPerSecond, new string[]{"km/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.Knot, new string[]{"kn", "kt", "knot", "knots"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.Knot, new string[]{"kn", "kt", "knot", "knots"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MeterPerHour, new string[]{"m/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MeterPerHour, new string[]{"m/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MeterPerMinute, new string[]{"m/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MeterPerMinute, new string[]{"m/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MeterPerSecond, new string[]{"m/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MeterPerSecond, new string[]{"m/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MicrometerPerMinute, new string[]{"µm/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MicrometerPerMinute, new string[]{"µm/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MicrometerPerSecond, new string[]{"µm/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MicrometerPerSecond, new string[]{"µm/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MilePerHour, new string[]{"mph"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MilePerHour, new string[]{"mph"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MillimeterPerHour, new string[]{"mm/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MillimeterPerHour, new string[]{"mm/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MillimeterPerMinute, new string[]{"mm/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MillimeterPerMinute, new string[]{"mm/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.MillimeterPerSecond, new string[]{"mm/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.MillimeterPerSecond, new string[]{"mm/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.NanometerPerMinute, new string[]{"nm/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.NanometerPerMinute, new string[]{"nm/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.NanometerPerSecond, new string[]{"nm/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.NanometerPerSecond, new string[]{"nm/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.UsSurveyFootPerHour, new string[]{"ftUS/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.UsSurveyFootPerHour, new string[]{"ftUS/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.UsSurveyFootPerMinute, new string[]{"ftUS/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.UsSurveyFootPerMinute, new string[]{"ftUS/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.UsSurveyFootPerSecond, new string[]{"ftUS/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.UsSurveyFootPerSecond, new string[]{"ftUS/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.YardPerHour, new string[]{"yd/h"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.YardPerHour, new string[]{"yd/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.YardPerMinute, new string[]{"yd/min"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.YardPerMinute, new string[]{"yd/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(SpeedUnit), (int)SpeedUnit.YardPerSecond, new string[]{"yd/s"}),
+#else
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.YardPerSecond, new string[]{"yd/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeCelsius, new string[]{"°C"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeCelsius, new string[]{"°C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeDelisle, new string[]{"°De"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeDelisle, new string[]{"°De"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeFahrenheit, new string[]{"°F"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeFahrenheit, new string[]{"°F"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeNewton, new string[]{"°N"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeNewton, new string[]{"°N"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeRankine, new string[]{"°R"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeRankine, new string[]{"°R"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeReaumur, new string[]{"°Ré"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeReaumur, new string[]{"°Ré"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeRoemer, new string[]{"°Rø"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeRoemer, new string[]{"°Rø"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.Kelvin, new string[]{"K"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.Kelvin, new string[]{"K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.SolarTemperature, new string[]{"T⊙"}),
+#else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.SolarTemperature, new string[]{"T⊙"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.CentidegreeCelsiusPerSecond, new string[]{"c°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.CentidegreeCelsiusPerSecond, new string[]{"c°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DecadegreeCelsiusPerSecond, new string[]{"da°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DecadegreeCelsiusPerSecond, new string[]{"da°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DecidegreeCelsiusPerSecond, new string[]{"d°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DecidegreeCelsiusPerSecond, new string[]{"d°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DegreeCelsiusPerMinute, new string[]{"°C/min"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DegreeCelsiusPerMinute, new string[]{"°C/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DegreeCelsiusPerSecond, new string[]{"°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.DegreeCelsiusPerSecond, new string[]{"°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.HectodegreeCelsiusPerSecond, new string[]{"h°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.HectodegreeCelsiusPerSecond, new string[]{"h°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.KilodegreeCelsiusPerSecond, new string[]{"k°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.KilodegreeCelsiusPerSecond, new string[]{"k°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.MicrodegreeCelsiusPerSecond, new string[]{"µ°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.MicrodegreeCelsiusPerSecond, new string[]{"µ°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.MillidegreeCelsiusPerSecond, new string[]{"m°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.MillidegreeCelsiusPerSecond, new string[]{"m°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.NanodegreeCelsiusPerSecond, new string[]{"n°C/s"}),
+#else
                 ("en-US", typeof(TemperatureChangeRateUnit), (int)TemperatureChangeRateUnit.NanodegreeCelsiusPerSecond, new string[]{"n°C/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeCelsius, new string[]{"∆°C"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeCelsius, new string[]{"∆°C"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeDelisle, new string[]{"∆°De"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeDelisle, new string[]{"∆°De"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeFahrenheit, new string[]{"∆°F"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeFahrenheit, new string[]{"∆°F"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeNewton, new string[]{"∆°N"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeNewton, new string[]{"∆°N"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeRankine, new string[]{"∆°R"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeRankine, new string[]{"∆°R"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeReaumur, new string[]{"∆°Ré"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeReaumur, new string[]{"∆°Ré"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeRoemer, new string[]{"∆°Rø"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.DegreeRoemer, new string[]{"∆°Rø"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.Kelvin, new string[]{"∆K"}),
+#else
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.Kelvin, new string[]{"∆K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.BtuPerHourFootFahrenheit, new string[]{"BTU/h·ft·°F"}),
+#else
                 ("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.BtuPerHourFootFahrenheit, new string[]{"BTU/h·ft·°F"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.WattPerMeterKelvin, new string[]{"W/m·K"}),
+#else
                 ("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.WattPerMeterKelvin, new string[]{"W/m·K"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.HourSquareFeetDegreeFahrenheitPerBtu, new string[]{"Hrft²°F/Btu"}),
+#else
                 ("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.HourSquareFeetDegreeFahrenheitPerBtu, new string[]{"Hrft²°F/Btu"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareCentimeterHourDegreeCelsiusPerKilocalorie, new string[]{"cm²Hr°C/kcal"}),
+#else
                 ("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareCentimeterHourDegreeCelsiusPerKilocalorie, new string[]{"cm²Hr°C/kcal"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareCentimeterKelvinPerWatt, new string[]{"cm²K/W"}),
+#else
                 ("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareCentimeterKelvinPerWatt, new string[]{"cm²K/W"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareMeterDegreeCelsiusPerWatt, new string[]{"m²°C/W"}),
+#else
                 ("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareMeterDegreeCelsiusPerWatt, new string[]{"m²°C/W"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareMeterKelvinPerKilowatt, new string[]{"m²K/kW"}),
+#else
                 ("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareMeterKelvinPerKilowatt, new string[]{"m²K/kW"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilogramForceCentimeter, new string[]{"kgf·cm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilogramForceCentimeter, new string[]{"kgf·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilogramForceMeter, new string[]{"kgf·m"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilogramForceMeter, new string[]{"kgf·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilogramForceMillimeter, new string[]{"kgf·mm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilogramForceMillimeter, new string[]{"kgf·mm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonCentimeter, new string[]{"kN·cm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonCentimeter, new string[]{"kN·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonMeter, new string[]{"kN·m"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonMeter, new string[]{"kN·m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonMeter, new string[]{"кН·м"}),
+#else
                 ("ru-RU", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonMeter, new string[]{"кН·м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonMillimeter, new string[]{"kN·mm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilonewtonMillimeter, new string[]{"kN·mm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilopoundForceFoot, new string[]{"kipf·ft"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilopoundForceFoot, new string[]{"kipf·ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilopoundForceInch, new string[]{"kipf·in"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.KilopoundForceInch, new string[]{"kipf·in"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonCentimeter, new string[]{"MN·cm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonCentimeter, new string[]{"MN·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonMeter, new string[]{"MN·m"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonMeter, new string[]{"MN·m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonMeter, new string[]{"МН·м"}),
+#else
                 ("ru-RU", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonMeter, new string[]{"МН·м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonMillimeter, new string[]{"MN·mm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.MeganewtonMillimeter, new string[]{"MN·mm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.MegapoundForceFoot, new string[]{"Mlbf·ft"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.MegapoundForceFoot, new string[]{"Mlbf·ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.MegapoundForceInch, new string[]{"Mlbf·in"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.MegapoundForceInch, new string[]{"Mlbf·in"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.NewtonCentimeter, new string[]{"N·cm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.NewtonCentimeter, new string[]{"N·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.NewtonMeter, new string[]{"N·m"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.NewtonMeter, new string[]{"N·m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(TorqueUnit), (int)TorqueUnit.NewtonMeter, new string[]{"Н·м"}),
+#else
                 ("ru-RU", typeof(TorqueUnit), (int)TorqueUnit.NewtonMeter, new string[]{"Н·м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.NewtonMillimeter, new string[]{"N·mm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.NewtonMillimeter, new string[]{"N·mm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.PoundForceFoot, new string[]{"lbf·ft"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.PoundForceFoot, new string[]{"lbf·ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.PoundForceInch, new string[]{"lbf·in"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.PoundForceInch, new string[]{"lbf·in"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.TonneForceCentimeter, new string[]{"tf·cm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.TonneForceCentimeter, new string[]{"tf·cm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.TonneForceMeter, new string[]{"tf·m"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.TonneForceMeter, new string[]{"tf·m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorqueUnit), (int)TorqueUnit.TonneForceMillimeter, new string[]{"tf·mm"}),
+#else
                 ("en-US", typeof(TorqueUnit), (int)TorqueUnit.TonneForceMillimeter, new string[]{"tf·mm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilogramForceCentimeterPerMeter, new string[]{"kgf·cm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilogramForceCentimeterPerMeter, new string[]{"kgf·cm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilogramForceMeterPerMeter, new string[]{"kgf·m/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilogramForceMeterPerMeter, new string[]{"kgf·m/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilogramForceMillimeterPerMeter, new string[]{"kgf·mm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilogramForceMillimeterPerMeter, new string[]{"kgf·mm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonCentimeterPerMeter, new string[]{"kN·cm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonCentimeterPerMeter, new string[]{"kN·cm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonMeterPerMeter, new string[]{"kN·m/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonMeterPerMeter, new string[]{"kN·m/m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonMeterPerMeter, new string[]{"кН·м/м"}),
+#else
                 ("ru-RU", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonMeterPerMeter, new string[]{"кН·м/м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonMillimeterPerMeter, new string[]{"kN·mm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilonewtonMillimeterPerMeter, new string[]{"kN·mm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilopoundForceFootPerFoot, new string[]{"kipf·ft/ft"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilopoundForceFootPerFoot, new string[]{"kipf·ft/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilopoundForceInchPerFoot, new string[]{"kipf·in/ft"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.KilopoundForceInchPerFoot, new string[]{"kipf·in/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonCentimeterPerMeter, new string[]{"MN·cm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonCentimeterPerMeter, new string[]{"MN·cm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonMeterPerMeter, new string[]{"MN·m/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonMeterPerMeter, new string[]{"MN·m/m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonMeterPerMeter, new string[]{"МН·м/м"}),
+#else
                 ("ru-RU", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonMeterPerMeter, new string[]{"МН·м/м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonMillimeterPerMeter, new string[]{"MN·mm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MeganewtonMillimeterPerMeter, new string[]{"MN·mm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MegapoundForceFootPerFoot, new string[]{"Mlbf·ft/ft"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MegapoundForceFootPerFoot, new string[]{"Mlbf·ft/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MegapoundForceInchPerFoot, new string[]{"Mlbf·in/ft"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.MegapoundForceInchPerFoot, new string[]{"Mlbf·in/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonCentimeterPerMeter, new string[]{"N·cm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonCentimeterPerMeter, new string[]{"N·cm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonMeterPerMeter, new string[]{"N·m/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonMeterPerMeter, new string[]{"N·m/m"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonMeterPerMeter, new string[]{"Н·м/м"}),
+#else
                 ("ru-RU", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonMeterPerMeter, new string[]{"Н·м/м"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonMillimeterPerMeter, new string[]{"N·mm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.NewtonMillimeterPerMeter, new string[]{"N·mm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.PoundForceFootPerFoot, new string[]{"lbf·ft/ft"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.PoundForceFootPerFoot, new string[]{"lbf·ft/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.PoundForceInchPerFoot, new string[]{"lbf·in/ft"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.PoundForceInchPerFoot, new string[]{"lbf·in/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.TonneForceCentimeterPerMeter, new string[]{"tf·cm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.TonneForceCentimeterPerMeter, new string[]{"tf·cm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.TonneForceMeterPerMeter, new string[]{"tf·m/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.TonneForceMeterPerMeter, new string[]{"tf·m/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.TonneForceMillimeterPerMeter, new string[]{"tf·mm/m"}),
+#else
                 ("en-US", typeof(TorquePerLengthUnit), (int)TorquePerLengthUnit.TonneForceMillimeterPerMeter, new string[]{"tf·mm/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VitaminAUnit), (int)VitaminAUnit.InternationalUnit, new string[]{"IU"}),
+#else
                 ("en-US", typeof(VitaminAUnit), (int)VitaminAUnit.InternationalUnit, new string[]{"IU"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.AcreFoot, new string[]{"ac-ft", "acre-foot", "acre-feet"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.AcreFoot, new string[]{"ac-ft", "acre-foot", "acre-feet"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.AuTablespoon, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.AuTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.AuTablespoon, new string[]{""}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.AuTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.AuTablespoon, new string[]{""}),
+#else
                 ("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.AuTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Centiliter, new string[]{"cl"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Centiliter, new string[]{"cl"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Centiliter, new string[]{"сл"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Centiliter, new string[]{"сл"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicCentimeter, new string[]{"cm³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicCentimeter, new string[]{"cm³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicCentimeter, new string[]{"см³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicCentimeter, new string[]{"см³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicDecimeter, new string[]{"dm³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicDecimeter, new string[]{"dm³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicDecimeter, new string[]{"дм³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicDecimeter, new string[]{"дм³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicFoot, new string[]{"ft³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicFoot, new string[]{"ft³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicFoot, new string[]{"фут³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicFoot, new string[]{"фут³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicHectometer, new string[]{"hm³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicHectometer, new string[]{"hm³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicHectometer, new string[]{"гм³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicHectometer, new string[]{"гм³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicInch, new string[]{"in³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicInch, new string[]{"in³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicInch, new string[]{"дюйм³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicInch, new string[]{"дюйм³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicKilometer, new string[]{"km³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicKilometer, new string[]{"km³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicKilometer, new string[]{"км³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicKilometer, new string[]{"км³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMeter, new string[]{"m³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMeter, new string[]{"m³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMeter, new string[]{"м³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMeter, new string[]{"м³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMicrometer, new string[]{"µm³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMicrometer, new string[]{"µm³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMicrometer, new string[]{"мкм³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMicrometer, new string[]{"мкм³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMile, new string[]{"mi³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMile, new string[]{"mi³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMile, new string[]{"миля³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMile, new string[]{"миля³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMillimeter, new string[]{"mm³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicMillimeter, new string[]{"mm³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMillimeter, new string[]{"мм³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicMillimeter, new string[]{"мм³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicYard, new string[]{"yd³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.CubicYard, new string[]{"yd³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicYard, new string[]{"ярд³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.CubicYard, new string[]{"ярд³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Deciliter, new string[]{"dl"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Deciliter, new string[]{"dl"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Deciliter, new string[]{"дл"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Deciliter, new string[]{"дл"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.HectocubicFoot, new string[]{"hft³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.HectocubicFoot, new string[]{"hft³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.HectocubicFoot, new string[]{"гфут³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.HectocubicFoot, new string[]{"гфут³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.HectocubicMeter, new string[]{"hm³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.HectocubicMeter, new string[]{"hm³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.HectocubicMeter, new string[]{"гм³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.HectocubicMeter, new string[]{"гм³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Hectoliter, new string[]{"hl"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Hectoliter, new string[]{"hl"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Hectoliter, new string[]{"гл"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Hectoliter, new string[]{"гл"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialBeerBarrel, new string[]{"bl (imp.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialBeerBarrel, new string[]{"bl (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialGallon, new string[]{"gal (imp.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialGallon, new string[]{"gal (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.ImperialGallon, new string[]{"Английский галлон"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.ImperialGallon, new string[]{"Английский галлон"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialOunce, new string[]{"oz (imp.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialOunce, new string[]{"oz (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.ImperialOunce, new string[]{"Английская унция"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.ImperialOunce, new string[]{"Английская унция"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialPint, new string[]{"pt (imp.)", "UK pt", "pt", "p"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.ImperialPint, new string[]{"pt (imp.)", "UK pt", "pt", "p"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.KilocubicFoot, new string[]{"kft³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.KilocubicFoot, new string[]{"kft³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KilocubicFoot, new string[]{"кфут³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KilocubicFoot, new string[]{"кфут³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.KilocubicMeter, new string[]{"km³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.KilocubicMeter, new string[]{"km³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KilocubicMeter, new string[]{"км³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KilocubicMeter, new string[]{"км³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.KiloimperialGallon, new string[]{"kgal (imp.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.KiloimperialGallon, new string[]{"kgal (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KiloimperialGallon, new string[]{"кАнглийский галлон"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KiloimperialGallon, new string[]{"кАнглийский галлон"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Kiloliter, new string[]{"kl"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Kiloliter, new string[]{"kl"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Kiloliter, new string[]{"кл"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Kiloliter, new string[]{"кл"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.KilousGallon, new string[]{"kgal (U.S.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.KilousGallon, new string[]{"kgal (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KilousGallon, new string[]{"кАмериканский галлон"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.KilousGallon, new string[]{"кАмериканский галлон"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Liter, new string[]{"l"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Liter, new string[]{"l"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Liter, new string[]{"л"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Liter, new string[]{"л"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.MegacubicFoot, new string[]{"Mft³"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.MegacubicFoot, new string[]{"Mft³"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MegacubicFoot, new string[]{"Мфут³"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MegacubicFoot, new string[]{"Мфут³"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.MegaimperialGallon, new string[]{"Mgal (imp.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.MegaimperialGallon, new string[]{"Mgal (imp.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MegaimperialGallon, new string[]{"МАнглийский галлон"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MegaimperialGallon, new string[]{"МАнглийский галлон"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Megaliter, new string[]{"Ml"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Megaliter, new string[]{"Ml"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Megaliter, new string[]{"Мл"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Megaliter, new string[]{"Мл"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.MegausGallon, new string[]{"Mgal (U.S.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.MegausGallon, new string[]{"Mgal (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MegausGallon, new string[]{"МАмериканский галлон"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MegausGallon, new string[]{"МАмериканский галлон"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.MetricCup, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.MetricCup, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.MetricTeaspoon, new string[]{"tsp", "t", "ts", "tspn", "t.", "ts.", "tsp.", "tspn.", "teaspoon"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.MetricTeaspoon, new string[]{"tsp", "t", "ts", "tspn", "t.", "ts.", "tsp.", "tspn.", "teaspoon"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MetricTeaspoon, new string[]{""}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.MetricTeaspoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.MetricTeaspoon, new string[]{""}),
+#else
                 ("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.MetricTeaspoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Microliter, new string[]{"µl"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Microliter, new string[]{"µl"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Microliter, new string[]{"мкл"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Microliter, new string[]{"мкл"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.Milliliter, new string[]{"ml"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.Milliliter, new string[]{"ml"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Milliliter, new string[]{"мл"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.Milliliter, new string[]{"мл"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.OilBarrel, new string[]{"bbl"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.OilBarrel, new string[]{"bbl"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UkTablespoon, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UkTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UkTablespoon, new string[]{""}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UkTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.UkTablespoon, new string[]{""}),
+#else
                 ("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.UkTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsBeerBarrel, new string[]{"bl (U.S.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsBeerBarrel, new string[]{"bl (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsCustomaryCup, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsCustomaryCup, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsGallon, new string[]{"gal (U.S.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsGallon, new string[]{"gal (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsGallon, new string[]{"Американский галлон"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsGallon, new string[]{"Американский галлон"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsLegalCup, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsLegalCup, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsOunce, new string[]{"oz (U.S.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsOunce, new string[]{"oz (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsOunce, new string[]{"Американская унция"}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsOunce, new string[]{"Американская унция"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsPint, new string[]{"pt (U.S.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsPint, new string[]{"pt (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsQuart, new string[]{"qt (U.S.)"}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsQuart, new string[]{"qt (U.S.)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsTablespoon, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsTablespoon, new string[]{""}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.UsTablespoon, new string[]{""}),
+#else
                 ("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.UsTablespoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsTeaspoon, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeUnit), (int)VolumeUnit.UsTeaspoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsTeaspoon, new string[]{""}),
+#else
                 ("ru-RU", typeof(VolumeUnit), (int)VolumeUnit.UsTeaspoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.UsTeaspoon, new string[]{""}),
+#else
                 ("nb-NO", typeof(VolumeUnit), (int)VolumeUnit.UsTeaspoon, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.CentilitersPerLiter, new string[]{"cL/L"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.CentilitersPerLiter, new string[]{"cL/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.CentilitersPerMililiter, new string[]{"cL/mL"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.CentilitersPerMililiter, new string[]{"cL/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.DecilitersPerLiter, new string[]{"dL/L"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.DecilitersPerLiter, new string[]{"dL/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.DecilitersPerMililiter, new string[]{"dL/mL"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.DecilitersPerMililiter, new string[]{"dL/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.DecimalFraction, new string[]{""}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.DecimalFraction, new string[]{""}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.LitersPerLiter, new string[]{"L/L"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.LitersPerLiter, new string[]{"L/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.LitersPerMililiter, new string[]{"L/mL"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.LitersPerMililiter, new string[]{"L/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MicrolitersPerLiter, new string[]{"µL/L"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MicrolitersPerLiter, new string[]{"µL/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MicrolitersPerMililiter, new string[]{"µL/mL"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MicrolitersPerMililiter, new string[]{"µL/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MillilitersPerLiter, new string[]{"mL/L"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MillilitersPerLiter, new string[]{"mL/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MillilitersPerMililiter, new string[]{"mL/mL"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.MillilitersPerMililiter, new string[]{"mL/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.NanolitersPerLiter, new string[]{"nL/L"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.NanolitersPerLiter, new string[]{"nL/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.NanolitersPerMililiter, new string[]{"nL/mL"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.NanolitersPerMililiter, new string[]{"nL/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerBillion, new string[]{"ppb"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerBillion, new string[]{"ppb"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerMillion, new string[]{"ppm"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerMillion, new string[]{"ppm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerThousand, new string[]{"‰"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerThousand, new string[]{"‰"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerTrillion, new string[]{"ppt"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PartPerTrillion, new string[]{"ppt"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.Percent, new string[]{"%", "% (v/v)"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.Percent, new string[]{"%", "% (v/v)"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PicolitersPerLiter, new string[]{"pL/L"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PicolitersPerLiter, new string[]{"pL/L"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PicolitersPerMililiter, new string[]{"pL/mL"}),
+#else
                 ("en-US", typeof(VolumeConcentrationUnit), (int)VolumeConcentrationUnit.PicolitersPerMililiter, new string[]{"pL/mL"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerDay, new string[]{"af/d"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerDay, new string[]{"af/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerHour, new string[]{"af/h"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerHour, new string[]{"af/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerMinute, new string[]{"af/m"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerMinute, new string[]{"af/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerSecond, new string[]{"af/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.AcreFootPerSecond, new string[]{"af/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CentiliterPerDay, new string[]{"cl/day", "cL/d", "cLPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CentiliterPerDay, new string[]{"cl/day", "cL/d", "cLPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CentiliterPerMinute, new string[]{"cL/min", "cLPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CentiliterPerMinute, new string[]{"cL/min", "cLPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicDecimeterPerMinute, new string[]{"dm³/min"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicDecimeterPerMinute, new string[]{"dm³/min"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicDecimeterPerMinute, new string[]{"дм³/мин"}),
+#else
                 ("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicDecimeterPerMinute, new string[]{"дм³/мин"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicFootPerHour, new string[]{"ft³/h", "cf/hr"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicFootPerHour, new string[]{"ft³/h", "cf/hr"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicFootPerMinute, new string[]{"ft³/min"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicFootPerMinute, new string[]{"ft³/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicFootPerSecond, new string[]{"ft³/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicFootPerSecond, new string[]{"ft³/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerDay, new string[]{"m³/d"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerDay, new string[]{"m³/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerHour, new string[]{"m³/h"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerHour, new string[]{"m³/h"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerHour, new string[]{"м³/ч"}),
+#else
                 ("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerHour, new string[]{"м³/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerMinute, new string[]{"m³/min"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerMinute, new string[]{"m³/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerSecond, new string[]{"m³/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerSecond, new string[]{"m³/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerSecond, new string[]{"м³/с"}),
+#else
                 ("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMeterPerSecond, new string[]{"м³/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMillimeterPerSecond, new string[]{"mm³/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMillimeterPerSecond, new string[]{"mm³/s"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMillimeterPerSecond, new string[]{"мм³/с"}),
+#else
                 ("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicMillimeterPerSecond, new string[]{"мм³/с"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerDay, new string[]{"cy/day"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerDay, new string[]{"cy/day"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerHour, new string[]{"yd³/h"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerHour, new string[]{"yd³/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerMinute, new string[]{"yd³/min"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerMinute, new string[]{"yd³/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerSecond, new string[]{"yd³/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.CubicYardPerSecond, new string[]{"yd³/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.DeciliterPerDay, new string[]{"dl/day", "dL/d", "dLPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.DeciliterPerDay, new string[]{"dl/day", "dL/d", "dLPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.DeciliterPerMinute, new string[]{"dL/min", "dLPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.DeciliterPerMinute, new string[]{"dL/min", "dLPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.KiloliterPerDay, new string[]{"kl/day", "kL/d", "kLPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.KiloliterPerDay, new string[]{"kl/day", "kL/d", "kLPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.KiloliterPerMinute, new string[]{"kL/min", "kLPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.KiloliterPerMinute, new string[]{"kL/min", "kLPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.KilousGallonPerMinute, new string[]{"kgal (U.S.)/min", "KGPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.KilousGallonPerMinute, new string[]{"kgal (U.S.)/min", "KGPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerDay, new string[]{"l/day", "L/d", "LPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerDay, new string[]{"l/day", "L/d", "LPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerHour, new string[]{"L/h", "LPH"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerHour, new string[]{"L/h", "LPH"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerHour, new string[]{"л/ч"}),
+#else
                 ("ru-RU", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerHour, new string[]{"л/ч"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerMinute, new string[]{"L/min", "LPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerMinute, new string[]{"L/min", "LPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerSecond, new string[]{"L/s", "LPS"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.LiterPerSecond, new string[]{"L/s", "LPS"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MegaliterPerDay, new string[]{"Ml/day", "ML/d", "MLPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MegaliterPerDay, new string[]{"Ml/day", "ML/d", "MLPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MegaukGallonPerSecond, new string[]{"Mgal (imp.)/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MegaukGallonPerSecond, new string[]{"Mgal (imp.)/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MicroliterPerDay, new string[]{"µl/day", "µL/d", "µLPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MicroliterPerDay, new string[]{"µl/day", "µL/d", "µLPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MicroliterPerMinute, new string[]{"µL/min", "µLPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MicroliterPerMinute, new string[]{"µL/min", "µLPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MilliliterPerDay, new string[]{"ml/day", "mL/d", "mLPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MilliliterPerDay, new string[]{"ml/day", "mL/d", "mLPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MilliliterPerMinute, new string[]{"mL/min", "mLPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MilliliterPerMinute, new string[]{"mL/min", "mLPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MillionUsGallonsPerDay, new string[]{"MGD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.MillionUsGallonsPerDay, new string[]{"MGD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.NanoliterPerDay, new string[]{"nl/day", "nL/d", "nLPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.NanoliterPerDay, new string[]{"nl/day", "nL/d", "nLPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.NanoliterPerMinute, new string[]{"nL/min", "nLPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.NanoliterPerMinute, new string[]{"nL/min", "nLPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerDay, new string[]{"bbl/d", "BOPD"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerDay, new string[]{"bbl/d", "BOPD"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerHour, new string[]{"bbl/hr", "bph"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerHour, new string[]{"bbl/hr", "bph"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerMinute, new string[]{"bbl/min", "bpm"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerMinute, new string[]{"bbl/min", "bpm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerSecond, new string[]{"bbl/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.OilBarrelPerSecond, new string[]{"bbl/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerDay, new string[]{"gal (U. K.)/d"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerDay, new string[]{"gal (U. K.)/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerHour, new string[]{"gal (imp.)/h"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerHour, new string[]{"gal (imp.)/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerMinute, new string[]{"gal (imp.)/min"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerMinute, new string[]{"gal (imp.)/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerSecond, new string[]{"gal (imp.)/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UkGallonPerSecond, new string[]{"gal (imp.)/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerDay, new string[]{"gpd", "gal/d"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerDay, new string[]{"gpd", "gal/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerHour, new string[]{"gal (U.S.)/h"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerHour, new string[]{"gal (U.S.)/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerMinute, new string[]{"gal (U.S.)/min", "GPM"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerMinute, new string[]{"gal (U.S.)/min", "GPM"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerSecond, new string[]{"gal (U.S.)/s"}),
+#else
                 ("en-US", typeof(VolumeFlowUnit), (int)VolumeFlowUnit.UsGallonPerSecond, new string[]{"gal (U.S.)/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.CubicMeterPerMeter, new string[]{"m³/m"}),
+#else
                 ("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.CubicMeterPerMeter, new string[]{"m³/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.LiterPerMeter, new string[]{"l/m"}),
+#else
                 ("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.LiterPerMeter, new string[]{"l/m"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.OilBarrelPerFoot, new string[]{"bbl/ft"}),
+#else
                 ("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.OilBarrelPerFoot, new string[]{"bbl/ft"}),
+#endif
             };
     }
 }
