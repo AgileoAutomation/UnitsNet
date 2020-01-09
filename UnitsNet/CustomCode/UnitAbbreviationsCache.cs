@@ -57,8 +57,13 @@ namespace UnitsNet
         {
             foreach(var localization in GeneratedLocalizations)
             {
+#if NET40
                 var culture = new CultureInfo(localization.Item1);
                 MapUnitToAbbreviation(localization.Item2, localization.Item3, culture, localization.Item4);
+#else
+                var culture = new CultureInfo(localization.Item1);
+                MapUnitToAbbreviation(localization.Item2, localization.Item3, culture, localization.Item4);
+#endif
             }
         }
 

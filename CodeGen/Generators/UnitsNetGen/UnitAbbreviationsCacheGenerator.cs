@@ -25,7 +25,11 @@ namespace UnitsNet
 {
     public partial class UnitAbbreviationsCache
     {
+#if NET40
         private static readonly Tuple<string, Type, int, string[]>[] GeneratedLocalizations
+#else
+        private static readonly (string CultureName, Type UnitType, int UnitValue, string[] UnitAbbreviations)[] GeneratedLocalizations
+#endif
             = new []
             {");
             foreach (var quantity in _quantities)
@@ -43,7 +47,11 @@ namespace UnitsNet
                             ? string.Join(", ", localization.Abbreviations.Select(abbr => $"\"{abbr}\""))
                             : "\"\"";
                         Writer.WL($@"
-                Tuple.Create(""{cultureName}"", typeof({unitEnumName}), (int){unitEnumName}.{unit.SingularName}, new string[]{{{abbreviationParams}}}),");
+#if NET40
+                Tuple.Create(""{cultureName}"", typeof({unitEnumName}), (int){unitEnumName}.{unit.SingularName}, new string[]{{{abbreviationParams}}}),
+#else
+                (""{cultureName}"", typeof({unitEnumName}), (int){unitEnumName}.{unit.SingularName}, new string[]{{{abbreviationParams}}}),
+#endif");
                     }
                 }
             }
