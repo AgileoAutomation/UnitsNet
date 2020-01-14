@@ -9,7 +9,7 @@ trigger:
       - master
       - feature/*
       - release/*
-      - refs/tags/*
+      - refs/tags/UnitsNet.Agileo/*
   paths:
     exclude:
       - docs/*
