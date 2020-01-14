@@ -709,6 +709,11 @@ namespace UnitsNet
                 ("en-US", typeof(CoefficientOfThermalExpansionUnit), (int)CoefficientOfThermalExpansionUnit.InverseKelvin, new string[]{"K⁻¹", "1/K"}),
 #endif
 #if NET40
+                Tuple.Create("en-US", typeof(DeformationUnit), (int)DeformationUnit.Microdeformation, new string[]{"µdef"}),
+#else
+                ("en-US", typeof(DeformationUnit), (int)DeformationUnit.Microdeformation, new string[]{"µdef"}),
+#endif
+#if NET40
                 Tuple.Create("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerDeciliter, new string[]{"cg/dl"}),
 #else
                 ("en-US", typeof(DensityUnit), (int)DensityUnit.CentigramPerDeciliter, new string[]{"cg/dl"}),
@@ -1337,6 +1342,36 @@ namespace UnitsNet
                 Tuple.Create("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.VoltDc, new string[]{"Vdc"}),
 #else
                 ("en-US", typeof(ElectricPotentialDcUnit), (int)ElectricPotentialDcUnit.VoltDc, new string[]{"Vdc"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MicrovoltPerVolt, new string[]{"µV/V"}),
+#else
+                ("en-US", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MicrovoltPerVolt, new string[]{"µV/V"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MicrovoltPerVolt, new string[]{"мкВ/В"}),
+#else
+                ("ru-RU", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MicrovoltPerVolt, new string[]{"мкВ/В"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MillivoltPerVolt, new string[]{"mV/V"}),
+#else
+                ("en-US", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MillivoltPerVolt, new string[]{"mV/V"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MillivoltPerVolt, new string[]{"мВ/В"}),
+#else
+                ("ru-RU", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.MillivoltPerVolt, new string[]{"мВ/В"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.VoltPerVolt, new string[]{"V/V"}),
+#else
+                ("en-US", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.VoltPerVolt, new string[]{"V/V"}),
+#endif
+#if NET40
+                Tuple.Create("ru-RU", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.VoltPerVolt, new string[]{"В/В"}),
+#else
+                ("ru-RU", typeof(ElectricRatioUnit), (int)ElectricRatioUnit.VoltPerVolt, new string[]{"В/В"}),
 #endif
 #if NET40
                 Tuple.Create("en-US", typeof(ElectricResistanceUnit), (int)ElectricResistanceUnit.Gigaohm, new string[]{"GΩ"}),
