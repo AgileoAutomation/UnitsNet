@@ -6484,6 +6484,16 @@ namespace UnitsNet
                 ("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.CubicMeterPerMeter, new string[]{"m³/m"}),
 #endif
 #if NET40
+                Tuple.Create("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.CubicYardPerFoot, new string[]{"yd³/ft"}),
+#else
+                ("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.CubicYardPerFoot, new string[]{"yd³/ft"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.CubicYardPerUsSurveyFoot, new string[]{"yd³/ftUS"}),
+#else
+                ("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.CubicYardPerUsSurveyFoot, new string[]{"yd³/ftUS"}),
+#endif
+#if NET40
                 Tuple.Create("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.LiterPerMeter, new string[]{"l/m"}),
 #else
                 ("en-US", typeof(VolumePerLengthUnit), (int)VolumePerLengthUnit.LiterPerMeter, new string[]{"l/m"}),
