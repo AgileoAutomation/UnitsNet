@@ -33,7 +33,7 @@ See [Upgrading from 3.x to 4.x](https://github.com/angularsen/UnitsNet/wiki/Upgr
 * [Example: Creating a unit converter app](#example-app)
 * [Example: WPF app using IValueConverter to parse quantities from input](#example-wpf-app-using-ivalueconverter-to-parse-quantities-from-input)
 * [Precision and accuracy](#precision)
-* [Serializable with JSON.NET](#serialization)
+* [Serialize with JSON.NET](#serialization)
 * Extensible with [custom units](https://github.com/angularsen/UnitsNet/wiki/Extending-with-Custom-Units)
 * [Contribute](#contribute) if you are missing some units
 * [Continuous integration](#ci) posts status reports to pull requests and commits
@@ -42,7 +42,7 @@ See [Upgrading from 3.x to 4.x](https://github.com/angularsen/UnitsNet/wiki/Upgr
 
 ### Installing
 
-Run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console) or go to the [NuGet site](https://www.nuget.org/packages/UnitsNet/) for the complete relase history.
+Run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console) or go to the [NuGet site](https://www.nuget.org/packages/UnitsNet/) for the complete release history.
 
 ![Install-Package UnitsNet](https://raw.githubusercontent.com/angularsen/UnitsNet/master/Docs/Images/install_package_unitsnet.png "Install-Package UnitsNet")
 
@@ -287,6 +287,32 @@ For more details, see [Precision](https://github.com/angularsen/UnitsNet/wiki/Pr
 ### <a name="serialization"></a>Serialization
 
 * `UnitsNet.Serialization.JsonNet` ([nuget](https://www.nuget.org/packages/UnitsNet.Serialization.JsonNet), [src](https://github.com/angularsen/UnitsNet/tree/master/UnitsNet.Serialization.JsonNet), [tests](https://github.com/angularsen/UnitsNet/tree/master/UnitsNet.Serialization.JsonNet.Tests)) for JSON.NET
+
+#### Example of JSON Serialization
+```c#
+var jsonSerializerSettings = new JsonSerializerSettings {Formatting = Formatting.Indented};
+jsonSerializerSettings.Converters.Add(new UnitsNetIQuantityJsonConverter());
+
+string json = JsonConvert.SerializeObject(new { Name = "Raiden", Weight = Mass.FromKilograms(90) }, jsonSerializerSettings);
+
+object obj = JsonConvert.DeserializeObject(json);
+```
+
+JSON output:
+```json
+{
+  "Name": "Raiden",
+  "Weight": {
+    "Unit": "MassUnit.Kilogram",
+    "Value": 90.0
+  }
+}
+```
+
+If you need to support deserializing into properties/fields of type `IComparable` instead of type `IQuantity`, then you can add 
+```c#
+jsonSerializerSettings.Converters.Add(new UnitsNetIQuantityJsonConverter());
+```
 
 **Important!** 
 We cannot guarantee backwards compatibility, although we will strive to do that on a "best effort" basis and bumping the major nuget version when a change is necessary.

@@ -2,7 +2,7 @@
   <!-- NuGet properties -->
   <PropertyGroup>
     <PackageId>UnitsNet.Agileo</PackageId>
-    <Version>4.43.0</Version>
+    <Version>4.71.0</Version>
     <Authors>Andreas Gullberg Larsen</Authors>
     <Title>Units.NET</Title>
     <Description>Get all the common units of measurement and the conversions between them. It is light-weight and thoroughly tested.</Description>
@@ -22,6 +22,7 @@
   <PropertyGroup>
     <AssemblyVersion>4.0.0.0</AssemblyVersion> <!-- Should reflect major part of Version -->
     <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
     <RootNamespace>UnitsNet</RootNamespace>
     <TargetFrameworks>netstandard2.0;net40;net461</TargetFrameworks>
     <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
@@ -60,8 +61,11 @@
     <Compile Remove="UnitDefinitions\**" />
     <EmbeddedResource Remove="UnitDefinitions\**" />
     <None Remove="UnitDefinitions\**" />
-    <None Include="..\Docs\Images\logo-128.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+  <!-- Files to include in nuget package -->
+  <ItemGroup>
+    <None Include="../Docs/Images/logo-128.png" Pack="true" PackagePath="/"/>
+  </ItemGroup>
 
 </Project>

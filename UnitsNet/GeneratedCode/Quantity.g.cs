@@ -23,6 +23,8 @@ using JetBrains.Annotations;
 using UnitsNet.InternalHelpers;
 using UnitsNet.Units;
 
+#nullable enable
+
 namespace UnitsNet
 {
     /// <summary>
@@ -96,6 +98,8 @@ namespace UnitsNet
                     return ElectricPotential.From(value, ElectricPotential.BaseUnit);
                 case QuantityType.ElectricPotentialAc:
                     return ElectricPotentialAc.From(value, ElectricPotentialAc.BaseUnit);
+                case QuantityType.ElectricPotentialChangeRate:
+                    return ElectricPotentialChangeRate.From(value, ElectricPotentialChangeRate.BaseUnit);
                 case QuantityType.ElectricPotentialDc:
                     return ElectricPotentialDc.From(value, ElectricPotentialDc.BaseUnit);
                 case QuantityType.ElectricResistance:
@@ -140,6 +144,8 @@ namespace UnitsNet
                     return Level.From(value, Level.BaseUnit);
                 case QuantityType.LinearDensity:
                     return LinearDensity.From(value, LinearDensity.BaseUnit);
+                case QuantityType.LinearPowerDensity:
+                    return LinearPowerDensity.From(value, LinearPowerDensity.BaseUnit);
                 case QuantityType.Luminosity:
                     return Luminosity.From(value, Luminosity.BaseUnit);
                 case QuantityType.LuminousFlux:
@@ -228,6 +234,8 @@ namespace UnitsNet
                     return Torque.From(value, Torque.BaseUnit);
                 case QuantityType.TorquePerLength:
                     return TorquePerLength.From(value, TorquePerLength.BaseUnit);
+                case QuantityType.Turbidity:
+                    return Turbidity.From(value, Turbidity.BaseUnit);
                 case QuantityType.VitaminA:
                     return VitaminA.From(value, VitaminA.BaseUnit);
                 case QuantityType.Volume:
@@ -250,7 +258,7 @@ namespace UnitsNet
         /// <param name="unit">Unit enum value.</param>
         /// <param name="quantity">The resulting quantity if successful, otherwise <c>default</c>.</param>
         /// <returns><c>True</c> if successful with <paramref name="quantity"/> assigned the value, otherwise <c>false</c>.</returns>
-        public static bool TryFrom(QuantityValue value, Enum unit, out IQuantity quantity)
+        public static bool TryFrom(QuantityValue value, Enum unit, out IQuantity? quantity)
         {
             switch (unit)
             {
@@ -338,6 +346,9 @@ namespace UnitsNet
                 case ElectricPotentialAcUnit electricPotentialAcUnit:
                     quantity = ElectricPotentialAc.From(value, electricPotentialAcUnit);
                     return true;
+                case ElectricPotentialChangeRateUnit electricPotentialChangeRateUnit:
+                    quantity = ElectricPotentialChangeRate.From(value, electricPotentialChangeRateUnit);
+                    return true;
                 case ElectricPotentialDcUnit electricPotentialDcUnit:
                     quantity = ElectricPotentialDc.From(value, electricPotentialDcUnit);
                     return true;
@@ -403,6 +414,9 @@ namespace UnitsNet
                     return true;
                 case LinearDensityUnit linearDensityUnit:
                     quantity = LinearDensity.From(value, linearDensityUnit);
+                    return true;
+                case LinearPowerDensityUnit linearPowerDensityUnit:
+                    quantity = LinearPowerDensity.From(value, linearPowerDensityUnit);
                     return true;
                 case LuminosityUnit luminosityUnit:
                     quantity = Luminosity.From(value, luminosityUnit);
@@ -536,6 +550,9 @@ namespace UnitsNet
                 case TorquePerLengthUnit torquePerLengthUnit:
                     quantity = TorquePerLength.From(value, torquePerLengthUnit);
                     return true;
+                case TurbidityUnit turbidityUnit:
+                    quantity = Turbidity.From(value, turbidityUnit);
+                    return true;
                 case VitaminAUnit vitaminAUnit:
                     quantity = VitaminA.From(value, vitaminAUnit);
                     return true;
@@ -567,7 +584,7 @@ namespace UnitsNet
         /// <param name="quantityString">Quantity string representation, such as "1.5 kg". Must be compatible with given quantity type.</param>
         /// <param name="quantity">The resulting quantity if successful, otherwise <c>default</c>.</param>
         /// <returns>The parsed quantity.</returns>
-        public static bool TryParse([CanBeNull] IFormatProvider formatProvider, Type quantityType, string quantityString, out IQuantity quantity)
+        public static bool TryParse(IFormatProvider? formatProvider, Type quantityType, string quantityString, out IQuantity? quantity)
         {
             quantity = default(IQuantity);
 
@@ -634,6 +651,8 @@ namespace UnitsNet
                     return parser.TryParse<ElectricPotential, ElectricPotentialUnit>(quantityString, formatProvider, ElectricPotential.From, out quantity);
                 case Type _ when quantityType == typeof(ElectricPotentialAc):
                     return parser.TryParse<ElectricPotentialAc, ElectricPotentialAcUnit>(quantityString, formatProvider, ElectricPotentialAc.From, out quantity);
+                case Type _ when quantityType == typeof(ElectricPotentialChangeRate):
+                    return parser.TryParse<ElectricPotentialChangeRate, ElectricPotentialChangeRateUnit>(quantityString, formatProvider, ElectricPotentialChangeRate.From, out quantity);
                 case Type _ when quantityType == typeof(ElectricPotentialDc):
                     return parser.TryParse<ElectricPotentialDc, ElectricPotentialDcUnit>(quantityString, formatProvider, ElectricPotentialDc.From, out quantity);
                 case Type _ when quantityType == typeof(ElectricResistance):
@@ -678,6 +697,8 @@ namespace UnitsNet
                     return parser.TryParse<Level, LevelUnit>(quantityString, formatProvider, Level.From, out quantity);
                 case Type _ when quantityType == typeof(LinearDensity):
                     return parser.TryParse<LinearDensity, LinearDensityUnit>(quantityString, formatProvider, LinearDensity.From, out quantity);
+                case Type _ when quantityType == typeof(LinearPowerDensity):
+                    return parser.TryParse<LinearPowerDensity, LinearPowerDensityUnit>(quantityString, formatProvider, LinearPowerDensity.From, out quantity);
                 case Type _ when quantityType == typeof(Luminosity):
                     return parser.TryParse<Luminosity, LuminosityUnit>(quantityString, formatProvider, Luminosity.From, out quantity);
                 case Type _ when quantityType == typeof(LuminousFlux):
@@ -766,6 +787,8 @@ namespace UnitsNet
                     return parser.TryParse<Torque, TorqueUnit>(quantityString, formatProvider, Torque.From, out quantity);
                 case Type _ when quantityType == typeof(TorquePerLength):
                     return parser.TryParse<TorquePerLength, TorquePerLengthUnit>(quantityString, formatProvider, TorquePerLength.From, out quantity);
+                case Type _ when quantityType == typeof(Turbidity):
+                    return parser.TryParse<Turbidity, TurbidityUnit>(quantityString, formatProvider, Turbidity.From, out quantity);
                 case Type _ when quantityType == typeof(VitaminA):
                     return parser.TryParse<VitaminA, VitaminAUnit>(quantityString, formatProvider, VitaminA.From, out quantity);
                 case Type _ when quantityType == typeof(Volume):
