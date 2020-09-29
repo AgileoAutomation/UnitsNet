@@ -220,6 +220,8 @@ namespace UnitsNet
                     return SpecificWeight.From(value, SpecificWeight.BaseUnit);
                 case QuantityType.Speed:
                     return Speed.From(value, Speed.BaseUnit);
+                case QuantityType.StandardFlow:
+                    return StandardFlow.From(value, StandardFlow.BaseUnit);
                 case QuantityType.Temperature:
                     return Temperature.From(value, Temperature.BaseUnit);
                 case QuantityType.TemperatureChangeRate:
@@ -529,6 +531,9 @@ namespace UnitsNet
                 case SpeedUnit speedUnit:
                     quantity = Speed.From(value, speedUnit);
                     return true;
+                case StandardFlowUnit standardFlowUnit:
+                    quantity = StandardFlow.From(value, standardFlowUnit);
+                    return true;
                 case TemperatureUnit temperatureUnit:
                     quantity = Temperature.From(value, temperatureUnit);
                     return true;
@@ -773,6 +778,8 @@ namespace UnitsNet
                     return parser.TryParse<SpecificWeight, SpecificWeightUnit>(quantityString, formatProvider, SpecificWeight.From, out quantity);
                 case Type _ when quantityType == typeof(Speed):
                     return parser.TryParse<Speed, SpeedUnit>(quantityString, formatProvider, Speed.From, out quantity);
+                case Type _ when quantityType == typeof(StandardFlow):
+                    return parser.TryParse<StandardFlow, StandardFlowUnit>(quantityString, formatProvider, StandardFlow.From, out quantity);
                 case Type _ when quantityType == typeof(Temperature):
                     return parser.TryParse<Temperature, TemperatureUnit>(quantityString, formatProvider, Temperature.From, out quantity);
                 case Type _ when quantityType == typeof(TemperatureChangeRate):

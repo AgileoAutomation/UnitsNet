@@ -118,6 +118,7 @@ namespace UnitsNet
         SpecificVolume,
         SpecificWeight,
         Speed,
+        StandardFlow,
         Temperature,
         TemperatureChangeRate,
         TemperatureDelta,

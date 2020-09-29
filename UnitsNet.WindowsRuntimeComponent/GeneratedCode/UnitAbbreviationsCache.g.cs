@@ -6369,6 +6369,86 @@ namespace UnitsNet
                 ("en-US", typeof(SpeedUnit), (int)SpeedUnit.YardPerSecond, new string[]{"yd/s"}),
 #endif
 #if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicCentimeterPerMinute, new string[]{"sccm", "scm³/min"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicCentimeterPerMinute, new string[]{"sccm", "scm³/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicCentimeterPerSecond, new string[]{"sccs", "scm³/s"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicCentimeterPerSecond, new string[]{"sccs", "scm³/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicDecimeterPerMinute, new string[]{"sdm³/min", "scdmm"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicDecimeterPerMinute, new string[]{"sdm³/min", "scdmm"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerDay, new string[]{"sft³/d", "scf/d", "scfd"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerDay, new string[]{"sft³/d", "scf/d", "scfd"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerHour, new string[]{"sft³/h", "scf/hr", "scfh"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerHour, new string[]{"sft³/h", "scf/hr", "scfh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerMinute, new string[]{"scfm", "sft³/min"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerMinute, new string[]{"scfm", "sft³/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerSecond, new string[]{"scfs", "sft³/s"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicFootPerSecond, new string[]{"scfs", "sft³/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerDay, new string[]{"scmd", "sm³/d"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerDay, new string[]{"scmd", "sm³/d"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerHour, new string[]{"scmh", "sm³/h"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerHour, new string[]{"scmh", "sm³/h"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerMinute, new string[]{"scmm", "sm³/min"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerMinute, new string[]{"scmm", "sm³/min"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerSecond, new string[]{"scms", "sm³/s"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMeterPerSecond, new string[]{"scms", "sm³/s"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMillimeterPerSecond, new string[]{"smm³/s", "scmms"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicMillimeterPerSecond, new string[]{"smm³/s", "scmms"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerDay, new string[]{"scy/day", "scyd"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerDay, new string[]{"scy/day", "scyd"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerHour, new string[]{"syd³/h", "scyh"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerHour, new string[]{"syd³/h", "scyh"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerMinute, new string[]{"syd³/min", "scym"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerMinute, new string[]{"syd³/min", "scym"}),
+#endif
+#if NET40
+                Tuple.Create("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerSecond, new string[]{"syd³/s", "scys"}),
+#else
+                ("en-US", typeof(StandardFlowUnit), (int)StandardFlowUnit.StandardCubicYardPerSecond, new string[]{"syd³/s", "scys"}),
+#endif
+#if NET40
                 Tuple.Create("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeCelsius, new string[]{"°C"}),
 #else
                 ("en-US", typeof(TemperatureUnit), (int)TemperatureUnit.DegreeCelsius, new string[]{"°C"}),
