@@ -863,21 +863,21 @@ namespace UnitsNet
             switch(Unit)
             {
                 case StandardFlowUnit.StandardCubicCentimeterPerMinute: return _value/6e7;
-                case StandardFlowUnit.StandardCubicCentimeterPerSecond: return _value*1e-6;
+                case StandardFlowUnit.StandardCubicCentimeterPerSecond: return _value/1e6;
                 case StandardFlowUnit.StandardCubicDecimeterPerMinute: return _value/60000.00000;
-                case StandardFlowUnit.StandardCubicFootPerDay: return _value*3.2774127999999619727840035909948e-7;
-                case StandardFlowUnit.StandardCubicFootPerHour: return _value*7.8657907199999087346816086183876e-6;
-                case StandardFlowUnit.StandardCubicFootPerMinute: return _value/2118.88000326;
-                case StandardFlowUnit.StandardCubicFootPerSecond: return _value/35.314666721;
-                case StandardFlowUnit.StandardCubicMeterPerDay: return _value/86400;
-                case StandardFlowUnit.StandardCubicMeterPerHour: return _value/3600;
+                case StandardFlowUnit.StandardCubicFootPerDay: return _value/3.0511872047366496e6;
+                case StandardFlowUnit.StandardCubicFootPerHour: return _value/1.271328001973604e5;
+                case StandardFlowUnit.StandardCubicFootPerMinute: return _value/2.11888000328934e3;
+                case StandardFlowUnit.StandardCubicFootPerSecond: return _value/35.314666721489;
+                case StandardFlowUnit.StandardCubicMeterPerDay: return _value/8.64e4;
+                case StandardFlowUnit.StandardCubicMeterPerHour: return _value/3.6e3;
                 case StandardFlowUnit.StandardCubicMeterPerMinute: return _value/60;
                 case StandardFlowUnit.StandardCubicMeterPerSecond: return _value;
-                case StandardFlowUnit.StandardCubicMillimeterPerSecond: return _value*1e-9;
-                case StandardFlowUnit.StandardCubicYardPerDay: return _value/113007;
-                case StandardFlowUnit.StandardCubicYardPerHour: return _value*2.1237634944E-4;
-                case StandardFlowUnit.StandardCubicYardPerMinute: return _value*0.0127425809664;
-                case StandardFlowUnit.StandardCubicYardPerSecond: return _value*0.764554857984;
+                case StandardFlowUnit.StandardCubicMillimeterPerSecond: return _value/1e9;
+                case StandardFlowUnit.StandardCubicYardPerDay: return _value/1.1300693351e5;
+                case StandardFlowUnit.StandardCubicYardPerHour: return _value/4.708622229532e3;
+                case StandardFlowUnit.StandardCubicYardPerMinute: return _value/78.477037158864;
+                case StandardFlowUnit.StandardCubicYardPerSecond: return _value/1.3079506193144;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -904,21 +904,21 @@ namespace UnitsNet
             switch(unit)
             {
                 case StandardFlowUnit.StandardCubicCentimeterPerMinute: return baseUnitValue*6e7;
-                case StandardFlowUnit.StandardCubicCentimeterPerSecond: return baseUnitValue/1e-6;
+                case StandardFlowUnit.StandardCubicCentimeterPerSecond: return baseUnitValue*1e6;
                 case StandardFlowUnit.StandardCubicDecimeterPerMinute: return baseUnitValue*60000.00000;
-                case StandardFlowUnit.StandardCubicFootPerDay: return baseUnitValue/3.2774127999999619727840035909948e-7;
-                case StandardFlowUnit.StandardCubicFootPerHour: return baseUnitValue/7.8657907199999087346816086183876e-6;
-                case StandardFlowUnit.StandardCubicFootPerMinute: return baseUnitValue*2118.88000326;
-                case StandardFlowUnit.StandardCubicFootPerSecond: return baseUnitValue*35.314666721;
-                case StandardFlowUnit.StandardCubicMeterPerDay: return baseUnitValue*86400;
-                case StandardFlowUnit.StandardCubicMeterPerHour: return baseUnitValue*3600;
+                case StandardFlowUnit.StandardCubicFootPerDay: return baseUnitValue*3.0511872047366496e6;
+                case StandardFlowUnit.StandardCubicFootPerHour: return baseUnitValue*1.271328001973604e5;
+                case StandardFlowUnit.StandardCubicFootPerMinute: return baseUnitValue*2.11888000328934e3;
+                case StandardFlowUnit.StandardCubicFootPerSecond: return baseUnitValue*35.314666721489;
+                case StandardFlowUnit.StandardCubicMeterPerDay: return baseUnitValue*8.64e4;
+                case StandardFlowUnit.StandardCubicMeterPerHour: return baseUnitValue*3.6e3;
                 case StandardFlowUnit.StandardCubicMeterPerMinute: return baseUnitValue*60;
                 case StandardFlowUnit.StandardCubicMeterPerSecond: return baseUnitValue;
-                case StandardFlowUnit.StandardCubicMillimeterPerSecond: return baseUnitValue/1e-9;
-                case StandardFlowUnit.StandardCubicYardPerDay: return baseUnitValue*113007;
-                case StandardFlowUnit.StandardCubicYardPerHour: return baseUnitValue/2.1237634944E-4;
-                case StandardFlowUnit.StandardCubicYardPerMinute: return baseUnitValue/0.0127425809664;
-                case StandardFlowUnit.StandardCubicYardPerSecond: return baseUnitValue/0.764554857984;
+                case StandardFlowUnit.StandardCubicMillimeterPerSecond: return baseUnitValue*1e9;
+                case StandardFlowUnit.StandardCubicYardPerDay: return baseUnitValue*1.1300693351e5;
+                case StandardFlowUnit.StandardCubicYardPerHour: return baseUnitValue*4.708622229532e3;
+                case StandardFlowUnit.StandardCubicYardPerMinute: return baseUnitValue*78.477037158864;
+                case StandardFlowUnit.StandardCubicYardPerSecond: return baseUnitValue*1.3079506193144;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }
