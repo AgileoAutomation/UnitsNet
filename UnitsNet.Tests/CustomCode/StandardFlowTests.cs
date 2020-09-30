@@ -24,5 +24,21 @@ namespace UnitsNet.Tests.CustomCode
     public class StandardFlowTests : StandardFlowTestsBase
     {
         // Override properties in base class here
+        protected override double StandardCubicCentimetersPerMinuteInOneStandardCubicMeterPerSecond => 6e7;
+        protected override double StandardCubicCentimetersPerSecondInOneStandardCubicMeterPerSecond => 1e6;
+        protected override double StandardCubicDecimetersPerMinuteInOneStandardCubicMeterPerSecond => 6e4;
+        protected override double StandardCubicFeetPerDayInOneStandardCubicMeterPerSecond => 3.0511872047366496e6;
+        protected override double StandardCubicFeetPerHourInOneStandardCubicMeterPerSecond => 1.271328001973604e5;
+        protected override double StandardCubicFeetPerMinuteInOneStandardCubicMeterPerSecond => 2.11888000328934e3;
+        protected override double StandardCubicFeetPerSecondInOneStandardCubicMeterPerSecond => 35.314666721489;
+        protected override double StandardCubicMetersPerDayInOneStandardCubicMeterPerSecond => 8.64e4;
+        protected override double StandardCubicMetersPerHourInOneStandardCubicMeterPerSecond => 3.6e3;
+        protected override double StandardCubicMetersPerMinuteInOneStandardCubicMeterPerSecond => 60;
+        protected override double StandardCubicMetersPerSecondInOneStandardCubicMeterPerSecond => 1;
+        protected override double StandardCubicMillimetersPerSecondInOneStandardCubicMeterPerSecond => 1e9;
+        protected override double StandardCubicYardsPerDayInOneStandardCubicMeterPerSecond => 1.1300693351e5;
+        protected override double StandardCubicYardsPerHourInOneStandardCubicMeterPerSecond => 4.708622229532e3;
+        protected override double StandardCubicYardsPerMinuteInOneStandardCubicMeterPerSecond => 78.477037158864;
+        protected override double StandardCubicYardsPerSecondInOneStandardCubicMeterPerSecond => 1.3079506193144;
     }
 }
