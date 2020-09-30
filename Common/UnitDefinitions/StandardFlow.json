@@ -1,0 +1,203 @@
+{
+  "Name": "StandardFlow",
+  "BaseUnit": "StandardCubicMeterPerSecond",
+  "XmlDoc": "In physics and engineering, in particular fluid dynamics and hydrometry, the volumetric flow rate, (also known as volume flow rate, rate of fluid flow or volume velocity) is the volume of fluid which passes through a given surface per unit time. The SI unit is m³/s (cubic meters per second). In US Customary Units and British Imperial Units, volumetric flow rate is often expressed as ft³/s (cubic feet per second). It is usually represented by the symbol Q.",
+  "BaseDimensions": {
+    "L": 3,
+    "T": -1
+  },
+  "Units": [
+    {
+      "SingularName": "StandardCubicMeterPerSecond",
+      "PluralName": "StandardCubicMetersPerSecond",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "scms", "sm³/s" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicMeterPerMinute",
+      "PluralName": "StandardCubicMetersPerMinute",
+      "FromUnitToBaseFunc": "x/60",
+      "FromBaseToUnitFunc": "x*60",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "scmm", "sm³/min" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicMeterPerHour",
+      "PluralName": "StandardCubicMetersPerHour",
+      "FromUnitToBaseFunc": "x/3.6e3",
+      "FromBaseToUnitFunc": "x*3.6e3",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "scmh", "sm³/h" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicMeterPerDay",
+      "PluralName": "StandardCubicMetersPerDay",
+      "FromUnitToBaseFunc": "x/8.64e4",
+      "FromBaseToUnitFunc": "x*8.64e4",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "scmd", "sm³/d" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicFootPerSecond",
+      "PluralName": "StandardCubicFeetPerSecond",
+      "FromUnitToBaseFunc": "x/35.314666721489",
+      "FromBaseToUnitFunc": "x*35.314666721489",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "scfs", "sft³/s" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicFootPerMinute",
+      "PluralName": "StandardCubicFeetPerMinute",
+      "FromUnitToBaseFunc": "x/2.11888000328934e3",
+      "FromBaseToUnitFunc": "x*2.11888000328934e3",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "scfm", "sft³/min" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicFootPerHour",
+      "PluralName": "StandardCubicFeetPerHour",
+      "FromUnitToBaseFunc": "x/1.271328001973604e5",
+      "FromBaseToUnitFunc": "x*1.271328001973604e5",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "sft³/h", "scf/hr", "scfh"  ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicFootPerDay",
+      "PluralName": "StandardCubicFeetPerDay",
+      "FromUnitToBaseFunc": "x/3.0511872047366496e6",
+      "FromBaseToUnitFunc": "x*3.0511872047366496e6",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "sft³/d", "scf/d", "scfd"  ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicYardPerSecond",
+      "PluralName": "StandardCubicYardsPerSecond",
+      "FromUnitToBaseFunc": "x/1.3079506193144",
+      "FromBaseToUnitFunc": "x*1.3079506193144",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "syd³/s", "scys" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicYardPerMinute",
+      "PluralName": "StandardCubicYardsPerMinute",
+      "FromUnitToBaseFunc": "x/78.477037158864",
+      "FromBaseToUnitFunc": "x*78.477037158864",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "syd³/min", "scym" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicYardPerHour",
+      "PluralName": "StandardCubicYardsPerHour",
+      "FromUnitToBaseFunc": "x/4.708622229532e3",
+      "FromBaseToUnitFunc": "x*4.708622229532e3",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "syd³/h", "scyh" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicYardPerDay",
+      "PluralName": "StandardCubicYardsPerDay",
+      "FromUnitToBaseFunc": "x/1.1300693351e5",
+      "FromBaseToUnitFunc": "x*1.1300693351e5",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "scy/day", "scyd"  ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicDecimeterPerMinute",
+      "PluralName": "StandardCubicDecimetersPerMinute",
+      "FromUnitToBaseFunc": "x/60000.00000",
+      "FromBaseToUnitFunc": "x*60000.00000",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "sdm³/min", "scdmm" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicMillimeterPerSecond",
+      "PluralName": "StandardCubicMillimetersPerSecond",
+      "FromUnitToBaseFunc": "x/1e9",
+      "FromBaseToUnitFunc": "x*1e9",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "smm³/s", "scmms" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicCentimeterPerSecond",
+      "PluralName": "StandardCubicCentimetersPerSecond",
+      "FromUnitToBaseFunc": "x/1e6",
+      "FromBaseToUnitFunc": "x*1e6",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "sccs", "scm³/s" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "StandardCubicCentimeterPerMinute",
+      "PluralName": "StandardCubicCentimetersPerMinute",
+      "FromUnitToBaseFunc": "x/6e7",
+      "FromBaseToUnitFunc": "x*6e7",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "sccm", "scm³/min" ]
+        }
+      ]
+    }
+  ]
+}

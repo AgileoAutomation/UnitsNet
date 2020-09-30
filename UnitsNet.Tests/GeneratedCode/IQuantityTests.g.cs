@@ -123,6 +123,7 @@ namespace UnitsNet.Tests
             Assertion(3, SpecificVolumeUnit.MillicubicMeterPerKilogram, Quantity.From(3, SpecificVolumeUnit.MillicubicMeterPerKilogram));
             Assertion(3, SpecificWeightUnit.TonneForcePerCubicMillimeter, Quantity.From(3, SpecificWeightUnit.TonneForcePerCubicMillimeter));
             Assertion(3, SpeedUnit.YardPerSecond, Quantity.From(3, SpeedUnit.YardPerSecond));
+            Assertion(3, StandardFlowUnit.StandardCubicYardPerSecond, Quantity.From(3, StandardFlowUnit.StandardCubicYardPerSecond));
             Assertion(3, TemperatureUnit.SolarTemperature, Quantity.From(3, TemperatureUnit.SolarTemperature));
             Assertion(3, TemperatureChangeRateUnit.NanodegreeCelsiusPerSecond, Quantity.From(3, TemperatureChangeRateUnit.NanodegreeCelsiusPerSecond));
             Assertion(3, TemperatureDeltaUnit.MillidegreeCelsius, Quantity.From(3, TemperatureDeltaUnit.MillidegreeCelsius));
@@ -232,6 +233,7 @@ namespace UnitsNet.Tests
             Assertion(SpecificVolume.Info, SpecificVolume.Zero);
             Assertion(SpecificWeight.Info, SpecificWeight.Zero);
             Assertion(Speed.Info, Speed.Zero);
+            Assertion(StandardFlow.Info, StandardFlow.Zero);
             Assertion(Temperature.Info, Temperature.Zero);
             Assertion(TemperatureChangeRate.Info, TemperatureChangeRate.Zero);
             Assertion(TemperatureDelta.Info, TemperatureDelta.Zero);
@@ -341,6 +343,7 @@ namespace UnitsNet.Tests
             Assertion(SpecificVolume.QuantityType, SpecificVolume.Zero);
             Assertion(SpecificWeight.QuantityType, SpecificWeight.Zero);
             Assertion(Speed.QuantityType, Speed.Zero);
+            Assertion(StandardFlow.QuantityType, StandardFlow.Zero);
             Assertion(Temperature.QuantityType, Temperature.Zero);
             Assertion(TemperatureChangeRate.QuantityType, TemperatureChangeRate.Zero);
             Assertion(TemperatureDelta.QuantityType, TemperatureDelta.Zero);
@@ -450,6 +453,7 @@ namespace UnitsNet.Tests
             Assertion(SpecificVolume.BaseDimensions, SpecificVolume.Zero);
             Assertion(SpecificWeight.BaseDimensions, SpecificWeight.Zero);
             Assertion(Speed.BaseDimensions, Speed.Zero);
+            Assertion(StandardFlow.BaseDimensions, StandardFlow.Zero);
             Assertion(Temperature.BaseDimensions, Temperature.Zero);
             Assertion(TemperatureChangeRate.BaseDimensions, TemperatureChangeRate.Zero);
             Assertion(TemperatureDelta.BaseDimensions, TemperatureDelta.Zero);

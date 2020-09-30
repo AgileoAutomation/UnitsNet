@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!-- NuGet properties -->
   <PropertyGroup>
-    <PackageId>UnitsNet.NumberExtensions</PackageId>
+    <PackageId>UnitsNet.NumberExtensions.Agileo</PackageId>
     <Version>4.71.0</Version>
     <Authors>Andreas Gullberg Larsen, Lu Li, Jon Suda</Authors>
     <Title>Units.NET NumberExtensions</Title>
@@ -9,7 +9,7 @@
     <Copyright>Copyright 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com).</Copyright>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RepositoryUrl>https://github.com/angularsen/UnitsNet</RepositoryUrl>
-    <PackageIcon>logo-32.png</PackageIcon>
+    <PackageIcon>logo-128.png</PackageIcon>
     <PackageIconUrl>https://raw.githubusercontent.com/angularsen/UnitsNet/ce85185429be345d77eb2ce09c99d59cc9ab8aed/Docs/Images/logo-32.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/angularsen/UnitsNet</PackageProjectUrl>
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
@@ -44,7 +44,7 @@
 
   <!-- Files to include in nuget package -->
   <ItemGroup>
-    <None Include="../Docs/Images/logo-32.png" Pack="true" PackagePath="/"/>
+    <None Include="../Docs/Images/logo-128.png" Pack="true" PackagePath="/"/>
   </ItemGroup>
 
 </Project>
