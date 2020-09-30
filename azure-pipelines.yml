@@ -24,8 +24,7 @@ pool:
   name: 'Agileo'
 
 variables:
-  dotnetSdkVersion: '2.2.x'
-  nugetToolVersion: '5.x'
+  nugetToolVersion: '5.7.0'
   includeWindowsRuntimeComponent: false
   buildConfiguration: 'Release'
 
@@ -34,13 +33,13 @@ workspace:
 
 steps:
   - task: UseDotNet@2
-    displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
+    displayName: 'Install .NET Core SDK from global.json'
     inputs:
       packageType: 'sdk'
-      version: '$(dotnetSdkVersion)'
+      useGlobalJson: true
 
   - task: NuGetToolInstaller@1
-    displayName: 'Use NuGet tool $(nugetToolVersion)'
+    displayName: 'Use NuGet tool v$(nugetToolVersion)'
     inputs:
       versionSpec: '$(nugetToolVersion)'
 
@@ -77,6 +76,10 @@ steps:
     displayName: 'UnitsNet.Tests code coverage'
 
   - script: |
+      dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.NumberExtensions.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build --logger trx $(Build.SourcesDirectory)/UnitsNet.NumberExtensions.Tests/UnitsNet.NumberExtensions.Tests.csproj"
+    displayName: 'UnitsNet.NumberExtensions.Tests code coverage'
+
+  - script: |
       dotcover cover --TargetExecutable="$(Agent.ToolsDirectory)/dotnet/dotnet.exe" --Filters="+:module=UnitsNet*;-:module=*Tests" --Output="$(Build.SourcesDirectory)/Artifacts/Coverage/UnitsNet.Serialization.JsonNet.Tests.coverage.xml" --ReportType=DetailedXML --TargetArguments="test --no-build --logger trx $(Build.SourcesDirectory)/UnitsNet.Serialization.JsonNet.Tests/UnitsNet.Serialization.JsonNet.Tests.csproj"
     displayName: 'UnitsNet.Serialization.JsonNet.Tests code coverage'
 
@@ -109,6 +112,36 @@ steps:
     inputs:
       command: 'pack'
       packagesToPack: '$(Build.SourcesDirectory)/UnitsNet/UnitsNet.csproj'
+      configuration: '$(buildConfiguration)'
+      packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
+      nobuild: true
+      versioningScheme: 'off'
+      verbosityPack: 'normal'
+    # Previous steps success and CI build due to a tag or Pull Request to master
+    condition: |
+      and
+      (
+        succeeded(),
+        or
+        (
+          and
+          (
+            in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'),
+            startsWith(variables['Build.SourceBranch'], 'refs/tags/')
+          ),
+          and
+          (
+            eq(variables['Build.Reason'], 'PullRequest'),
+            eq(variables['System.PullRequest.TargetBranch'], 'master')
+          )
+        )
+      )
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Generate UnitsNet.NumberExtensions.Agileo package'
+    inputs:
+      command: 'pack'
+      packagesToPack: '$(Build.SourcesDirectory)/UnitsNet.NumberExtensions/UnitsNet.NumberExtensions.csproj'
       configuration: '$(buildConfiguration)'
       packDirectory: '$(Build.SourcesDirectory)/Artifacts/NuGet'
       nobuild: true
@@ -196,5 +229,5 @@ steps:
 
   - publish: $(Build.SourcesDirectory)/Artifacts
     displayName: 'Publish Artifacts'
-    artifact: 'drop'
+    artifact: 'UnitsNet.Agileo'
     condition: succeeded()
